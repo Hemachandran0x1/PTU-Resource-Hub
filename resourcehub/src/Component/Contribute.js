@@ -9,6 +9,8 @@ import FormLabel from '@mui/material/FormLabel';
 import '../Styles/contribute.css'
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
+import { Box } from '@mui/material';
+import Sidebar from './Sidebar';
 
 
 const BootstrapButton = styled(Button)({
@@ -53,7 +55,9 @@ class Contribute extends Component {
     }
     state = {  }
     render() { 
-        return (  
+        return ( 
+          <Box sx={{display:'flex'}}>
+            <Sidebar/>
             <div>
             <Grid container>
                     <Grid item xs={2}>
@@ -106,6 +110,7 @@ class Contribute extends Component {
                    
                 </Grid>
                 </div>
+        </Box>
         );
     }
 }

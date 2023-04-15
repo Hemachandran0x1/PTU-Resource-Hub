@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 import '../Styles/contribute.css'
 import img1 from '../assets/greentick.png';
 import '../Styles/contributeauth.css'
-class Contribute extends Component {
+class ContributeAuth extends Component {
     constructor(props) {
         super(props);
     }
@@ -38,4 +38,4 @@ class Contribute extends Component {
     }
 }
  
-export default Contribute;
+export default ContributeAuth;

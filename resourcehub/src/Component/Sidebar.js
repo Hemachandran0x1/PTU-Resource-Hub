@@ -1,5 +1,6 @@
 import React from 'react'
-import { Drawer,List,ListItem,ListItemButton,ListItemIcon,Divider,ListItemText, Typography } from '@mui/material';//Toolbar
+import { Drawer,List,ListItem,ListItemButton,ListItemIcon,Divider,ListItemText, Typography} from '@mui/material';//Toolbar
+import { Link } from 'react-router-dom';
 import MailIcon from '@mui/icons-material/Mail';
 import ControlPointIcon from '@mui/icons-material/ControlPoint';
 import InfoIcon from '@mui/icons-material/Info';
@@ -22,16 +23,42 @@ function Sidebar() {
         <Typography variant='p'  sx={{fontSize:28,marginY:2,marginX:2}}>Ptu Resource Hub</Typography>
         <Divider />
         <List>
-          {['Home','Contribute', 'Request/Report','About'].map((text, index) => (
-            <ListItem key={text} disablePadding>
+        <Link to="/" style={{color:'inherit',textDecorationLine:'none'}}>
+            <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  {index === 0 ? <HomeIcon/> : index ===1 ?<ControlPointIcon/>:index===2 ? <MailIcon/> : <InfoIcon/>}
+                  <HomeIcon/> 
                 </ListItemIcon>
-                <ListItemText primary={text} />
+               <ListItemText primary="Home" />
               </ListItemButton>
-            </ListItem>
-          ))}
+            </ListItem></Link>
+            <Link to="/Contribute" style={{color:'inherit',textDecorationLine:'none'}}>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <ControlPointIcon/>
+                </ListItemIcon>
+                <ListItemText primary="Contribute" />
+              </ListItemButton>
+            </ListItem> </Link>
+            <Link to="/Login" style={{color:'inherit',textDecorationLine:'none'}}>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <MailIcon/> 
+                </ListItemIcon>
+                <ListItemText primary="Request/Report" />
+              </ListItemButton>
+            </ListItem></Link>
+            <Link to="/Login" style={{color:'inherit',textDecorationLine:'none'}}>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                    <InfoIcon/>
+                </ListItemIcon>
+                <ListItemText primary="About" />
+              </ListItemButton>
+            </ListItem></Link>
         </List>
         
       </Drawer>
@@ -39,3 +66,4 @@ function Sidebar() {
 }
 
 export default Sidebar
+//['Home','Contribute', 'Request/Report','About'] //key={text} 
