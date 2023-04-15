@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Grid from '@mui/material/Grid';
+import {Grid,Box} from '@mui/material';
 import '../Styles/contribute.css'
 import img1 from '../assets/greentick.png';
-import '../Styles/contributeauth.css'
+import '../Styles/contributeauth.css';
+import Sidebar from './Sidebar';
 class ContributeAuth extends Component {
     constructor(props) {
         super(props);
@@ -10,6 +11,8 @@ class ContributeAuth extends Component {
     state = {  }
     render() { 
         return (  
+            <Box sx={{display:'flex'}}>
+            <Sidebar/>
             <div>
             <Grid container>
                     <Grid item xs={2}>
@@ -34,6 +37,7 @@ class ContributeAuth extends Component {
                    
                 </Grid>
                 </div>
+                </Box>
         );
     }
 }
