@@ -1,12 +1,12 @@
-
 import './Styles/App.css';
-import Login from './Component/Login';
-import Contribute from './Component/Contribute';
-import ContributeAuth from './Component/ContributeAuth'
+//import Login from './Component/Login';
+//import Sidebar from './Component/Sidebar';
+import Routesapp from './Component/Routesapp';
+
 function App() {
   return (
-      
-     <ContributeAuth />
+
+      <Routesapp/>
     
   );
 }
