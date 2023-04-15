@@ -3,6 +3,8 @@ import '../Styles/Login.css'
 import { TextField, Button, Typography ,Box,Grid} from "@mui/material";
 //import { Link } from "react-router-dom"
 import pic from '../assets/placeholder.jpg';
+//import Sidebar from "./Sidebar";
+import PermanentDrawerLeft from "./Sample";
 
 const Login = () =>  {
     const [email, setEmail] = useState("")
@@ -31,6 +33,7 @@ const Login = () =>  {
     <div>
      <Grid container>
         <Grid xs={2}>
+            <PermanentDrawerLeft/>
         </Grid>
         <Grid xs={8}>
             <div className='maincomp'>
