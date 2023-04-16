@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import '../Styles/Login.css'
 import { TextField, Button, Typography ,Box,Grid} from "@mui/material";
 //import { Link } from "react-router-dom"
-import pic from '../assets/placeholder.jpg';
+import pic from '../assets/signup.jpg';
 
 const Login = () =>  {
     const [email, setEmail] = useState("")
