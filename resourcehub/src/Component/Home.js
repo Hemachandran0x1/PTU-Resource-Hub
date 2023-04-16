@@ -1,6 +1,7 @@
 import React from 'react'
 import Sidebar from './Sidebar'
 import { Box, Typography } from '@mui/material'
+import Search from './Search'
 
 function Home() {
   return (
@@ -8,7 +9,7 @@ function Home() {
         <Box sx={{display:'flex'}}>
         <Sidebar/>
         <div>
-        <Typography variant='h2' align='center'>Home</Typography> 
+        <Search/>
         </div>
         </Box>
   </div>
