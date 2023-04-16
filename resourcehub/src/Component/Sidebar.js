@@ -23,7 +23,7 @@ function Sidebar() {
         <Typography variant='p'  sx={{fontSize:28,marginY:2,marginX:2}}>Ptu Resource Hub</Typography>
         <Divider />
         <List>
-        <Link to="/Login" style={{color:'inherit',textDecorationLine:'none'}}>
+        <Link to="/" style={{color:'inherit',textDecorationLine:'none'}}>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
@@ -32,7 +32,7 @@ function Sidebar() {
                <ListItemText primary="Home" />
               </ListItemButton>
             </ListItem></Link>
-            <Link to="/Contribute" style={{color:'inherit',textDecorationLine:'none'}}>
+            <Link to="/contribute" style={{color:'inherit',textDecorationLine:'none'}}>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
@@ -41,7 +41,7 @@ function Sidebar() {
                 <ListItemText primary="Contribute" />
               </ListItemButton>
             </ListItem> </Link>
-            <Link to="/ContributeAuth" style={{color:'inherit',textDecorationLine:'none'}}>
+            <Link to="/request" style={{color:'inherit',textDecorationLine:'none'}}>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
@@ -50,7 +50,7 @@ function Sidebar() {
                 <ListItemText primary="Request/Report" />
               </ListItemButton>
             </ListItem></Link>
-            <Link to="/Signup" style={{color:'inherit',textDecorationLine:'none'}}>
+            <Link to="/signup" style={{color:'inherit',textDecorationLine:'none'}}>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>

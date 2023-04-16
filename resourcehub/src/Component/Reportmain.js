@@ -1,22 +1,29 @@
 import React from 'react'
+import Sidebar from './Sidebar';
 import '../Styles/Reportmain.css'
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
-
+import { Link } from 'react-router-dom';
 export default function Reportmain() {
   return (
+    <Box sx={{display:'flex'}}>
+            <Sidebar/>
     <div className='report_main'>
     <Grid container>
     <Grid item xs={3}></Grid>
     <Grid item xs={9}>
     <div className='checkbutton'>
       <ButtonGroup variant="outlined" aria-label="outlined button group">
-  <Button>Request</Button>
-  <Button variant="contained">Report</Button>
-</ButtonGroup>
+        <Link to="/request" style={{color:'inherit',textDecorationLine:'none'}}>
+          <Button>Request</Button>
+        </Link>
+        <Link to="/report" style={{color:'inherit',textDecorationLine:'none'}}>
+          <Button variant="contained">Report</Button>
+        </Link>
+      </ButtonGroup>
       </div>
       <div>
         <h1>Report any mismatched or outdated material here</h1>
@@ -43,8 +50,9 @@ export default function Reportmain() {
       </div>
   </Grid>
 </Grid>
-      
+
     </div>
+    </Box>
   )
 
 }

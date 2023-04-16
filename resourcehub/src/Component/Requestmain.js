@@ -1,22 +1,28 @@
 import React from 'react'
 import "../Styles/Requestmain.css"
-
+import Sidebar from './Sidebar';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-
+import { Link } from 'react-router-dom';
 export default function Requestmain() {
   return (
+    <Box sx={{display:'flex'}}>
+            <Sidebar/>
     <div className='requestmain_main'>
     <Grid container>
         <Grid item xs={3}></Grid>
         <Grid item xs={9}>
         <div className='checkbutton'>
       <ButtonGroup variant="outlined" aria-label="outlined button group">
-  <Button variant="contained">Request</Button>
-  <Button>Report</Button>
+      <Link to="/request" style={{color:'inherit',textDecorationLine:'none'}}>
+          <Button variant="contained">Request</Button>
+        </Link>
+        <Link to="/report" style={{color:'inherit',textDecorationLine:'none'}}>
+          <Button >Report</Button>
+        </Link>
 </ButtonGroup>
       </div>
       <div>
@@ -41,5 +47,6 @@ export default function Requestmain() {
       </Grid>
     </Grid>
     </div>
+    </Box>
   )
 }
