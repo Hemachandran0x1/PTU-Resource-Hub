@@ -14,6 +14,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Sidebar from './Sidebar';
+
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
       backgroundColor: theme.palette.common.black,
@@ -63,6 +65,8 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   
 export default function Request() {
   return (
+    <Box sx={{display:'flex'}}>
+            <Sidebar/>
     <div>
       <Grid container>
         <Grid item xs={3}></Grid>
@@ -114,5 +118,6 @@ export default function Request() {
         </div>
       </Grid>
     </div>
+    </Box>
   )
 }

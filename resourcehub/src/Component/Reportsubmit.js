@@ -2,9 +2,12 @@ import React from 'react'
 import '../Styles/Reportsubmit.css'
 import Grid from '@mui/material/Grid';
 import CheckCircleOutlineRoundedIcon from '@mui/icons-material/CheckCircleOutlineRounded';
-
+import { Box } from '@mui/material';
+import Sidebar from './Sidebar';
 export default function Reportsubmit() {
   return (
+    <Box sx={{display:'flex'}}>
+            <Sidebar/>
     <div className='reportsubmit_main'><Grid container>
     <Grid item xs={3}></Grid>
     <Grid item xs={9}>
@@ -15,7 +18,7 @@ export default function Reportsubmit() {
       <h2>We'll verify the credentials get back to you soon</h2>
   </Grid>
 </Grid>
-      
     </div>
+    </Box>
   )
 }

@@ -7,6 +7,9 @@ import ContributeAuth from './ContributeAuth';
 import Requestmain from './Requestmain';
 import Home from './Home';
 import Reportmain from './Reportmain';
+import Requestsubmit from './Requestsubmit';
+import Reportsubmit from './Reportsubmit';
+import Request from './Request';
 function Routesapp() {
   return (
     <>
@@ -18,7 +21,10 @@ function Routesapp() {
                 <Route path="/contribute" element={<Contribute/>}/>
                 <Route path="/contributeAuth" element={<ContributeAuth/>}/>
                 <Route path="/request" element={<Requestmain/>}/>
-                <Route path="/report" element={<Reportmain/>}/>             
+                <Route path="/report" element={<Reportmain/>}/> 
+                <Route path="/submit_request" element={<Requestsubmit/>}/>
+                <Route path="/submit_report" element={<Reportsubmit/>}/>
+                <Route path="/requestsadd" element={<Request/>}/>            
             </Routes>
         </BrowserRouter>
     </>
