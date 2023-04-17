@@ -10,8 +10,6 @@ import '../Styles/Search.css'
 export default function Search() {
   return (
       <div>
-        <Box sx={{display:'flex'}}>
-        <Sidebar/>
         <div className='searchbar'>
         <Box
       component="form"
@@ -40,7 +38,6 @@ export default function Search() {
        
         </Box>
   </div>
-  </Box>
   </div>
   )
 }

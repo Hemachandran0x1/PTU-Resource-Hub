@@ -7,14 +7,15 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import { Link } from 'react-router-dom';
+import Search from './Search';
 export default function Reportmain() {
   return (
-    <Box sx={{display:'flex'}}>
-            <Sidebar/>
-    <div className='report_main'>
     <Grid container>
-    <Grid item xs={3}></Grid>
-    <Grid item xs={9}>
+      <Grid xs={3}>
+            <Sidebar/></Grid>
+      <Grid xs={9}>
+        <Search/>
+    <div className='report_main'>
     <div className='checkbutton'>
       <ButtonGroup variant="outlined" aria-label="outlined button group">
         <Link to="/request" style={{color:'inherit',textDecorationLine:'none'}}>
@@ -48,11 +49,10 @@ export default function Reportmain() {
         <Button style={{ alignSelf: 'flex-start' , marginLeft: "10px"}} variant="contained" onClick={SubmitEvent}>Submit</Button>
     </Box>
       </div>
-  </Grid>
-</Grid>
 
     </div>
-    </Box>
-  )
+    </Grid>
+    </Grid> 
+      )
 
 }

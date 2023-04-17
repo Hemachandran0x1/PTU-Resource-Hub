@@ -1,17 +1,21 @@
 import React from 'react'
 import Sidebar from './Sidebar'
-import { Box, Typography } from '@mui/material'
+import { Grid} from '@mui/material'
 import Search from './Search'
 
 function Home() {
   return (
     <div>
-        <Box sx={{display:'flex'}}>
-        <Sidebar/>
+         <Grid container>
+      <Grid xs={3}>
+            <Sidebar/></Grid>
+      <Grid xs={9}> 
+         <Sidebar/>
         <div>
         <Search/>
         </div>
-        </Box>
+        </Grid>
+      </Grid>
   </div>
   )
 }
