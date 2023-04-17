@@ -10,6 +10,7 @@ import Reportmain from './Reportmain';
 import Requestsubmit from './Requestsubmit';
 import Reportsubmit from './Reportsubmit';
 import Request from './Request';
+import About from './About';
 function Routesapp() {
   return (
     <>
@@ -24,7 +25,8 @@ function Routesapp() {
                 <Route path="/report" element={<Reportmain/>}/> 
                 <Route path="/submit_request" element={<Requestsubmit/>}/>
                 <Route path="/submit_report" element={<Reportsubmit/>}/>
-                <Route path="/requestsadd" element={<Request/>}/>            
+                <Route path="/requestsadd" element={<Request/>}/>
+                <Route path="/about" element={<About/>}/>             
             </Routes>
         </BrowserRouter>
     </>
