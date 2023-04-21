@@ -14,6 +14,7 @@ import Credentials from './Credentials';
 import Unitpage from './Unitpage';
 import About from './About';
 import Subject from './Subject';
+import Topics from './Topics';
 function Routesapp() {
   return (
     <>
@@ -33,7 +34,7 @@ function Routesapp() {
                 <Route path="/unit" element={<Unitpage/>}/>     
                 <Route path="/requestsadd" element={<Request/>}/>
                 <Route path="/about" element={<About/>}/>   
-                <Route path="/topics" element={<About/>}/>            
+                <Route path="/topics" element={<Topics/>}/>            
             </Routes>
         </BrowserRouter>
     </>

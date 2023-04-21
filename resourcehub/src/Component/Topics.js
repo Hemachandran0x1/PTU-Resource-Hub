@@ -2,6 +2,7 @@ import React from 'react'
 import Sidebar from './Sidebar'
 import Search from './Search'
 import { Grid,Box } from '@mui/material'
+import { styled } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -10,7 +11,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { styled } from '@mui/material/styles';
 
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -70,7 +70,7 @@ function Topics() {
    <Search/>
    </div>
    <div className='request_main'>
-            <Box sx={{ width: '97%' }}>
+            
       <Stack spacing={2}>
         <Item>
         <div className='request_top'>
@@ -106,7 +106,7 @@ function Topics() {
                 </Item>
                 
       </Stack>
-    </Box>
+ 
     </div>
    </Grid>
    </Grid>
