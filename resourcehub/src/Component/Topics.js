@@ -59,7 +59,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
   }));
-function Topics() {
+export default function Topics() {
   return (
     <div>
     <Grid container>
@@ -114,5 +114,3 @@ function Topics() {
       
      )
 }
-
-export default Topics
