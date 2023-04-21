@@ -10,7 +10,6 @@ function Home() {
       <Grid xs={3}>
             <Sidebar/></Grid>
       <Grid xs={9}> 
-         <Sidebar/>
         <div>
         <Search/>
         </div>

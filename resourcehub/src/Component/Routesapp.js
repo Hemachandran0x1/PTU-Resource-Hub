@@ -10,6 +10,8 @@ import Reportmain from './Reportmain';
 import Requestsubmit from './Requestsubmit';
 import Reportsubmit from './Reportsubmit';
 import Request from './Request';
+import Credentials from './Credentials';
+import Unitpage from './Unitpage';
 function Routesapp() {
   return (
     <>
@@ -24,7 +26,9 @@ function Routesapp() {
                 <Route path="/report" element={<Reportmain/>}/> 
                 <Route path="/submit_request" element={<Requestsubmit/>}/>
                 <Route path="/submit_report" element={<Reportsubmit/>}/>
-                <Route path="/requestsadd" element={<Request/>}/>            
+                <Route path="/requestsadd" element={<Request/>}/>    
+                <Route path="/credentials" element={<Credentials/>}/>        
+                <Route path="/unit" element={<Unitpage/>}/>     
             </Routes>
         </BrowserRouter>
     </>
