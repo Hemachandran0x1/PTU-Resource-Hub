@@ -33,7 +33,7 @@ function Routesapp() {
                 <Route path="/unit" element={<Unitpage/>}/>     
                 <Route path="/requestsadd" element={<Request/>}/>
                 <Route path="/about" element={<About/>}/>   
-                          
+                <Route path="/topics" element={<About/>}/>            
             </Routes>
         </BrowserRouter>
     </>
