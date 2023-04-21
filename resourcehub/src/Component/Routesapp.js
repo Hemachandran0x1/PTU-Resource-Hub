@@ -13,12 +13,13 @@ import Request from './Request';
 import Credentials from './Credentials';
 import Unitpage from './Unitpage';
 import About from './About';
+import Subject from './Subject';
 function Routesapp() {
   return (
     <>
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home/>}/>
+                <Route path="/" element={<Subject/>}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/signup" element={<Signup/>}/>
                 <Route path="/contribute" element={<Contribute/>}/>
@@ -31,7 +32,8 @@ function Routesapp() {
                 <Route path="/credentials" element={<Credentials/>}/>        
                 <Route path="/unit" element={<Unitpage/>}/>     
                 <Route path="/requestsadd" element={<Request/>}/>
-                <Route path="/about" element={<About/>}/>             
+                <Route path="/about" element={<About/>}/>   
+                          
             </Routes>
         </BrowserRouter>
     </>

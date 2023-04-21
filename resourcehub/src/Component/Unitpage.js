@@ -1,6 +1,6 @@
 import React from 'react'
 import Sidebar from './Sidebar'
-import { Grid} from '@mui/material'
+import { Grid,Button} from '@mui/material'
 import Search from './Search'
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -8,9 +8,6 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
-import AddIcon from '@mui/icons-material/Add';
-import Box from '@mui/material/Box';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
@@ -40,6 +37,33 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
       border: 0,
     },
   }));
+  function createData(
+    name,
+    request,
+    status
+  ) {
+    return { name, request ,status };
+  }
+  
+  const rows = [
+    createData('lorem ipsum' ),
+    createData('lorem ipsum' ),
+    createData('lorem ipsum' ),
+    createData('lorem ipsum' ),
+    createData('lorem ipsum'),
+    createData('lorem ipsum' ),
+    createData('lorem ipsum'),
+    createData('lorem ipsum' ),
+    createData('lorem ipsum' )
+  ];
+  const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  }));
+  
   
 function Unitpage() {
   return (
@@ -54,7 +78,7 @@ function Unitpage() {
    <div>
    <Grid container marginTop={10}>
     <Grid xs='10'>
-      <Accordion>
+      <Accordion defaultExpanded='true'>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -63,10 +87,43 @@ function Unitpage() {
           <Typography>Unit 1</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
+      
+      <Stack spacing={2}>
+        <Item>
+        <div className='request_top'>
+                <h1>Select Topics to Learn</h1>
+                </div>
+                </Item>
+        <Item>
+        <div className='request_bottom'>
+                <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 700 }} aria-label="customized table">
+          <TableHead>
+            <TableRow>
+              <StyledTableCell>TOPIC</StyledTableCell>
+              <StyledTableCell align="center"></StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <StyledTableRow key={row.name}>
+                <StyledTableCell component="th" scope="row">
+                  {row.name}
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <Button variant='contained' color='primary'>Learn
+                  </Button>
+                </StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+                </div>
+                </Item>
+                
+      </Stack>
+    
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -78,10 +135,42 @@ function Unitpage() {
           <Typography>Unit 2</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
+           
+      <Stack spacing={2}>
+        <Item>
+        <div className='request_top'>
+                <h1>Select Topics to Learn</h1>
+                </div>
+                </Item>
+        <Item>
+        <div className='request_bottom'>
+                <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 700 }} aria-label="customized table">
+          <TableHead>
+            <TableRow>
+              <StyledTableCell>TOPIC</StyledTableCell>
+              <StyledTableCell align="center"></StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <StyledTableRow key={row.name}>
+                <StyledTableCell component="th" scope="row">
+                  {row.name}
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <Button variant='contained' color='primary'>Learn
+                  </Button>
+                </StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+                </div>
+                </Item>
+                
+      </Stack>
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -93,10 +182,42 @@ function Unitpage() {
           <Typography>Unit 3</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
+           
+      <Stack spacing={2}>
+        <Item>
+        <div className='request_top'>
+                <h1>Select Topics to Learn</h1>
+                </div>
+                </Item>
+        <Item>
+        <div className='request_bottom'>
+                <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 700 }} aria-label="customized table">
+          <TableHead>
+            <TableRow>
+              <StyledTableCell>TOPIC</StyledTableCell>
+              <StyledTableCell align="center"></StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <StyledTableRow key={row.name}>
+                <StyledTableCell component="th" scope="row">
+                  {row.name}
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <Button variant='contained' color='primary'>Learn
+                  </Button>
+                </StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+                </div>
+                </Item>
+                
+      </Stack>
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -108,10 +229,41 @@ function Unitpage() {
           <Typography>Unit 4</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
+        <Stack spacing={2}>
+        <Item>
+        <div className='request_top'>
+                <h1>Select Topics to Learn</h1>
+                </div>
+                </Item>
+        <Item>
+        <div className='request_bottom'>
+                <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 700 }} aria-label="customized table">
+          <TableHead>
+            <TableRow>
+              <StyledTableCell>TOPIC</StyledTableCell>
+              <StyledTableCell align="center"></StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <StyledTableRow key={row.name}>
+                <StyledTableCell component="th" scope="row">
+                  {row.name}
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <Button variant='contained' color='primary'>Learn
+                  </Button>
+                </StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+                </div>
+                </Item>
+                
+      </Stack>
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -123,10 +275,41 @@ function Unitpage() {
           <Typography>Unit 5</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
+        <Stack spacing={2}>
+        <Item>
+        <div className='request_top'>
+                <h1>Select Topics to Learn</h1>
+                </div>
+                </Item>
+        <Item>
+        <div className='request_bottom'>
+                <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 700 }} aria-label="customized table">
+          <TableHead>
+            <TableRow>
+              <StyledTableCell>TOPIC</StyledTableCell>
+              <StyledTableCell align="center"></StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <StyledTableRow key={row.name}>
+                <StyledTableCell component="th" scope="row">
+                  {row.name}
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <Button variant='contained' color='primary'>Learn
+                  </Button>
+                </StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+                </div>
+                </Item>
+                
+      </Stack>
         </AccordionDetails>
       </Accordion>
       </Grid>
