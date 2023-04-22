@@ -10,12 +10,18 @@ import Reportmain from './Reportmain';
 import Requestsubmit from './Requestsubmit';
 import Reportsubmit from './Reportsubmit';
 import Request from './Request';
+import Credentials from './Credentials';
+import Unitpage from './Unitpage';
+import About from './About';
+import Subject from './Subject';
+import Topics from './Topics';
+
 function Routesapp() {
   return (
     <>
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home/>}/>
+                <Route path="/" element={<Subject/>}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/signup" element={<Signup/>}/>
                 <Route path="/contribute" element={<Contribute/>}/>
@@ -24,7 +30,12 @@ function Routesapp() {
                 <Route path="/report" element={<Reportmain/>}/> 
                 <Route path="/submit_request" element={<Requestsubmit/>}/>
                 <Route path="/submit_report" element={<Reportsubmit/>}/>
-                <Route path="/requestsadd" element={<Request/>}/>            
+                <Route path="/requestsadd" element={<Request/>}/>    
+                <Route path="/credentials" element={<Credentials/>}/>        
+                <Route path="/unit" element={<Unitpage/>}/>     
+                <Route path="/requestsadd" element={<Request/>}/>
+                <Route path="/about" element={<About/>}/>   
+                <Route path="/topics" element={<Topics/>}/>            
             </Routes>
         </BrowserRouter>
     </>

@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import { Box } from '@mui/material';
 import Sidebar from './Sidebar';
-
+import Search from './Search';
 
 const BootstrapButton = styled(Button)({
     boxShadow: 'none',
@@ -56,14 +56,12 @@ class Contribute extends Component {
     state = {  }
     render() { 
         return ( 
-          <Box sx={{display:'flex'}}>
-            <Sidebar/>
+          <Grid container>
+          <Grid xs={3}>
+                <Sidebar/></Grid>
+          <Grid xs={9}> 
+          <Search/>
             <div>
-            <Grid container>
-                    <Grid item xs={2}>
-                       
-                    </Grid>
-                    <Grid item xs={10}>
                       <h1> Hey Geeks!</h1>
                       <h1> Contribute any new material here! ↓</h1>
                       <TextField id="standard-basic" label="Subject" variant="standard" inputProps={{
@@ -105,12 +103,9 @@ class Contribute extends Component {
 <BootstrapButton variant="contained" disableRipple>
         Submit
       </BootstrapButton>
-                      
-                    </Grid>
-                   
-                </Grid>
                 </div>
-        </Box>
+        </Grid>
+        </Grid>
         );
     }
 }
