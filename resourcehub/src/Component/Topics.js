@@ -70,7 +70,7 @@ export default function Topics() {
    <Search/>
    </div>
    <div className='topic_main'>
-            <Box sx={{ width: '97%' }}>
+            <Box sx={{ width: '87%' }}>
       <Stack spacing={2}>
         <Item>
         <div className='topic_top'>
@@ -96,7 +96,7 @@ export default function Topics() {
                 <StyledTableCell component="th" scope="row">
                   {row.name}
                 </StyledTableCell>
-                <StyledTableCell align="left">{row.request}</StyledTableCell>
+                <StyledTableCell align="center">{row.request}</StyledTableCell>
                 <StyledTableCell align="center">{row.status}</StyledTableCell>
               </StyledTableRow>
             ))}
@@ -129,6 +129,7 @@ export default function Topics() {
                 </Item>
                 
       </Stack>
+      </Box>
  
     </div>
    </Grid>
