@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { useState } from 'react';
+import {  Navigate, useNavigate } from 'react-router-dom'
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -12,7 +14,7 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import { Apicalls } from './Apicalls';
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -29,16 +31,31 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function Login() {
+  const navigate =useNavigate();
+  const [loggedin,setLoggedin]=useState(false);
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    Apicalls.Login(data.get('email'),data.get('password')).then(response => {
+      const { id, name, email,password,departmenid,semesterid, role } = response.data;
+      setLoggedin(true)}) .catch(error => {
+        //handleLogError(error)
+        const error1=error;
+        console.log("WEAFADASDFAS")
+        console.log(data);
+      })
     console.log({
       email: data.get('email'),
       password: data.get('password'),
     });
   };
 
-  return (
+  if(loggedin){
+    navigate("/")
+  }
+  else
+  {return (
+    
     <ThemeProvider theme={theme}>
       <Grid container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
@@ -123,7 +140,7 @@ export default function Login() {
         </Grid>
       </Grid>
     </ThemeProvider>
-  );
+  );}
 }
 /*import React, {useState} from "react";
 import '../Styles/Login.css'
