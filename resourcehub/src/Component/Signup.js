@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
+import {  Navigate, useNavigate } from 'react-router-dom'
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -13,7 +14,8 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import { Apicalls } from './Apicalls';
+import { useState } from 'react';
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -30,15 +32,30 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function Signup() {
+  const navigate =useNavigate();
+  const [register,setRegister]=useState(false);
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    const user ={
+      name:data.get('Name'),
+      email: data.get('email'),
+      password: data.get('password'),
+      departmentid:1,
+      semesterid:1
+    };
+    Apicalls.Signup(user);
+    setRegister(true)
     console.log({
       email: data.get('email'),
       password: data.get('password'),
     });
+    
   };
-
+if(register)
+{//,{state:{"name":data.get('Name'),"email":data.get('email'),"password":data.get('password')},}
+  navigate("/credentials");
+}
   return (
 <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
@@ -59,25 +76,15 @@ export default function Signup() {
           </Typography>
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12}>
                 <TextField
                   autoComplete="given-name"
-                  name="firstName"
+                  name="Name"
                   required
                   fullWidth
-                  id="firstName"
+                  id="Name"
                   label="First Name"
                   autoFocus
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  autoComplete="family-name"
                 />
               </Grid>
               <Grid item xs={12}>
