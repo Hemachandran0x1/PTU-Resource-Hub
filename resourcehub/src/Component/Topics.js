@@ -69,24 +69,47 @@ export default function Topics() {
    <div>
    <Search/>
    </div>
-   <div className='request_main'>
-            
+   <div className='topic_main'>
+            <Box sx={{ width: '97%' }}>
       <Stack spacing={2}>
         <Item>
-        <div className='request_top'>
-                <h1>Welcome to Request Forum</h1>
-                <h2>Use this space to request for new materials and to report any outdated information</h2>
+        <div className='topic_top'>
+                <h1>Unit 1: </h1>
+                <h2>Topic:</h2>
                 </div>
                 </Item>
         <Item>
-        <div className='request_bottom'>
+        <div className='topic_bottom'>
+        <h2>Text:</h2>
                 <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead>
             <TableRow>
               <StyledTableCell>Name</StyledTableCell>
-              <StyledTableCell align="center">Request</StyledTableCell>
-              <StyledTableCell align="center">Status</StyledTableCell>
+              <StyledTableCell align="center">Url</StyledTableCell>
+              <StyledTableCell align="center">Contributors</StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <StyledTableRow key={row.name}>
+                <StyledTableCell component="th" scope="row">
+                  {row.name}
+                </StyledTableCell>
+                <StyledTableCell align="left">{row.request}</StyledTableCell>
+                <StyledTableCell align="center">{row.status}</StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer><br></br>
+<h2>PLaylist:</h2>
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 700 }} aria-label="customized table">
+          <TableHead>
+            <TableRow>
+              <StyledTableCell>Playlist</StyledTableCell>
+             
             </TableRow>
           </TableHead>
           <TableBody>
