@@ -5,10 +5,19 @@ import MailIcon from '@mui/icons-material/Mail';
 import ControlPointIcon from '@mui/icons-material/ControlPoint';
 import InfoIcon from '@mui/icons-material/Info';
 import HomeIcon from '@mui/icons-material/Home';
+import '../Styles/Sidebar.css'
+
 const drawerWidth = 240;
+
 function Sidebar() {
-  return (
-    <Drawer
+  return ( 
+    <div className='sidebarstyle' >
+    <Drawer  PaperProps={{
+              sx: {
+               // backgroundColor: "#263598",
+                // color: "white"
+              }
+            }}
         sx={{
           width: drawerWidth,
           flexShrink: 0,
@@ -62,6 +71,7 @@ function Sidebar() {
         </List>
         
       </Drawer>
+      </div>
   )
 }
 
