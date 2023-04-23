@@ -41,8 +41,8 @@ export default function Login() {
       setLoggedin(true)}) .catch(error => {
         //handleLogError(error)
         const error1=error;
-        console.log("WEAFADASDFAS")
-        console.log(data);
+       // console.log("WEAFADASDFAS")
+       // console.log(data);
       })
     console.log({
       email: data.get('email'),

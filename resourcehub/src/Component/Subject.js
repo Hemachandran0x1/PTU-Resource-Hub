@@ -44,14 +44,14 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   
   const rows = [
     createData('Gokul','lorem ipsum'),
-    createData('Gokul','lorem ipsum'),
-    createData('Gokul','lorem ipsum'),
-    createData('Gokul','lorem ipsum'),
-    createData('Gokul','lorem ipsum'),
-    createData('Gokul','lorem ipsum'),
-    createData('Gokul','lorem ipsum'),
-    createData('Gokul','lorem ipsum'),
-    createData('Gokul','lorem ipsum')
+    createData('Gokul2','lorem ipsum'),
+    createData('Gokul3','lorem ipsum'),
+    createData('Gokul4','lorem ipsum'),
+    createData('Gokul5','lorem ipsum'),
+    createData('Gokul6','lorem ipsum'),
+    createData('Gokul7','lorem ipsum'),
+    createData('Gokul8','lorem ipsum'),
+    createData('Gokul9','lorem ipsum')
   ];
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',

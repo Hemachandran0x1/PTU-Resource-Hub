@@ -1,20 +1,18 @@
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
-import {  Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
-import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import { Container } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Apicalls } from './Apicalls';
 import { useState } from 'react';
 function Copyright(props) {
   return (
@@ -32,6 +30,9 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function Signup() {
+  const [name,setName]=useState();
+  const [email,setEmail]=useState();
+  const [password,setPassword]=useState();
   const navigate =useNavigate();
   const [register,setRegister]=useState(false);
   const handleSubmit = (event) => {
@@ -44,7 +45,6 @@ export default function Signup() {
       departmentid:1,
       semesterid:1
     };
-    Apicalls.Signup(user);
     setRegister(true)
     console.log({
       email: data.get('email'),
@@ -54,7 +54,7 @@ export default function Signup() {
   };
 if(register)
 {//,{state:{"name":data.get('Name'),"email":data.get('email'),"password":data.get('password')},}
-  navigate("/credentials");
+  navigate("/credentials",{state:{"name":name,"email":email,"password":password},});
 }
   return (
 <ThemeProvider theme={theme}>
@@ -80,6 +80,7 @@ if(register)
                 <TextField
                   autoComplete="given-name"
                   name="Name"
+                  onChange={(e) => setName(e.target.value)}
                   required
                   fullWidth
                   id="Name"
@@ -90,6 +91,7 @@ if(register)
               <Grid item xs={12}>
                 <TextField
                   required
+                  onChange={(e) => setEmail(e.target.value)}
                   fullWidth
                   id="email"
                   label="Email Address"
@@ -100,6 +102,7 @@ if(register)
               <Grid item xs={12}>
                 <TextField
                   required
+                  onChange={(e) => setPassword(e.target.value)}
                   fullWidth
                   name="password"
                   label="Password"
