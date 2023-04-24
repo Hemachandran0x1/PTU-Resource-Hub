@@ -5,9 +5,18 @@ import {Button} from '@mui/material';
 import TextField from '@mui/material/TextField';
 import SearchIcon from '@mui/icons-material/Search';
 import LogoutIcon from '@mui/icons-material/Logout';
-import '../Styles/Search.css'
-
+import '../Styles/Search.css';
+import { ReactSession } from 'react-client-session';
+import { useState } from 'react';
+import { useNavigate } from 'react-router';
 export default function Search() {
+  const [loggedout,setLoggedout]=useState(false);
+  const handleLogout = ()=>
+  {
+    ReactSession.set("username",null);
+    setLoggedout(true);
+  }
+  
   return (
       <div>
         <div className='searchbar'>
@@ -29,7 +38,7 @@ export default function Search() {
         />
         </div>
         <div className='search_button'>
-        <Button className='icon' variant="contained" startIcon={<SearchIcon/>}>
+        <Button className='icon' onClick={handleLogout} variant="contained" startIcon={<SearchIcon/>}>
 </Button>
 <Button className='icon' variant="contained" startIcon={<LogoutIcon />}>
   Logout

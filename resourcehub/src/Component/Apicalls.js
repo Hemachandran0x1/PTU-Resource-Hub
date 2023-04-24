@@ -9,7 +9,9 @@ const config = {
 
 export const Apicalls = {
         Signup,
-        Login
+        Login,
+        getDepts,
+        getSems
 }
 function Signup(user)
 {
@@ -23,7 +25,14 @@ function Login(email , password)
         headers: { 'Content-type': 'application/json' }
       })   
 }
-
+function getDepts()
+{
+  return instance.get('/api/department')   
+}
+function getSems()
+{
+  return instance.get('/api/semester')   
+}
 const instance = axios.create({
     baseURL: config.url.API_BASE_URL
   })

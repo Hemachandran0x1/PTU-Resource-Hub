@@ -3,47 +3,69 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import Select from 'react-select';
 import {Button} from '@mui/material';
-import {Box} from '@mui/material';
 import { Apicalls } from './Apicalls';
 import { useLocation } from 'react-router';
-const optionsDepartment = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' },
-  ];
-  const optionsSemester = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' },
-  ];
+import { ReactSession } from 'react-client-session';
+
+import { useMemo } from 'react';
+/*const options = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'vanilla', label: 'Vanilla' }
+]*/
+let optionsDepartment=[];
+let optionsSemester=[] ;
 function Credentials(props) {
-    const location =useLocation();
+  const location =useLocation();
+    const [sem,setSem]=useState([{}]);
+    const [dept,setDept]=useState([{}]);
     const [department, setDepartment] = useState(null);
     const [semester, setSemester] = useState(null);
-    const[name,setName]=useState();
-    const[email,setEmail]=useState();
-    const[password,setPassword]=useState();
+    const[username,setUsername]=useState("");
+    const[useremail,setUseremail]=useState("");
+    const[userpassword,setUserpassword]=useState("");
     const[signup,setSignup]=useState(false)
     const navigate=useNavigate();
+   /* useMemo(() => {
+  
+    }, []);*/
+    
     useEffect(() => {
-      setName(location.state.name);
-      setEmail(location.state.email);
-      setPassword(location.state.password);      
+    
       console.log(location);
- });
-    const handleSubmit=(event)=>{
+      Apicalls.getDepts()
+      .then(response => response.data
+      ).then(data => {
+      data.map((deptx)=>{optionsDepartment.push({value:deptx.id,label:deptx.deptname})});
+
+      //optionsDepartment=data;
+      }, (e) =>{
+      console.log(e);
+      })
+    Apicalls.getSems()
+    .then(response => response.data
+    ).then(data => {
+      data.map((semy)=>{optionsSemester.push({value:semy.id,label:semy.semester})}); 
+   // optionsSemester=data;
+    }, (e) =>{
+    console.log(e);
+    });
+    
+      
+ },[]);
+    const handleSubmit=()=>{
     
       const user ={
-        name:name,
-        email: email,
-        password:password,
+        name:location.state.name,
+        email: location.state.email,
+        password:location.state.password,
         departmentid:department.value,
         semesterid:semester.value
       };
       console.log(user);
       Apicalls.Signup(user).then(response => {
-        const { id, name, email,password,departmenid,semesterid, role } = response.data;
-        setSignup(true)}) .catch(error => {
+        setSignup(true)
+      }) .catch(error => {
           //handleLogError(error)
           const error1=error;
           //console.log("WEAFADASDFAS")
@@ -60,12 +82,12 @@ function Credentials(props) {
         <Typography variant='h4' m={5} align='center'>
                 Select Your Credentials
         </Typography>
-        <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+   
         <Grid container>
-            <Grid xs={4}>
+            <Grid item xs={4}>
 
             </Grid>
-            <Grid xs={4}>
+            <Grid item xs={4}>
               <Stack m={5} spacing={6}>    
                    <Select className="selectbox" 
                 placeholder='Department'
@@ -82,6 +104,7 @@ function Credentials(props) {
                     />
                 </Stack>
                 <Button 
+                onClick={handleSubmit}
               type="submit"
               fullWidth
               variant="contained"
@@ -89,12 +112,13 @@ function Credentials(props) {
             >
               Submit
             </Button>
+            
             </Grid>
-            <Grid xs={4}>
+            <Grid item xs={4}>
 
             </Grid>
         </Grid>
-        </Box>
+      
       </div>
     );}
 }
