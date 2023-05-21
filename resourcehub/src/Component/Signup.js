@@ -1,19 +1,19 @@
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
+import { useNavigate } from 'react-router-dom'
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
-import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import { Container } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import { useState } from 'react';
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -30,15 +30,32 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function Signup() {
+  const [name,setName]=useState();
+  const [email,setEmail]=useState();
+  const [password,setPassword]=useState();
+  const navigate =useNavigate();
+  const [register,setRegister]=useState(false);
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    const user ={
+      name:data.get('Name'),
+      email: data.get('email'),
+      password: data.get('password'),
+      departmentid:1,
+      semesterid:1
+    };
+    setRegister(true)
     console.log({
       email: data.get('email'),
       password: data.get('password'),
     });
+    
   };
-
+if(register)
+{//,{state:{"name":data.get('Name'),"email":data.get('email'),"password":data.get('password')},}
+  navigate("/credentials",{state:{"name":name,"email":email,"password":password},});
+}
   return (
 <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
@@ -59,30 +76,22 @@ export default function Signup() {
           </Typography>
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12}>
                 <TextField
                   autoComplete="given-name"
-                  name="firstName"
+                  name="Name"
+                  onChange={(e) => setName(e.target.value)}
                   required
                   fullWidth
-                  id="firstName"
+                  id="Name"
                   label="First Name"
                   autoFocus
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  autoComplete="family-name"
                 />
               </Grid>
               <Grid item xs={12}>
                 <TextField
                   required
+                  onChange={(e) => setEmail(e.target.value)}
                   fullWidth
                   id="email"
                   label="Email Address"
@@ -93,6 +102,7 @@ export default function Signup() {
               <Grid item xs={12}>
                 <TextField
                   required
+                  onChange={(e) => setPassword(e.target.value)}
                   fullWidth
                   name="password"
                   label="Password"

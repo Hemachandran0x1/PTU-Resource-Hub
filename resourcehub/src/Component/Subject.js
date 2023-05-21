@@ -14,7 +14,8 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Sidebar from './Sidebar';
 import Search from './Search';
-
+import { ReactSession } from 'react-client-session';
+import { useNavigate } from 'react-router';
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
       backgroundColor: theme.palette.common.black,
@@ -44,14 +45,14 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   
   const rows = [
     createData('Gokul','lorem ipsum'),
-    createData('Gokul','lorem ipsum'),
-    createData('Gokul','lorem ipsum'),
-    createData('Gokul','lorem ipsum'),
-    createData('Gokul','lorem ipsum'),
-    createData('Gokul','lorem ipsum'),
-    createData('Gokul','lorem ipsum'),
-    createData('Gokul','lorem ipsum'),
-    createData('Gokul','lorem ipsum')
+    createData('Gokul2','lorem ipsum'),
+    createData('Gokul3','lorem ipsum'),
+    createData('Gokul4','lorem ipsum'),
+    createData('Gokul5','lorem ipsum'),
+    createData('Gokul6','lorem ipsum'),
+    createData('Gokul7','lorem ipsum'),
+    createData('Gokul8','lorem ipsum'),
+    createData('Gokul9','lorem ipsum')
   ];
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -62,8 +63,14 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   }));
   
 export default function Subject() {
-  return (
-            
+  const navigate = useNavigate();
+  const name=ReactSession.get("username");        
+  if(name==null)
+  {
+      navigate("/login")
+  }
+  else
+  {return (
     <div>
       <Grid container>
         <Grid item xs={3}>
@@ -112,5 +119,5 @@ export default function Subject() {
       <br></br>
       <br></br>
     </div>
-  )
+  )}
 }
