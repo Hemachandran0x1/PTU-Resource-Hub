@@ -15,6 +15,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Sidebar from './Sidebar';
+import Search from './Search';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -65,13 +66,14 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   
 export default function Request() {
   return (
-    <Box sx={{display:'flex'}}>
-            <Sidebar/>
+            
     <div>
       <Grid container>
-        <Grid item xs={3}></Grid>
+        <Grid item xs={3}><Sidebar/></Grid>
         <Grid item xs={9}>
+        <Search />
             <div className='request_main'>
+            
             <Box sx={{ width: '97%' }}>
       <Stack spacing={2}>
         <Item>
@@ -118,6 +120,5 @@ export default function Request() {
         </div>
       </Grid>
     </div>
-    </Box>
   )
 }

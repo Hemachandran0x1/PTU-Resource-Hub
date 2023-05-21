@@ -5,6 +5,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import ControlPointIcon from '@mui/icons-material/ControlPoint';
 import InfoIcon from '@mui/icons-material/Info';
 import HomeIcon from '@mui/icons-material/Home';
+import TocIcon from '@mui/icons-material/Toc';
 import '../Styles/Sidebar.css'
 
 const drawerWidth = 240;
@@ -29,7 +30,7 @@ function Sidebar() {
         variant="permanent"
         anchor="left"
       >
-        <Typography variant='p'  sx={{fontSize:28,marginY:2,marginX:2}}>Ptu Resource Hub</Typography>
+        <Typography variant='p'  sx={{fontSize:28,marginY:2,marginX:2}}>PTU Resource Hub</Typography>
         <Divider />
         <List>
         <Link to="/" style={{color:'inherit',textDecorationLine:'none'}}>
@@ -60,6 +61,15 @@ function Sidebar() {
               </ListItemButton>
             </ListItem></Link>
             <Link to="/requestsadd" style={{color:'inherit',textDecorationLine:'none'}}>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                    <TocIcon/>
+                </ListItemIcon>
+                <ListItemText primary="Forum" />
+              </ListItemButton>
+            </ListItem></Link>
+            <Link to="/about" style={{color:'inherit',textDecorationLine:'none'}}>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>

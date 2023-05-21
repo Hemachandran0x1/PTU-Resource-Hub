@@ -7,15 +7,18 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Link } from 'react-router-dom';
+import Search from './Search'
 export default function Requestmain() {
   return (
-    <Box sx={{display:'flex'}}>
-            <Sidebar/>
+    
+            
     <div className='requestmain_main'>
     <Grid container>
-        <Grid item xs={3}></Grid>
+        <Grid item xs={3}><Sidebar/></Grid>
         <Grid item xs={9}>
         <div className='checkbutton'>
+        <Search />
+        <br></br>
       <ButtonGroup variant="outlined" aria-label="outlined button group">
       <Link to="/request" style={{color:'inherit',textDecorationLine:'none'}}>
           <Button variant="contained">Request</Button>
@@ -47,6 +50,6 @@ export default function Requestmain() {
       </Grid>
     </Grid>
     </div>
-    </Box>
+    
   )
 }
