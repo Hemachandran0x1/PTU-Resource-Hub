@@ -64,13 +64,14 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   
 export default function Subject() {
   const navigate = useNavigate();
-  const name=ReactSession.get("username");        
-  if(name==null)
-  {
-      navigate("/login")
-  }
-  else
-  {return (
+  //const name=ReactSession.get("username");
+ // const name =null        
+  //if(name==null)
+  //{
+  //    navigate("/login")
+  //}
+  //else{
+    return (
     <div>
       <Grid container>
         <Grid item xs={3}>
@@ -120,4 +121,4 @@ export default function Subject() {
       <br></br>
     </div>
   )}
-}
+//}
