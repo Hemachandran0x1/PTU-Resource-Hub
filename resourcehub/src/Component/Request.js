@@ -76,8 +76,8 @@ export default function Request() {
             
             <Box sx={{ width: '97%' }}>
       <Stack spacing={2}>
-        <Item>
-        <div className='request_top'>
+        <Item className='request_top'>
+        <div >
                 <h1>Welcome to Request Forum</h1>
                 <h2>Use this space to request for new materials and to report any outdated information</h2>
                 </div>
