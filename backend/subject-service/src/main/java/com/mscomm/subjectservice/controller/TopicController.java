@@ -1,4 +1,8 @@
 package com.mscomm.subjectservice.controller;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +16,7 @@ import lombok.AllArgsConstructor;
 @RequestMapping("api/topics")
 @AllArgsConstructor
 public class TopicController {
-
+	@Autowired
 	private TopicService topicService;
 
     @PostMapping
@@ -26,4 +30,11 @@ public class TopicController {
         Topic topic = topicService.getTopic(topicId);
         return ResponseEntity.ok(topic);
     }
+    @GetMapping
+    public ResponseEntity<?> saveUser(){
+	 List<Topic> departments = new ArrayList<>();
+        	departments=	topicService.getallTopics();
+        return new ResponseEntity<>(departments, HttpStatus.OK);
+    }
 }
+

@@ -5,4 +5,6 @@ import com.mscomm.userservice.entity.*;
 public interface DepartmentService {
 	Department getDepartment(long id);
 	List<Department> getallDepartments();
+	
+
 }

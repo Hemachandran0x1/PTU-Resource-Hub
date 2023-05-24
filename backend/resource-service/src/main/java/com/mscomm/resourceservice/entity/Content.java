@@ -16,4 +16,8 @@ public class Content {
 	  @Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	    private Long id;
+	  	private Long topicid;
+	  	private String url;
+	  	private Long subjectid;
+	  	private Long unit;
 }

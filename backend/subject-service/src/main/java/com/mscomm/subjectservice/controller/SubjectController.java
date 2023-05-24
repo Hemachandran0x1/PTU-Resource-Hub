@@ -1,4 +1,7 @@
 package com.mscomm.subjectservice.controller;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -26,4 +29,11 @@ public class SubjectController {
         Subject subject = subjectService.getSubject(subjectId);
         return ResponseEntity.ok(subject);
     }
+    @GetMapping
+    public ResponseEntity<?> saveUser(){
+	 List<Subject> departments = new ArrayList<>();
+        	departments=	subjectService.getallSubjects();
+        return new ResponseEntity<>(departments, HttpStatus.OK);
+    }
 }
+

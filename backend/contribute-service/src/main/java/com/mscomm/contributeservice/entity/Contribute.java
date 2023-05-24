@@ -20,6 +20,7 @@ public class Contribute {
 	  private Long deptid;
 	  private Long topicid;
 	  private String url;
+	  private int approve;
 	  
 	  
 	  

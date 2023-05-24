@@ -16,4 +16,7 @@ public class Bookmark {
 	  @Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	    private Long id;
+	  	private Long contentid;
+	  	private String bookmarkname;
+	  	private Long userid;
 }
