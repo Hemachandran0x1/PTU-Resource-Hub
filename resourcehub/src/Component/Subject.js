@@ -14,7 +14,9 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Sidebar from './Sidebar';
 import Search from './Search';
+
 import '../Styles/Subject.css'
+
 import { ReactSession } from 'react-client-session';
 import { useNavigate } from 'react-router';
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -65,6 +67,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   
 export default function Subject() {
   const navigate = useNavigate();
+
   //const name=ReactSession.get("username");
  // const name =null        
   //if(name==null)
@@ -73,6 +76,7 @@ export default function Subject() {
   //}
   //else{
     return (
+
     <div>
       <Grid container>
         <Grid item xs={3}>
@@ -122,4 +126,4 @@ export default function Subject() {
       <br></br>
     </div>
   )}
-//}
+
