@@ -23,6 +23,7 @@ export default function Requestmain() {
       <Link to="/request" style={{color:'inherit',textDecorationLine:'none'}}>
           <Button variant="contained">Request</Button>
         </Link>
+        &nbsp;&nbsp;&nbsp;
         <Link to="/report" style={{color:'inherit',textDecorationLine:'none'}}>
           <Button >Report</Button>
         </Link>
