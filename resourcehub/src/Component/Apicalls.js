@@ -3,7 +3,11 @@ import axios from 'axios'
 
 const config = {
   url: {
-    API_BASE_URL: 'http://localhost:8080'
+    API_BASE_URL: 'http://localhost:8080',
+    API_BASE_URL1: 'http://localhost:8081',
+    API_BASE_URL2: 'http://localhost:8082',
+    API_BASE_URL3: 'http://localhost:8083',
+    API_BASE_URL4: 'http://localhost:8084'  
   }
 }
 
@@ -35,5 +39,17 @@ function getSems()
 }
 const instance = axios.create({
     baseURL: config.url.API_BASE_URL
+  })
+  const instance1 = axios.create({
+    baseURL: config.url.API_BASE_URL1
+  })
+  const instance2 = axios.create({
+    baseURL: config.url.API_BASE_URL2
+  })
+  const instance3 = axios.create({
+    baseURL: config.url.API_BASE_URL3
+  })
+  const instance4 = axios.create({
+    baseURL: config.url.API_BASE_URL4
   })
   
