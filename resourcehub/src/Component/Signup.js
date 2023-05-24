@@ -14,6 +14,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState } from 'react';
+import '../Styles/Signup.css'
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -58,7 +59,7 @@ if(register)
 }
   return (
 <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="xs" sx={{ backgroundColor: '#e03c3c' }}>
         <CssBaseline />
         <Box
           sx={{
@@ -66,6 +67,10 @@ if(register)
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            backgroundColor: '#e03c3c',
+            padding: '20px',
+            borderRadius: '5px',
+            boxSizing:'unset',
           }}
         >
           <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
@@ -138,6 +143,7 @@ if(register)
         <Copyright sx={{ mt: 5 }} />
       </Container>
     </ThemeProvider>
+    
   );
 }
 /*import React, {useState} from 'react';

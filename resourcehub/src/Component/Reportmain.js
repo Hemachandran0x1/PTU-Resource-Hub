@@ -15,17 +15,17 @@ export default function Reportmain() {
             <Sidebar/></Grid>
       <Grid xs={9}>
         <Search/>
-    <div className='report_main'>
-    <div className='checkbutton'>
+    <br></br>
       <ButtonGroup variant="outlined" aria-label="outlined button group">
         <Link to="/request" style={{color:'inherit',textDecorationLine:'none'}}>
           <Button>Request</Button>
         </Link>
+        &nbsp;&nbsp;&nbsp;
         <Link to="/report" style={{color:'inherit',textDecorationLine:'none'}}>
           <Button variant="contained">Report</Button>
         </Link>
       </ButtonGroup>
-      </div>
+      
       <div>
         <h1>Report any mismatched or outdated material here</h1>
         <Box  
@@ -50,7 +50,7 @@ export default function Reportmain() {
     </Box>
       </div>
 
-    </div>
+    
     </Grid>
     </Grid> 
       )

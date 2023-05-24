@@ -15,6 +15,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Sidebar from './Sidebar';
+import Search from './Search';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -65,17 +66,18 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   
 export default function Request() {
   return (
-    <Box sx={{display:'flex'}}>
-            <Sidebar/>
+            
     <div>
       <Grid container>
-        <Grid item xs={3}></Grid>
+        <Grid item xs={3}><Sidebar/></Grid>
         <Grid item xs={9}>
+        <Search />
             <div className='request_main'>
-            <Box sx={{ width: '97%' }}>
+            
+            <Box sx={{ width: '87%' }}>
       <Stack spacing={2}>
-        <Item>
-        <div className='request_top'>
+        <Item className='request_top'>
+        <div >
                 <h1>Welcome to Request Forum</h1>
                 <h2>Use this space to request for new materials and to report any outdated information</h2>
                 </div>
@@ -118,6 +120,5 @@ export default function Request() {
         </div>
       </Grid>
     </div>
-    </Box>
   )
 }

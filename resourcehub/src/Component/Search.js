@@ -20,6 +20,7 @@ export default function Search() {
   return (
       <div>
         <div className='searchbar'>
+          <br></br>
         <Box
       component="form"
       sx={{

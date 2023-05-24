@@ -1,9 +1,10 @@
 .request_main{
     display: flex;
-    margin-top: 80px;
+    margin-top: 20px;
 }
 .request_top{
     position: relative; 
+    background: linear-gradient(to right bottom, #244624, white);
 }
 .request_bottom{
     display: flex;
