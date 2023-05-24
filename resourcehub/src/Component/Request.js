@@ -74,7 +74,7 @@ export default function Request() {
         <Search />
             <div className='request_main'>
             
-            <Box sx={{ width: '97%' }}>
+            <Box sx={{ width: '87%' }}>
       <Stack spacing={2}>
         <Item className='request_top'>
         <div >

@@ -20,6 +20,7 @@ export default function Reportmain() {
         <Link to="/request" style={{color:'inherit',textDecorationLine:'none'}}>
           <Button>Request</Button>
         </Link>
+        &nbsp;&nbsp;&nbsp;
         <Link to="/report" style={{color:'inherit',textDecorationLine:'none'}}>
           <Button variant="contained">Report</Button>
         </Link>
