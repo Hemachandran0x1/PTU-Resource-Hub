@@ -104,18 +104,19 @@ const getallContents=()=>
    <div>
    <Search/>
    </div>
-   <div className='topic_main'>
+   <div className='topic_main' >
             <Box sx={{ width: '87%' }}>
       <Stack spacing={2}>
-        <Item>
+        <Item style={{backgroundColor:'#27374D'}}>
         <div className='topic_top'>
-                <h1>Unit 1: </h1>
-                <h2>Topic:</h2>
+                <h1 style={{color:'#9DB2BF'}}>Unit 1: </h1>                         
+                {/* // 9DB2BF */}
+                <h2 style={{color:'#9DB2BF'}}>Topic:</h2>
                 </div>
                 </Item>
-        <Item>
-        <div className='topic_bottom'>
-        <h2>Text:</h2>
+        <Item style={{backgroundColor:'#27374D'}}>
+        <div className='topic_bottom' >
+        <h2 style={{color:'#9DB2BF'}}>Text:</h2>
                 <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead>
@@ -132,14 +133,18 @@ const getallContents=()=>
                   {row.name}
                 </StyledTableCell>
                 <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
+<<<<<<< HEAD
                 <StyledTableCell ><Button variant='contained' color='primary' onClick={()=>handlebookmark(row.id,row.name,row.url)}>Bookmark
+=======
+                <StyledTableCell ><Button variant='contained' color='primary' style={{backgroundColor:'#27374D'}}>Bookmark
+>>>>>>> bc1662291b21d90f20e085826dbbb2664ef10408
                   </Button></StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
         </Table>
       </TableContainer><br></br>
-<h2>Playlist:</h2>
+<h2 style={{color:'#9DB2BF'}}>Playlist:</h2>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead>
@@ -156,14 +161,18 @@ const getallContents=()=>
                   {row.name}
                 </StyledTableCell>
                 <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
+<<<<<<< HEAD
                 <StyledTableCell align="center"><Button variant='contained' color='primary' onClick={()=>handlebookmark(row.id,row.name,row.url)} >Bookmark
+=======
+                <StyledTableCell align="center"><Button variant='contained' color='primary' style={{backgroundColor:'#27374D'}}>Bookmark
+>>>>>>> bc1662291b21d90f20e085826dbbb2664ef10408
                   </Button></StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
         </Table>
       </TableContainer>
-      <h2>Materials:</h2>
+      <h2 style={{color:'#9DB2BF'}}>Materials:</h2>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead>
@@ -180,7 +189,11 @@ const getallContents=()=>
                   {row.name}
                 </StyledTableCell>
                 <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
+<<<<<<< HEAD
                 <StyledTableCell ><Button variant='contained' color='primary' onClick={()=>handlebookmark(row.id,row.name,row.url)}>Bookmark
+=======
+                <StyledTableCell ><Button variant='contained' color='primary' style={{backgroundColor:'#27374D'}}>Bookmark
+>>>>>>> bc1662291b21d90f20e085826dbbb2664ef10408
                   </Button></StyledTableCell>
               </StyledTableRow>
             ))}

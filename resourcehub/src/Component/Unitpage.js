@@ -111,13 +111,13 @@ function Unitpage(props) {
    <div>
    <Grid container marginTop={10}>
     <Grid xs='10'>
-      <Accordion defaultExpanded='true' style={{backgroundColor:'#f5e7bc'}}>
+      <Accordion defaultExpanded='true' style={{backgroundColor:'#27374D'}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography style={{fontSize:'30px'}}>Unit 1</Typography>
+          <Typography style={{fontSize:'30px', color:'white'}}>Unit 1</Typography>
         </AccordionSummary>
         <AccordionDetails>
       
@@ -145,7 +145,7 @@ function Unitpage(props) {
                   {row.topicname}
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary' onClick={()=>handleclick(row.id)}>Learn
+                  <Button variant='contained' color='primary' onClick={()=>handleclick(row.id)} style={{backgroundColor:'#27374D'}}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>
@@ -160,13 +160,13 @@ function Unitpage(props) {
     
         </AccordionDetails>
       </Accordion>
-      <Accordion style={{backgroundColor:'#f5e7bc'}}>
+      <Accordion style={{backgroundColor:'#27374D'}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography style={{fontSize:'30px'}}>Unit 2</Typography>
+          <Typography style={{fontSize:'30px', color:'white'}}>Unit 2</Typography>
         </AccordionSummary>
         <AccordionDetails>
            
@@ -194,7 +194,7 @@ function Unitpage(props) {
                 {row.topicname}
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)}>Learn
+                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)} style={{backgroundColor:'#27374D'}}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>
@@ -208,13 +208,13 @@ function Unitpage(props) {
       </Stack>
         </AccordionDetails>
       </Accordion>
-      <Accordion style={{backgroundColor:'#f5e7bc'}}>
+      <Accordion style={{backgroundColor:'#27374D'}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography style={{fontSize:'30px'}}>Unit 3</Typography>
+          <Typography style={{fontSize:'30px', color:'white'}}>Unit 3</Typography>
         </AccordionSummary>
         <AccordionDetails>
            
@@ -241,7 +241,7 @@ function Unitpage(props) {
                 {row.topicname}
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)}>Learn
+                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)} style={{backgroundColor:'#27374D'}}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>
@@ -255,13 +255,13 @@ function Unitpage(props) {
       </Stack>
         </AccordionDetails>
       </Accordion>
-      <Accordion style={{backgroundColor:'#f5e7bc'}}>
+      <Accordion style={{backgroundColor:'#27374D'}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography style={{fontSize:'30px'}}>Unit 4</Typography>
+          <Typography style={{fontSize:'30px', color:'white'}}>Unit 4</Typography>
         </AccordionSummary>
         <AccordionDetails>
         <Stack spacing={2}>
@@ -287,7 +287,7 @@ function Unitpage(props) {
                 {row.topicname}
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)}>Learn
+                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)} style={{backgroundColor:'#27374D'}}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>
@@ -301,13 +301,13 @@ function Unitpage(props) {
       </Stack>
         </AccordionDetails>
       </Accordion>
-      <Accordion style={{backgroundColor:'#f5e7bc'}}>
+      <Accordion style={{backgroundColor:'#27374D'}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography style={{fontSize:'30px'}}>Unit 5</Typography>
+          <Typography style={{fontSize:'30px', color:'white' }}>Unit 5</Typography>
         </AccordionSummary>
         <AccordionDetails>
         <Stack spacing={2}>
@@ -333,7 +333,7 @@ function Unitpage(props) {
                 {row.topicname }
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)}>Learn
+                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)} style={{backgroundColor:'#27374D'}}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>

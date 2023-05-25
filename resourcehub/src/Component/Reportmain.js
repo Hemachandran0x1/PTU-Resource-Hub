@@ -63,13 +63,13 @@ return (
       <Stack spacing={2}>
         <Item className='request_top'>
         <div >
-        <ButtonGroup variant="outlined" aria-label="outlined button group">
+        <ButtonGroup variant="outlined" aria-label="outlined button group" >
         <Link to="/request" style={{color:'inherit',textDecorationLine:'none'}}>
-          <Button>Request</Button>
+          <Button style={{borderColor: '#27374D',color:'#27374D'}}>Request</Button>
         </Link>
         &nbsp;&nbsp;&nbsp;
         <Link to="/report" style={{color:'inherit',textDecorationLine:'none'}}>
-          <Button variant="contained">Report</Button>
+          <Button variant="contained" style={{backgroundColor:'#27374D'}}>Report</Button>
         </Link>
       </ButtonGroup>
       
@@ -94,7 +94,11 @@ return (
           maxRows={7}
           onChange={(e) => setDesc(e.target.value)}
         />
+<<<<<<< HEAD
         <Button style={{ alignSelf: 'flex-start' , marginLeft: "10px"}} variant="contained" onClick={()=>handleSubmit()}>Submit</Button>
+=======
+        <Button style={{ alignSelf: 'flex-start' , marginLeft: "10px",backgroundColor:'#27374D'}} variant="contained" onClick={SubmitEvent}>Submit</Button>
+>>>>>>> bc1662291b21d90f20e085826dbbb2664ef10408
     </Box>
       </div>
 
