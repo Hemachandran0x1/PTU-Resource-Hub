@@ -61,13 +61,14 @@ export default function Requestmain() {
         <Item className='request_top'>
         <div >
         <ButtonGroup variant="outlined" aria-label="outlined button group">
-      <Link to="/request" style={{color:'inherit',textDecorationLine:'none'}}>
-          <Button variant="contained">Request</Button>
-        </Link>
-        &nbsp;&nbsp;&nbsp;
-        <Link to="/report" style={{color:'inherit',textDecorationLine:'none'}}>
-          <Button >Report</Button>
-        </Link>
+        <Link to="/request" style={{color:'inherit', textDecorationLine:'none'}}>
+  <Button variant="contained" style={{backgroundColor:'#27374D'}}>Request</Button>
+</Link>
+&nbsp;&nbsp;&nbsp;
+<Link to="/report" style={{color:'inherit', textDecorationLine:'none'}}>
+  <Button style={{borderColor:'#27374D',color:'#27374D'}}>Report</Button>
+</Link>
+
 </ButtonGroup>
       <div>
       <br></br>
@@ -86,7 +87,7 @@ export default function Requestmain() {
           multiline
           onChange={(e) => setDesc(e.target.value)}
           maxRows={7}  />
-        <Button style={{ alignSelf: 'flex-start' , marginLeft: "10px"}} variant="contained" onClick={SubmitEvent}>Submit</Button>
+        <Button style={{ alignSelf: 'flex-start' , marginLeft: "10px",backgroundColor:'#27374D'}} variant="contained" onClick={SubmitEvent}>Submit</Button>
         
     </Box>
       </div>

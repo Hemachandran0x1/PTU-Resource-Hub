@@ -34,13 +34,13 @@ export default function Reportmain() {
       <Stack spacing={2}>
         <Item className='request_top'>
         <div >
-        <ButtonGroup variant="outlined" aria-label="outlined button group">
+        <ButtonGroup variant="outlined" aria-label="outlined button group" >
         <Link to="/request" style={{color:'inherit',textDecorationLine:'none'}}>
-          <Button>Request</Button>
+          <Button style={{borderColor: '#27374D',color:'#27374D'}}>Request</Button>
         </Link>
         &nbsp;&nbsp;&nbsp;
         <Link to="/report" style={{color:'inherit',textDecorationLine:'none'}}>
-          <Button variant="contained">Report</Button>
+          <Button variant="contained" style={{backgroundColor:'#27374D'}}>Report</Button>
         </Link>
       </ButtonGroup>
       
@@ -64,7 +64,7 @@ export default function Reportmain() {
           multiline
           maxRows={7}
         />
-        <Button style={{ alignSelf: 'flex-start' , marginLeft: "10px"}} variant="contained" onClick={SubmitEvent}>Submit</Button>
+        <Button style={{ alignSelf: 'flex-start' , marginLeft: "10px",backgroundColor:'#27374D'}} variant="contained" onClick={SubmitEvent}>Submit</Button>
     </Box>
       </div>
 

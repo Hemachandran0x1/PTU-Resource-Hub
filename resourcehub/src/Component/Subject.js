@@ -116,7 +116,7 @@ export default function Subject() {
                 </StyledTableCell>
                 <StyledTableCell>{row.subjectcode}</StyledTableCell>
                 <StyledTableCell ><a href={row.syllabus} target='_blank' rel="noreferrer" >{row.syllabus}</a></StyledTableCell>
-                <StyledTableCell><Button variant='contained' color='primary' onClick={()=>handleclick(row.id)}>Explore</Button></StyledTableCell>
+                <StyledTableCell><Button variant='contained' className='icon' color='primary' onClick={()=>handleclick(row.id)}>Explore</Button></StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
