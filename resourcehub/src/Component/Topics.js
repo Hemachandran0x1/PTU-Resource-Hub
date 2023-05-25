@@ -11,7 +11,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-
+import { useLocation } from 'react-router';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -60,6 +62,13 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     color: theme.palette.text.secondary,
   }));
 export default function Topics() {
+  const location = useLocation()
+  useEffect(()=>
+  {
+    
+    console.log(location)
+    
+  },[])
   return (
     <div>
     <Grid container>
@@ -103,7 +112,7 @@ export default function Topics() {
           </TableBody>
         </Table>
       </TableContainer><br></br>
-<h2>PLaylist:</h2>
+<h2>Playlist:</h2>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead>

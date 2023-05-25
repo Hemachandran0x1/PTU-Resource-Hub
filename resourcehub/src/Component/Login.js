@@ -47,9 +47,12 @@ export default function Login() {
     Apicalls.Login(data.get('email'),data.get('password')).then(response => {
       const { id, name, email,password,departmenid,semesterid, role } = response.data;
       ReactSession.set("username",name)
+      ReactSession.set("userid",id)
+
       setLoggedin(true)}) .catch(error => {
         //handleLogError(error)
         const error1=error;
+        console.log(error)
        // console.log("WEAFADASDFAS")
        // console.log(data);
       })

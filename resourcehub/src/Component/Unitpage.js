@@ -16,8 +16,10 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
-
-
+import { Apicalls } from './Apicalls';
+import { useState,useEffect } from 'react';
+import { useLocation } from 'react-router';
+import { useNavigate } from 'react-router';
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
       backgroundColor: theme.palette.common.black,
@@ -37,25 +39,6 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
       border: 0,
     },
   }));
-  function createData(
-    name,
-    request,
-    status
-  ) {
-    return { name, request ,status };
-  }
-  
-  const rows = [
-    createData('lorem ipsum' ),
-    createData('lorem ipsum' ),
-    createData('lorem ipsum' ),
-    createData('lorem ipsum' ),
-    createData('lorem ipsum'),
-    createData('lorem ipsum' ),
-    createData('lorem ipsum'),
-    createData('lorem ipsum' ),
-    createData('lorem ipsum' )
-  ];
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
@@ -65,7 +48,51 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   }));
   
   
-function Unitpage() {
+function Unitpage(props) {
+  const [topic1,setTopic1]=useState([{}])
+  const [topic2,setTopic2]=useState([{}])
+  const [topic3,setTopic3]=useState([{}])
+  const [topic4,setTopic4]=useState([{}])
+  const [topic5,setTopic5]=useState([{}])
+  const location =useLocation()
+  const navigate=useNavigate()
+  const handleclick=(id)=>{
+    navigate("/topics",{state:{"topicid":id},});
+  }
+  React.useEffect(()=>
+  {
+    getTopics();
+    console.log(location)
+    
+  },[])
+  const getTopics=()=>
+  { const sid =location.state.subjectid
+    Apicalls.getTopicsByunit(sid,1).then(response=>response.data
+      ).then(data=>{
+        console.log(data)
+        setTopic1(data)
+      },(e)=>console.log(e))
+    Apicalls.getTopicsByunit(1,2).then(response=>response.data
+      ).then(data=>{
+        console.log(data)
+        setTopic2(data)
+      },(e)=>console.log(e))
+    Apicalls.getTopicsByunit(1,3).then(response=>response.data
+      ).then(data=>{
+        console.log(data)
+        setTopic3(data)
+      },(e)=>console.log(e))
+    Apicalls.getTopicsByunit(1,4).then(response=>response.data
+      ).then(data=>{
+        console.log(data)
+        setTopic4(data)
+      },(e)=>console.log(e))
+    Apicalls.getTopicsByunit(1,5).then(response=>response.data
+      ).then(data=>{
+        console.log(data)
+        setTopic5(data)
+      },(e)=>console.log(e))
+  }
   return (
     <div>
     <Grid container>
@@ -89,8 +116,8 @@ function Unitpage() {
         <AccordionDetails>
       
       <Stack spacing={2}>
-        <Item>
-        <div className='request_top'>
+        <Item className='request_top'>
+        <div >
                 <h1>Select Topics to Learn</h1>
                 </div>
                 </Item>
@@ -105,13 +132,14 @@ function Unitpage() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
-              <StyledTableRow key={row.name}>
+            {topic1 && topic1.map && topic1.map((row,i) => (
+             
+              <StyledTableRow >
                 <StyledTableCell component="th" scope="row">
-                  {row.name}
+                  {row.topicname}
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary'>Learn
+                  <Button variant='contained' color='primary' onClick={()=>handleclick(row.id)}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>
@@ -137,8 +165,8 @@ function Unitpage() {
         <AccordionDetails>
            
       <Stack spacing={2}>
-        <Item>
-        <div className='request_top'>
+        <Item  className='request_top'>
+        <div >
                 <h1>Select Topics to Learn</h1>
                 </div>
                 </Item>
@@ -153,13 +181,14 @@ function Unitpage() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
-              <StyledTableRow key={row.name}>
+            {topic2 && topic2.map && topic2.map((row,i)  => (
+
+              <StyledTableRow>
                 <StyledTableCell component="th" scope="row">
-                  {row.name}
+                {row.topicname}
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary'>Learn
+                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>
@@ -184,8 +213,8 @@ function Unitpage() {
         <AccordionDetails>
            
       <Stack spacing={2}>
-        <Item>
-        <div className='request_top'>
+        <Item className='request_top'>
+        <div >
                 <h1>Select Topics to Learn</h1>
                 </div>
                 </Item>
@@ -200,13 +229,13 @@ function Unitpage() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
-              <StyledTableRow key={row.name}>
+            {topic3 && topic3.map && topic3.map((row,i)  => (
+              <StyledTableRow >
                 <StyledTableCell component="th" scope="row">
-                  {row.name}
+                {row.topicname}
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary'>Learn
+                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>
@@ -230,8 +259,8 @@ function Unitpage() {
         </AccordionSummary>
         <AccordionDetails>
         <Stack spacing={2}>
-        <Item>
-        <div className='request_top'>
+        <Item className='request_top'>
+        <div >
                 <h1>Select Topics to Learn</h1>
                 </div>
                 </Item>
@@ -246,13 +275,13 @@ function Unitpage() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
-              <StyledTableRow key={row.name}>
+            {topic4 && topic4.map && topic4.map((row,i)  => (
+              <StyledTableRow>
                 <StyledTableCell component="th" scope="row">
-                  {row.name}
+                {row.topicname}
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary'>Learn
+                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>
@@ -276,8 +305,8 @@ function Unitpage() {
         </AccordionSummary>
         <AccordionDetails>
         <Stack spacing={2}>
-        <Item>
-        <div className='request_top'>
+        <Item className='request_top'>
+        <div >
                 <h1>Select Topics to Learn</h1>
                 </div>
                 </Item>
@@ -292,13 +321,13 @@ function Unitpage() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
-              <StyledTableRow key={row.name}>
+            {topic5 && topic5.map && topic5.map((row,i)  => (
+              <StyledTableRow >
                 <StyledTableCell component="th" scope="row">
-                  {row.name}
+                {row.topicname }
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary'>Learn
+                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>

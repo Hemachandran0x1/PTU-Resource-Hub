@@ -13,10 +13,11 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Sidebar from './Sidebar';
+import {Button} from '@mui/material'
 import Search from './Search';
 import { useState } from 'react';
 import '../Styles/Subject.css'
-
+import { Apicalls } from './Apicalls';
 import { ReactSession } from 'react-client-session';
 import { useNavigate } from 'react-router';
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -38,25 +39,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
       border: 0,
     },
   }));
-  
-  function createData(
-    subject,
-    code
-  ) {
-    return { subject, code};
-  }
-  
-  const rows = [
-    createData('Gokul','lorem ipsum'),
-    createData('Gokul2','lorem ipsum'),
-    createData('Gokul3','lorem ipsum'),
-    createData('Gokul4','lorem ipsum'),
-    createData('Gokul5','lorem ipsum'),
-    createData('Gokul6','lorem ipsum'),
-    createData('Gokul7','lorem ipsum'),
-    createData('Gokul8','lorem ipsum'),
-    createData('Gokul9','lorem ipsum')
-  ];
+
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
@@ -67,15 +50,36 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   
 export default function Subject() {
   const navigate = useNavigate();
+  const [subject,setSubject]=useState([{}])
+  const [sid1,setSid1]=useState(null)
+ 
+  
+    React.useEffect(()=>
+    {
+      getSubjects();
+    },[])
+    const getSubjects=()=>
+    {
+      Apicalls.getSubjects().then(response=>response.data
+        ).then(data=>{
+          console.log(data)
+          setSubject(data)
+        },(e)=>console.log(e))
+    }
+    const handleclick=(sid)=>
+    { setSid1(sid)
+      console.log(sid)
+      navigate("/unit",{state:{"subjectid":sid},});
 
-  //const name=ReactSession.get("username");
- // const name =null        
-  //if(name==null)
-  //{
-  //    navigate("/login")
-  //}
-  //else{
-    return (
+    }
+    const name=ReactSession.get("username");
+       
+    if(name==null)
+    {
+       navigate("/login")
+    }
+    else
+    {return (
 
     <div>
       <Grid container>
@@ -99,16 +103,20 @@ export default function Subject() {
           <TableHead>
             <TableRow>
               <StyledTableCell>Subject</StyledTableCell>
-              <StyledTableCell align="center">Code</StyledTableCell>
+              <StyledTableCell>Code</StyledTableCell>
+              <StyledTableCell>Syllabus</StyledTableCell>
+              <StyledTableCell></StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
-              <StyledTableRow key={row.subject}>
-                <StyledTableCell component="th" scope="row">
-                  {row.subject}
+            {subject && subject.map && subject.map((row,i) => (
+              <StyledTableRow key={i}>
+                <StyledTableCell >
+                  {row.subjectname} 
                 </StyledTableCell>
-                <StyledTableCell align="left">{row.code}</StyledTableCell>
+                <StyledTableCell>{row.subjectcode}</StyledTableCell>
+                <StyledTableCell ><a href={row.syllabus} target='_blank' rel="noreferrer" >{row.syllabus}</a></StyledTableCell>
+                <StyledTableCell><Button variant='contained' color='primary' onClick={()=>handleclick(row.id)}>Explore</Button></StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
@@ -125,5 +133,6 @@ export default function Subject() {
       <br></br>
       <br></br>
     </div>
-  )}
+  )}}
 
+//  navigate("/credentials",{state:{"name":name,"email":email,"password":password},});

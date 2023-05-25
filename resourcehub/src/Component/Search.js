@@ -9,12 +9,15 @@ import '../Styles/Search.css';
 import { ReactSession } from 'react-client-session';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
+
 export default function Search() {
   const [loggedout,setLoggedout]=useState(false);
+  const navigate =useNavigate()
   const handleLogout = ()=>
   {
     ReactSession.set("username",null);
     setLoggedout(true);
+    navigate("/login")
   }
   
   return (
@@ -39,9 +42,9 @@ export default function Search() {
         />
         </div>
         <div className='search_button'>
-        <Button className='icon' onClick={handleLogout} variant="contained" startIcon={<SearchIcon/>}>
+        <Button className='icon'  variant="contained" startIcon={<SearchIcon/>}>
 </Button>
-<Button className='icon' variant="contained" startIcon={<LogoutIcon />}>
+<Button className='icon' variant="contained" onClick={()=>handleLogout()} startIcon={<LogoutIcon />}>
   Logout
 </Button>
         </div>
