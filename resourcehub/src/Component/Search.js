@@ -36,6 +36,7 @@ export default function Search() {
           label="What do you want to learn today?"
           multiline
           maxRows={4}
+          style={{backgroundColor:'#ffffff'}}
         />
         </div>
         <div className='search_button'>
