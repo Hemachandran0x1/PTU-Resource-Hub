@@ -4,7 +4,7 @@
 }
 .request_top{
     position: relative; 
-    background: linear-gradient(to right bottom, #244624, white);
+    background-color: #f5e7bc!important;
 }
 .request_bottom{
     display: flex;

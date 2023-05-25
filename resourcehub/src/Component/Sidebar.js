@@ -16,7 +16,7 @@ function Sidebar() {
     <div className='sidebarstyle' >
     <Drawer  PaperProps={{
               sx: {
-               backgroundColor: "#2a280d",
+               backgroundColor: "#163592",
                 color: "white"
               }
             }}
@@ -38,7 +38,7 @@ function Sidebar() {
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <HomeIcon/> 
+                  <HomeIcon /> 
                 </ListItemIcon>
                <ListItemText primary="Home" />
               </ListItemButton>
