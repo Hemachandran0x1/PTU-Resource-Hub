@@ -26,7 +26,7 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background-color: red;
+    background-color: #27374D;
 }
 .container {
     position: relative;
@@ -36,8 +36,15 @@ body {
     overflow:hidden;
 
   }
-.bac{
-    background-image: url('white-grid-png-3.png');
-    background-repeat: repeat;
-    background-size: cover;
-}
+/* .bac{
+    background-image: url('https://cdn.pixabay.com/photo/2022/03/23/07/40/technology-7086601_1280.jpg');
+    background-repeat: no-repeat;
+    background-size: 50%;
+} */
+/* .bac2{
+    background-image: url('https://cdn.pixabay.com/photo/2019/10/15/12/04/office-4551450_1280.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: bottom;
+    
+} */
