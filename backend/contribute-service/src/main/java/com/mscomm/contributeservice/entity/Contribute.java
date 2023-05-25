@@ -21,7 +21,5 @@ public class Contribute {
 	  private Long topicid;
 	  private String url;
 	  private int approve;
-	  
-	  
-	  
+	  	  
 }

@@ -2,11 +2,23 @@
     background-color: brown ;
     
 } */
-body{
-    background-color: #f8efd3!important;
+body {
+    background-color: #DDE6ED !important;
+    position: relative;
+  }
+  
+  body::before {
+    background-size: cover;
+    background-repeat: no-repeat;
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
     background-image: url('white-grid-png-3.png');
-    background-repeat:repeat;
-    background-size:cover;}
+    opacity: 0.2;
+    z-index: -1;
+  }
+  
 .highlight{
     position:fixed;
     top: 0px;

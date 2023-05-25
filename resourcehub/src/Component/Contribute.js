@@ -74,8 +74,8 @@ export default function Contribute() {
       <Stack spacing={2}>
         <Item className='request_top'>
         <div >
-        <h1> Hey Geeks!</h1>
-                <h1> Contribute any new material here! ↓</h1>
+        <h1 style={{fontSize:'50px'}}> Hey Geeks!</h1>
+                <h1 style={{fontSize:'30px'}}> Contribute any new material here! ↓</h1>
                 <TextField id="standard-basic" label="Subject" variant="standard" inputProps={{
     style: {
       width: "500px",

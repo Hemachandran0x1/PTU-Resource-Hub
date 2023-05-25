@@ -45,7 +45,7 @@ export default function Reportmain() {
       </ButtonGroup>
       
       <div>
-        <h1>Report any mismatched or outdated material here</h1>
+        <h1 style={{fontSize:'45px'}}>Report any mismatched or outdated material here</h1>
         <Box  
       component="form" style={{ display: 'flex', flexDirection: 'column' }}
       sx={{
