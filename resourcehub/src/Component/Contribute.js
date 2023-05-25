@@ -5,8 +5,12 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
+import Paper from '@mui/material/Paper';
 import FormLabel from '@mui/material/FormLabel';
+import Stack from '@mui/material/Stack';
 import '../Styles/contribute.css'
+import '../Styles/Request.css'
+
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import { Box } from '@mui/material';
@@ -49,65 +53,78 @@ const BootstrapButton = styled(Button)({
     },
   });
 
-class Contribute extends Component {
-    constructor(props) {
-        super(props);
-    }
-    state = {  }
-    render() { 
-        return ( 
-          <Grid container>
-          <Grid xs={3}>
-                <Sidebar/></Grid>
-          <Grid xs={9}> 
-          <Search/>
-            <div>
-                      <h1> Hey Geeks!</h1>
-                      <h1> Contribute any new material here! ↓</h1>
-                      <TextField id="standard-basic" label="Subject" variant="standard" inputProps={{
-          style: {
-            width: "500px",
-          },
-        }}/><br></br><br></br>
-                      <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label">Unit</FormLabel>
-      <RadioGroup
-        row
-        aria-labelledby="demo-row-radio-buttons-group-label"
-        name="row-radio-buttons-group"
-      >
-        <FormControlLabel value="I" control={<Radio />} label="I" />
-        <FormControlLabel value="II" control={<Radio />} label="II" />
-        <FormControlLabel value="III" control={<Radio />} label="III" />
-        <FormControlLabel value="IV" control={<Radio />} label="IV" />
-        <FormControlLabel value="V" control={<Radio />} label="V" />
-        
-      </RadioGroup>
-    </FormControl><br></br>
-                      <TextField id="standard-basic" label="Topic" variant="standard" inputProps={{
-          style: {
-            width: "500px",
-          },
-        }}/><br></br><br></br>
-                      <TextField id="standard-basic" label="Topic Name" variant="standard" inputProps={{
-          style: {
-            width: "500px",
-          },
-        }}/><br></br><br></br>
-                      <TextField id="standard-basic" label="Url" variant="standard" inputProps={{
-          style: {
-            width: "500px",
-          },
-        }} /><br></br><br></br><br></br>
+  const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  }));
+  
+export default function Contribute() {
+  return (
+    <div>
+    <Grid container>
+    <Grid xs={3}>
+          <Sidebar/></Grid>
+    <Grid xs={9}> 
+    <Search/>
+    <div className='request_main'>
+            <Box sx={{ width: '87%' }}>
+      <Stack spacing={2}>
+        <Item className='request_top'>
+        <div >
+        <h1> Hey Geeks!</h1>
+                <h1> Contribute any new material here! ↓</h1>
+                <TextField id="standard-basic" label="Subject" variant="standard" inputProps={{
+    style: {
+      width: "500px",
+    },
+  }}/><br></br><br></br>
+                <FormControl>
+<FormLabel id="demo-row-radio-buttons-group-label">Unit</FormLabel>
+<RadioGroup
+  row
+  aria-labelledby="demo-row-radio-buttons-group-label"
+  name="row-radio-buttons-group"
+>
+  <FormControlLabel value="I" control={<Radio />} label="I" />
+  <FormControlLabel value="II" control={<Radio />} label="II" />
+  <FormControlLabel value="III" control={<Radio />} label="III" />
+  <FormControlLabel value="IV" control={<Radio />} label="IV" />
+  <FormControlLabel value="V" control={<Radio />} label="V" />
+  
+</RadioGroup>
+</FormControl><br></br>
+                <TextField id="standard-basic" label="Topic" variant="standard" inputProps={{
+    style: {
+      width: "500px",
+    },
+  }}/><br></br><br></br>
+                <TextField id="standard-basic" label="Topic Name" variant="standard" inputProps={{
+    style: {
+      width: "500px",
+    },
+  }}/><br></br><br></br>
+                <TextField id="standard-basic" label="Url" variant="standard" inputProps={{
+    style: {
+      width: "500px",
+    },
+  }} /><br></br><br></br><br></br>
 
 <BootstrapButton variant="contained" disableRipple>
-        Submit
-      </BootstrapButton>
+  Submit
+</BootstrapButton>
                 </div>
-        </Grid>
-        </Grid>
-        );
-    }
+                </Item>
+                </Stack>
+                </Box>
+          </div>
+
+  </Grid>
+  
+  </Grid>
+  </div>
+  )
 }
- 
-export default Contribute;
+
