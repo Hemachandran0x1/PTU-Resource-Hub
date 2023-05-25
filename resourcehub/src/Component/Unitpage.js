@@ -66,7 +66,13 @@ function Unitpage(props) {
     
   },[])
   const getTopics=()=>
-  { const sid =location.state.subjectid
+  { var sid
+    if(location.state.subjectid != null)
+    { sid =location.state.subjectid}
+    else
+    {
+      sid=2
+    }
     Apicalls.getTopicsByunit(sid,1).then(response=>response.data
       ).then(data=>{
         console.log(data)

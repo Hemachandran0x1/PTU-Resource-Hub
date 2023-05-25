@@ -19,7 +19,9 @@ export const Apicalls = {
         getSubjects,
         getTopics,
         getTopicsByunit,
-        getContents
+        getContents,
+        addRequest,
+        getRequests
 }
 function Signup(user)
 {
@@ -56,6 +58,16 @@ function getTopicsByunit(sid,unit)
 function getContents(topicid,type)
 {
   return instance2.get(`/api/contents/topic/${topicid}/type/${type}`)
+}
+function getRequests()
+{
+  return instance3.get('/api/requests')
+}
+function addRequest(req)
+{
+    return instance3.post('/api/requests', req, {
+        headers: { 'Content-type': 'application/json' }
+      })
 }
 const instance = axios.create({
     baseURL: config.url.API_BASE_URL

@@ -56,8 +56,10 @@ export default function Topics() {
     
   },[])
 const getallContents=()=>
-{
-  const topic = location.state.topicid
+{ var topic;
+  if(location.state.topicid != null)
+  { topic = location.state.topicid}
+  
   Apicalls.getContents(topic,0).then(response=>response.data
     ).then(data=>{
       console.log(data)
@@ -159,7 +161,7 @@ const getallContents=()=>
                   {row.name}
                 </StyledTableCell>
                 <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
-                <StyledTableCell align="center"><Button variant='contained' color='primary'>Bookmark
+                <StyledTableCell ><Button variant='contained' color='primary'>Bookmark
                   </Button></StyledTableCell>
               </StyledTableRow>
             ))}

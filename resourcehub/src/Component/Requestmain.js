@@ -11,7 +11,10 @@ import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import { Link } from 'react-router-dom';
 import Search from './Search'
-
+import { Apicalls } from './Apicalls';
+import { useState } from 'react';
+import { ReactSession } from 'react-client-session';
+import { useNavigate } from 'react-router-dom';
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
@@ -21,6 +24,27 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function Requestmain() {
+  const [desc,setDesc]=useState("")
+  const [status,setStatus]=useState("")
+  const navigate = useNavigate()
+  const SubmitEvent = ()=>
+  {
+    const uid =ReactSession.get("userid")
+    const req={
+      "userid":uid,
+      "requestdesc":desc
+    }
+    Apicalls.addRequest(req).then(response => {
+      setStatus("done")
+      console.log(response)
+      navigate("/submit_request")
+    }) .catch(error => {
+        
+        const error1=error;
+        console.log(error)
+      });
+  
+  }
   return (
     
             
@@ -60,7 +84,8 @@ export default function Requestmain() {
           id="outlined-multiline-flexible"
           label="Type your request here"
           multiline
-          maxRows={7}        />
+          onChange={(e) => setDesc(e.target.value)}
+          maxRows={7}  />
         <Button style={{ alignSelf: 'flex-start' , marginLeft: "10px"}} variant="contained" onClick={SubmitEvent}>Submit</Button>
         
     </Box>

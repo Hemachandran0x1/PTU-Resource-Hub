@@ -16,7 +16,8 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Sidebar from './Sidebar';
 import Search from './Search';
-
+import { Apicalls } from './Apicalls';
+import { useState,useEffect } from 'react';
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
       backgroundColor: theme.palette.common.black,
@@ -65,6 +66,20 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   }));
   
 export default function Request() {
+  const [req,setReq]=useState([{}])
+  const [user,setUser]=useState("")
+  useEffect(()=>
+  {
+    getallRequests()
+    Apicalls.getRequests().then(response=>response.data
+      ).then(data=>{
+        console.log(data)
+        setReq(data)
+      },(e)=>console.log(e))
+  },[])
+  const getallRequests = ()=>{
+
+  }
   return (
             
     <div>
@@ -89,18 +104,19 @@ export default function Request() {
           <TableHead>
             <TableRow>
               <StyledTableCell>Name</StyledTableCell>
-              <StyledTableCell align="center">Request</StyledTableCell>
+              <StyledTableCell align="center">User</StyledTableCell>
               <StyledTableCell align="center">Status</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
-              <StyledTableRow key={row.name}>
+            {req && req.map && req.map((row) => (
+              <StyledTableRow >
                 <StyledTableCell component="th" scope="row">
-                  {row.name}
+                  {row.requestdesc}
                 </StyledTableCell>
-                <StyledTableCell align="left">{row.request}</StyledTableCell>
-                <StyledTableCell align="center">{row.status}</StyledTableCell>
+                <StyledTableCell align="center">{row.userid}</StyledTableCell>
+                <StyledTableCell align="center">Pending</StyledTableCell>
+
               </StyledTableRow>
             ))}
           </TableBody>
