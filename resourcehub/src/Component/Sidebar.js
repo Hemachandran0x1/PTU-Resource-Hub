@@ -9,14 +9,14 @@ import TocIcon from '@mui/icons-material/Toc';
 import '@fontsource/fira-sans/600.css';
 import '../Styles/Sidebar.css'
 
-const drawerWidth = 240;
+const drawerWidth = 269;
 
 function Sidebar() {
   return ( 
     <div className='sidebarstyle' >
     <Drawer  PaperProps={{
               sx: {
-               backgroundColor: "#163592",
+               backgroundColor: "#27374D",
                 color: "white"
               }
             }}

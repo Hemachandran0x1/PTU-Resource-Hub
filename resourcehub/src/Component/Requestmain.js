@@ -71,7 +71,7 @@ export default function Requestmain() {
 </ButtonGroup>
       <div>
       <br></br>
-      <h1>Request your material below</h1>
+      <h1 style={{fontSize:'45px'}}>Request your material below</h1>
       <Box  
       component="form" style={{ display: 'flex', flexDirection: 'column' }}
       sx={{
