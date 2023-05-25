@@ -59,15 +59,23 @@ if(register)
 }
   return (
 <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs" sx={{ backgroundColor: '#e03c3c' }}>
+<div className='bac'>
+<div className='container'>
+<div className='highlight'>
+<h1 style={{marginLeft:'65px',marginBottom:'-5px'}}>PTU</h1>
+<h1 style={{marginLeft:'12px',marginBottom:'-5px',marginTop:'-5px'}}>RESOURCE</h1>
+<h1 style={{marginLeft:'64px',marginTop:'-5px'}}>HUB</h1>
+</div>
+</div>
+      <Container component="main" maxWidth="xs" sx={{ backgroundColor: '#ffffff' }}>
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 8,
+            marginTop: -5,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            backgroundColor: '#e03c3c',
+            backgroundColor: '#ffffff',
             padding: '20px',
             borderRadius: '5px',
             boxSizing:'unset',
@@ -142,6 +150,7 @@ if(register)
         </Box>
         <Copyright sx={{ mt: 5 }} />
       </Container>
+      </div>
     </ThemeProvider>
     
   );

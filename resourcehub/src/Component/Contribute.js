@@ -96,7 +96,7 @@ class Contribute extends Component {
         }}/><br></br><br></br>
                       <TextField id="standard-basic" label="Url" variant="standard" inputProps={{
           style: {
-            width: "950px",
+            width: "500px",
           },
         }} /><br></br><br></br><br></br>
 

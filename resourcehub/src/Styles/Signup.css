@@ -1,10 +1,26 @@
-.design{
+/* .design{
     background-color: brown ;
     
-}
+} */
 body{
-    background-color: #b05f6d!important;
-    background: linear-gradient(to right bottom, #b05f6d,#462446);
-    background-repeat: no-repeat;
-    background-size:contain;
+    background-color: #f8efd3!important;
+    background-repeat:no-repeat;
+    background-size:cover;
 }
+.highlight{
+    position:fixed;
+    top: -10px;
+    left: -10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: red;
+}
+.container {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    margin-left: 10px;
+    overflow:hidden;
+
+  }
