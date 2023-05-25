@@ -21,6 +21,9 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function Reportmain() {
+let optionsDepartment=[];
+let optionsSemester=[] ;
+let optionsUnit=[];
   return (
     <Grid container>
       <Grid xs={3}>
