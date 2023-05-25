@@ -18,7 +18,8 @@ export const Apicalls = {
         getSems,
         getSubjects,
         getTopics,
-        getTopicsByunit
+        getTopicsByunit,
+        getContents
 }
 function Signup(user)
 {
@@ -51,6 +52,10 @@ function getTopics()
 function getTopicsByunit(sid,unit)
 {
   return instance1.get(`/api/topics/subject/${sid}/unit/${unit}`)
+}
+function getContents(topicid,type)
+{
+  return instance1.get(`/api/contents/topic/${topicid}/type/${type}`)
 }
 const instance = axios.create({
     baseURL: config.url.API_BASE_URL

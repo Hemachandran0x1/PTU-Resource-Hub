@@ -14,7 +14,7 @@ import Paper from '@mui/material/Paper';
 import { useLocation } from 'react-router';
 import { useState } from 'react';
 import { useEffect } from 'react';
-
+import { Apicalls } from './Apicalls';
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
       backgroundColor: theme.palette.common.black,
@@ -35,25 +35,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     },
   }));
   
-  function createData(
-    name,
-    request,
-    status
-  ) {
-    return { name, request ,status };
-  }
-  
-  const rows = [
-    createData('Gokul','lorem ipsum','Pending' ),
-    createData('Cegil','lorem ipsum','Approved' ),
-    createData('Hems','lorem ipsum','Pending' ),
-    createData('Gokul','lorem ipsum','Pending' ),
-    createData('Cegil','lorem ipsum','Approved' ),
-    createData('Hems','lorem ipsum','Pending' ),
-    createData('Gokul','lorem ipsum','Pending' ),
-    createData('Cegil','lorem ipsum','Approved' ),
-    createData('Hems','lorem ipsum','Pending' )
-  ];
+ 
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
@@ -63,12 +45,29 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   }));
 export default function Topics() {
   const location = useLocation()
+  const [textbased,setTextbased]=useState([{}])
+  const [video,setVideo]=useState([{}])
+  const [material,setMaterial]=useState([{}])
   useEffect(()=>
   {
-    
+    getallContents()
     console.log(location)
     
   },[])
+const getallContents=()=>
+{
+  const topic = location.state.topicid
+  Apicalls.getContents(topic,0).then(response=>response.data
+    ).then(data=>{
+      console.log(data)
+      textbased(data)
+    },(e)=>console.log(e))
+  Apicalls.getContents(topic,1).then(response=>response.data
+    ).then(data=>{
+      console.log(data)
+      video(data)
+    },(e)=>console.log(e))
+}
   return (
     <div>
     <Grid container>
@@ -96,17 +95,17 @@ export default function Topics() {
             <TableRow>
               <StyledTableCell>Name</StyledTableCell>
               <StyledTableCell align="center">Url</StyledTableCell>
-              <StyledTableCell align="center">Contributors</StyledTableCell>
+              <StyledTableCell align="center"></StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
-              <StyledTableRow key={row.name}>
+            {textbased.map((row) => (
+              <StyledTableRow>
                 <StyledTableCell component="th" scope="row">
                   {row.name}
                 </StyledTableCell>
-                <StyledTableCell align="center">{row.request}</StyledTableCell>
-                <StyledTableCell align="center">{row.status}</StyledTableCell>
+                <StyledTableCell align="center">{row.url}</StyledTableCell>
+                <StyledTableCell align="center"></StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
@@ -122,13 +121,13 @@ export default function Topics() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
-              <StyledTableRow key={row.name}>
+            {video.map((row) => (
+              <StyledTableRow >
                 <StyledTableCell component="th" scope="row">
                   {row.name}
                 </StyledTableCell>
-                <StyledTableCell align="left">{row.request}</StyledTableCell>
-                <StyledTableCell align="center">{row.status}</StyledTableCell>
+                <StyledTableCell align="left">{row.url}</StyledTableCell>
+                <StyledTableCell align="center"></StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>

@@ -105,13 +105,13 @@ function Unitpage(props) {
    <div>
    <Grid container marginTop={10}>
     <Grid xs='10'>
-      <Accordion defaultExpanded='true'>
+      <Accordion defaultExpanded='true' style={{backgroundColor:'#f5e7bc'}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Unit 1</Typography>
+          <Typography style={{fontSize:'30px'}}>Unit 1</Typography>
         </AccordionSummary>
         <AccordionDetails>
       
@@ -154,22 +154,25 @@ function Unitpage(props) {
     
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion style={{backgroundColor:'#f5e7bc'}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Unit 2</Typography>
+          <Typography style={{fontSize:'30px'}}>Unit 2</Typography>
         </AccordionSummary>
         <AccordionDetails>
            
       <Stack spacing={2}>
+<<<<<<< HEAD
         <Item  className='request_top'>
         <div >
                 <h1>Select Topics to Learn</h1>
                 </div>
                 </Item>
+=======
+>>>>>>> ea8777627af12035ae7972aca141bc39656823bd
         <Item>
         <div className='request_bottom'>
                 <TableContainer component={Paper}>
@@ -202,22 +205,25 @@ function Unitpage(props) {
       </Stack>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion style={{backgroundColor:'#f5e7bc'}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Unit 3</Typography>
+          <Typography style={{fontSize:'30px'}}>Unit 3</Typography>
         </AccordionSummary>
         <AccordionDetails>
            
       <Stack spacing={2}>
+<<<<<<< HEAD
         <Item className='request_top'>
         <div >
                 <h1>Select Topics to Learn</h1>
                 </div>
                 </Item>
+=======
+>>>>>>> ea8777627af12035ae7972aca141bc39656823bd
         <Item>
         <div className='request_bottom'>
                 <TableContainer component={Paper}>
@@ -249,21 +255,24 @@ function Unitpage(props) {
       </Stack>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion style={{backgroundColor:'#f5e7bc'}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Unit 4</Typography>
+          <Typography style={{fontSize:'30px'}}>Unit 4</Typography>
         </AccordionSummary>
         <AccordionDetails>
         <Stack spacing={2}>
+<<<<<<< HEAD
         <Item className='request_top'>
         <div >
                 <h1>Select Topics to Learn</h1>
                 </div>
                 </Item>
+=======
+>>>>>>> ea8777627af12035ae7972aca141bc39656823bd
         <Item>
         <div className='request_bottom'>
                 <TableContainer component={Paper}>
@@ -295,21 +304,24 @@ function Unitpage(props) {
       </Stack>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion style={{backgroundColor:'#f5e7bc'}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Unit 5</Typography>
+          <Typography style={{fontSize:'30px'}}>Unit 5</Typography>
         </AccordionSummary>
         <AccordionDetails>
         <Stack spacing={2}>
+<<<<<<< HEAD
         <Item className='request_top'>
         <div >
                 <h1>Select Topics to Learn</h1>
                 </div>
                 </Item>
+=======
+>>>>>>> ea8777627af12035ae7972aca141bc39656823bd
         <Item>
         <div className='request_bottom'>
                 <TableContainer component={Paper}>

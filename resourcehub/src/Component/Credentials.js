@@ -3,9 +3,13 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import Select from 'react-select';
 import {Button} from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { Box } from '@mui/material';
+import Paper from '@mui/material/Paper';
 import { Apicalls } from './Apicalls';
 import { useLocation } from 'react-router';
 import { ReactSession } from 'react-client-session';
+import '../Styles/Signup.css'
 
 import { useMemo } from 'react';
 /*const options = [
@@ -15,6 +19,13 @@ import { useMemo } from 'react';
 ]*/
 let optionsDepartment=[];
 let optionsSemester=[] ;
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
 function Credentials(props) {
   const location =useLocation();
     const [sem,setSem]=useState([{}]);
@@ -79,15 +90,26 @@ function Credentials(props) {
     else
     {return (
       <div >
+   
+        <Grid container>
+            <Grid item xs={3}>
+<div className='container'>
+<div className='highlight'>
+<h1 style={{marginLeft:'65px',marginBottom:'-5px'}}>PTU</h1>
+<h1 style={{marginLeft:'12px',marginBottom:'-5px',marginTop:'-5px'}}>RESOURCE</h1>
+<h1 style={{marginLeft:'64px',marginTop:'-5px'}}>HUB</h1>
+</div>
+</div>
+              </Grid>
+            <Grid item xs={7}>            
+            <Box sx={{ width: '80%' }} >
+      <Stack spacing={2}>
+        <Item className='request_top' style={{borderRadius:'42px',marginTop:'150px',marginLeft:'20px'}}>
+        <div >
+        <br></br>
         <Typography variant='h4' m={5} align='center'>
                 Select Your Credentials
         </Typography>
-   
-        <Grid container>
-            <Grid item xs={4}>
-
-            </Grid>
-            <Grid item xs={4}>
               <Stack m={5} spacing={6}>    
                    <Select className="selectbox" 
                 placeholder='Department'
@@ -112,7 +134,10 @@ function Credentials(props) {
             >
               Submit
             </Button>
-            
+                </div>
+                </Item>
+                </Stack>
+                </Box>            
             </Grid>
             <Grid item xs={4}>
 

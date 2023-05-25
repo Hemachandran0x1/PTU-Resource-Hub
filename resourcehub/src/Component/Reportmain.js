@@ -8,6 +8,18 @@ import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import { Link } from 'react-router-dom';
 import Search from './Search';
+import { styled } from '@mui/material/styles';
+import Stack from '@mui/material/Stack';
+import { Paper } from '@mui/material';
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign:'left',
+  color: theme.palette.text.secondary,
+}));
+
 export default function Reportmain() {
   return (
     <Grid container>
@@ -16,7 +28,13 @@ export default function Reportmain() {
       <Grid xs={9}>
         <Search/>
     <br></br>
-      <ButtonGroup variant="outlined" aria-label="outlined button group">
+    <div className='request_main'>
+            
+            <Box sx={{ width: '87%' }}>
+      <Stack spacing={2}>
+        <Item className='request_top'>
+        <div >
+        <ButtonGroup variant="outlined" aria-label="outlined button group">
         <Link to="/request" style={{color:'inherit',textDecorationLine:'none'}}>
           <Button>Request</Button>
         </Link>
@@ -51,6 +69,11 @@ export default function Reportmain() {
       </div>
 
     
+                </div>
+                </Item>
+                </Stack>
+                </Box>
+                </div>
     </Grid>
     </Grid> 
       )

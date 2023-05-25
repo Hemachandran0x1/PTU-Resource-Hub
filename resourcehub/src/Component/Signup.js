@@ -67,7 +67,7 @@ if(register)
 <h1 style={{marginLeft:'64px',marginTop:'-5px'}}>HUB</h1>
 </div>
 </div>
-      <Container component="main" maxWidth="xs" sx={{ backgroundColor: '#ffffff' }}>
+      <Container component="main" maxWidth="xs" sx={{ backgroundColor: '#f5e7bc' }}>
         <CssBaseline />
         <Box
           sx={{
@@ -75,7 +75,7 @@ if(register)
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            backgroundColor: '#ffffff',
+            backgroundColor: '#f5e7bc',
             padding: '20px',
             borderRadius: '5px',
             boxSizing:'unset',
