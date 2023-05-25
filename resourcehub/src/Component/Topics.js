@@ -133,11 +133,7 @@ const getallContents=()=>
                   {row.name}
                 </StyledTableCell>
                 <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
-<<<<<<< HEAD
-                <StyledTableCell ><Button variant='contained' color='primary' onClick={()=>handlebookmark(row.id,row.name,row.url)}>Bookmark
-=======
                 <StyledTableCell ><Button variant='contained' color='primary' style={{backgroundColor:'#27374D'}}>Bookmark
->>>>>>> bc1662291b21d90f20e085826dbbb2664ef10408
                   </Button></StyledTableCell>
               </StyledTableRow>
             ))}
@@ -161,11 +157,7 @@ const getallContents=()=>
                   {row.name}
                 </StyledTableCell>
                 <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
-<<<<<<< HEAD
-                <StyledTableCell align="center"><Button variant='contained' color='primary' onClick={()=>handlebookmark(row.id,row.name,row.url)} >Bookmark
-=======
                 <StyledTableCell align="center"><Button variant='contained' color='primary' style={{backgroundColor:'#27374D'}}>Bookmark
->>>>>>> bc1662291b21d90f20e085826dbbb2664ef10408
                   </Button></StyledTableCell>
               </StyledTableRow>
             ))}
@@ -189,11 +181,7 @@ const getallContents=()=>
                   {row.name}
                 </StyledTableCell>
                 <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
-<<<<<<< HEAD
-                <StyledTableCell ><Button variant='contained' color='primary' onClick={()=>handlebookmark(row.id,row.name,row.url)}>Bookmark
-=======
                 <StyledTableCell ><Button variant='contained' color='primary' style={{backgroundColor:'#27374D'}}>Bookmark
->>>>>>> bc1662291b21d90f20e085826dbbb2664ef10408
                   </Button></StyledTableCell>
               </StyledTableRow>
             ))}
