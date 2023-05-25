@@ -19,7 +19,7 @@ function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="/signup">
         Your Website
       </Link>{' '}
       {new Date().getFullYear()}
@@ -67,7 +67,7 @@ if(register)
 <h1 style={{marginLeft:'64px',marginTop:'-5px'}}>HUB</h1>
 </div>
 </div>
-      <Container component="main" maxWidth="xs" sx={{ backgroundColor: '#f5e7bc' }}>
+      <Container component="main" maxWidth="xs" sx={{ backgroundColor: '#9DB2BF' }}>
         <CssBaseline />
         <Box
           sx={{
@@ -75,13 +75,13 @@ if(register)
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            backgroundColor: '#f5e7bc',
+            backgroundColor: '#9DB2BF',
             padding: '20px',
             borderRadius: '5px',
             boxSizing:'unset',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar style={{backgroundColor:'#27374D'}} sx={{ m: 1, bgcolor: 'secondary.main' }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
@@ -135,13 +135,13 @@ if(register)
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              sx={{ mt: 3, mb: 2 ,backgroundColor:'#27374D'}}
             >
               Sign Up
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="/login" variant="body2">
+                <Link href="/login" variant="body2" style={{color:'#27374D'}}>
                   Already have an account? Sign in
                 </Link>
               </Grid>

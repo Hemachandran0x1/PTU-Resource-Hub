@@ -21,7 +21,7 @@ function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="/login">
         Your Website
       </Link>{' '}
       {new Date().getFullYear()}
@@ -77,13 +77,13 @@ export default function Login() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: 'url(https://u-static.fotor.com/images/text-to-image/result/PRO-4ef02e7a93a0441f8b25d1dbfca06c9c.jpg)',
+            backgroundImage: 'url(https://cdn.pixabay.com/photo/2016/03/26/13/08/sackcloth-1280529_1280.jpg)',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundPosition: 'left',
           }}
         />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square style={{backgroundColor:'#f5e7bc'}}>
+        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square style={{backgroundColor:'#9DB2BF'}}>
           <Box
             sx={{
               my: 8,
@@ -91,10 +91,10 @@ export default function Login() {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              backgroundColor: '#f5e7bc',
+              backgroundColor: '#9DB2BF',
             }}
           >
-            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <Avatar style={{backgroundColor:'#27374D'}} sx={{ m: 1, bgcolor: 'secondary.main' }}>
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
@@ -129,18 +129,19 @@ export default function Login() {
                 type="submit"
                 fullWidth
                 variant="contained"
+                style={{backgroundColor:'#27374D'}}
                 sx={{ mt: 3, mb: 2 }}
               >
                 Sign In
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <Link href="#" variant="body2">
+                  <Link href="#" variant="body2" style={{color:'#27374D'}}>
                     Forgot password?
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="/signup" variant="body2">
+                  <Link href="/signup" variant="body2" style={{color:'#27374D'}}>
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>
