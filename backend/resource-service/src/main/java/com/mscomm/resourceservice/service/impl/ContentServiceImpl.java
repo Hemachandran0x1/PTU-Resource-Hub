@@ -32,5 +32,11 @@ public class ContentServiceImpl implements ContentService{
 			 resourceRepository.findAll().forEach(contents::add);
 		     return contents;
 		}
-
+		@Override
+		public List<Content> getallContentsbytype(Long topic,int type)
+		{
+			 List<Content> contents = new ArrayList<>();
+			 resourceRepository.findByTopicidAndType(topic,type).forEach(contents::add);
+		     return contents;
+		}
 }

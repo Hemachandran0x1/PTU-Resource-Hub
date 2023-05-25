@@ -17,19 +17,20 @@ import lombok.AllArgsConstructor;
 public class SubjectController {
 
 	private SubjectService subjectService;
-
+	@CrossOrigin(origins = "http://localhost:3000")
     @PostMapping
     public ResponseEntity<Subject> saveSubject(@RequestBody Subject subject){
         Subject savedSubject = subjectService.saveSubject(subject);
         return new ResponseEntity<>(savedSubject, HttpStatus.CREATED);
     }
-
+	@CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("{id}")
     public ResponseEntity<Subject> getSubjectById(@PathVariable("id") Long subjectId){
         Subject subject = subjectService.getSubject(subjectId);
         return ResponseEntity.ok(subject);
     }
-    @GetMapping
+	@CrossOrigin(origins = "http://localhost:3000")
+	@GetMapping
     public ResponseEntity<?> saveUser(){
 	 List<Subject> departments = new ArrayList<>();
         	departments=	subjectService.getallSubjects();

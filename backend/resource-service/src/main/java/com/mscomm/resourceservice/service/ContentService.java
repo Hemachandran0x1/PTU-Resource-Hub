@@ -9,5 +9,6 @@ public interface ContentService {
 	Content saveContent(Content bk);
 	Content getContent(Long id);
 	List<Content> getallContents();
+	List<Content> getallContentsbytype(Long topic,int type);
 
 }

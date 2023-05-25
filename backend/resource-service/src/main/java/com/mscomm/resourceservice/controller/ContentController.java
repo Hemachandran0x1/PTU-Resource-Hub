@@ -34,5 +34,11 @@ public class ContentController {
         	departments=	contentService.getallContents();
         return new ResponseEntity<>(departments, HttpStatus.OK);
     }
+    @GetMapping("/topic/{topic}/type/{type}")
+    public ResponseEntity<?> getTopicbytype(@PathVariable("topic") Long topic,@PathVariable("type") int type){
+	 List<Content> departments = new ArrayList<>();
+        	departments=	contentService.getallContentsbytype(topic,type);
+        return new ResponseEntity<>(departments, HttpStatus.OK);
+    }
 }
 

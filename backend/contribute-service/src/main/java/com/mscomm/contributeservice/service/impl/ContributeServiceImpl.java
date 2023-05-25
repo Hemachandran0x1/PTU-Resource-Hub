@@ -17,6 +17,7 @@ public class ContributeServiceImpl implements ContributeService {
 	 private ContributeRepository contributeRepository;
 	@Override
 	public Contribute saveContribute(Contribute contribute) {
+		contribute.setApprove(0);
 	return contributeRepository.save(contribute);
 	}
 

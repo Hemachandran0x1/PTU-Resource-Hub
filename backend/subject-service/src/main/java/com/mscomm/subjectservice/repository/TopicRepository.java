@@ -7,4 +7,5 @@ import com.mscomm.subjectservice.entity.Topic;
 
 public interface TopicRepository extends JpaRepository<Topic,Long>{
 	List<Topic> findBySubjectid(Long subjectid);
+	List<Topic> findBySubjectidAndUnit(Long subjectid,int unitid);
 }

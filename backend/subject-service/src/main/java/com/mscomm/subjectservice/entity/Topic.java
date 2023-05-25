@@ -17,4 +17,6 @@ public class Topic {
     private Long id;
 	private Long subjectid;
 	private String topicname;
+	private int unit;
+	
 }

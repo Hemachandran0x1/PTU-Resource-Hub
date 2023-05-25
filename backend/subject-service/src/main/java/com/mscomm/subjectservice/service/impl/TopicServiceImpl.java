@@ -31,6 +31,7 @@ public class TopicServiceImpl implements TopicService{
 	{
 		List<Topic> topics = new ArrayList<Topic>();
 		//Write implementation
+		 topicRepository.findBySubjectid(sid).forEach(topics::add);
 		return topics;
 		
 	}
@@ -39,6 +40,13 @@ public class TopicServiceImpl implements TopicService{
 	{
 		 List<Topic> topics = new ArrayList<>();
 		 topicRepository.findAll().forEach(topics::add);
+	     return topics;
+	}
+	@Override
+	public List<Topic> getallTopicsByUnit(Long sid,int unit)
+	{
+		 List<Topic> topics = new ArrayList<>();
+		 topicRepository.findBySubjectidAndUnit(sid,unit).forEach(topics::add);
 	     return topics;
 	}
 

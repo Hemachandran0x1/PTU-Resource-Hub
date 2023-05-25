@@ -20,4 +20,6 @@ public class Content {
 	  	private String url;
 	  	private Long subjectid;
 	  	private Long unit;
+	  	private int type;
+	  	private String name;
 }
