@@ -21,5 +21,8 @@ public class Report {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 	private String reportdesc;
-	private Long contentid;
+	private String topic;
+	private int unit;
+	private String subject;
+	private String semester;
 }

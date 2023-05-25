@@ -15,11 +15,13 @@ public class Contribute {
 	  @Id
 	  @GeneratedValue(strategy = GenerationType.IDENTITY)
 	  private Long id;
-	  private Long userid;
-	  private Long subjectid;
-	  private Long deptid;
-	  private Long topicid;
+	  private String subject;
+	  private String unit;
+	  private String topic;
+	  private String description;
 	  private String url;
 	  private int approve;
-	  	  
+	  
+	  
+	  
 }

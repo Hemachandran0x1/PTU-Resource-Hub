@@ -12,11 +12,11 @@ import com.mscomm.contributeservice.service.ContributeService;
 import lombok.AllArgsConstructor;
 
 @RestController
-@RequestMapping("api/contributes")
+@RequestMapping("api/contribute")
 @AllArgsConstructor
 public class ContributeController {
 	private ContributeService contributeService;
-
+	@CrossOrigin(origins = "http://localhost:3000")
     @PostMapping
     public ResponseEntity<Contribute> saveContribute(@RequestBody Contribute contribute){
         Contribute savedContribute = contributeService.saveContribute(contribute);
