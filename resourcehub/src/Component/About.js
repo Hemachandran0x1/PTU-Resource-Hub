@@ -30,15 +30,13 @@ export default function About() {
       <Grid item xs={9}><Search/>
       <br></br>
       <Box sx={{ width: '97%' }}>
-      <Stack spacing={2}>
+      <Stack spacing={2} marginRight={12}>
         <Item className='request_top'>
         <div>
                 <h1>About</h1>
                 <h2>Welcome to the PTU College resource hub—a one-stop platform for knowledge sharing, doubt clarification, study materials, and lectures. Experience a seamless learning environment, accessing comprehensive resources to enhance your academic journey. Maximize your potential and excel with PTU College's centralized resource hub.</h2>
                 </div>
-                </Item>
-        
-                
+                </Item>        
       </Stack>
     </Box>
     </Grid>
