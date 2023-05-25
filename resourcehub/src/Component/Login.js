@@ -76,13 +76,11 @@ export default function Login() {
           sx={{
             backgroundImage: 'url(https://u-static.fotor.com/images/text-to-image/result/PRO-4ef02e7a93a0441f8b25d1dbfca06c9c.jpg)',
             backgroundRepeat: 'no-repeat',
-            backgroundColor: (t) =>
-              t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square style={{backgroundColor:'#f5e7bc'}}>
           <Box
             sx={{
               my: 8,
@@ -90,6 +88,7 @@ export default function Login() {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
+              backgroundColor: '#f5e7bc',
             }}
           >
             <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
