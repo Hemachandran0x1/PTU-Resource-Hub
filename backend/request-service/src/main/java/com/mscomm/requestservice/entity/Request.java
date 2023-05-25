@@ -20,9 +20,8 @@ public class Request {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-	private Long unit;
-	private String Topic;
-	private Long subjectid;
+	private Long userid;
 	private String requestdesc;
+	private int status;
 	
 }

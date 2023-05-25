@@ -18,6 +18,7 @@ public class RequestServiceImpl implements RequestService {
 	 private RequestRepository requestRepository;
 	@Override
 	public Request saveRequest(Request request) {
+		request.setStatus(0);
 	return requestRepository.save(request);
 	}
 
@@ -30,6 +31,13 @@ public class RequestServiceImpl implements RequestService {
 	{
 		 List<Request> requests = new ArrayList<>();
 		 requestRepository.findAll().forEach(requests::add);
+	     return requests;
+	}
+	@Override
+	public List<Request> getallRequestsbyStatus(int s)
+	{
+		 List<Request> requests = new ArrayList<>();
+		 requestRepository.findByStatus(s).forEach(requests::add);
 	     return requests;
 	}
 }

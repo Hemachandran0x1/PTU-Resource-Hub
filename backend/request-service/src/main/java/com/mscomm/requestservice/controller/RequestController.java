@@ -31,9 +31,9 @@ public class RequestController {
         @GetMapping
 	    public ResponseEntity<?> saveUser(){
 		 List<Request> requests = new ArrayList<>();
-	        	requests=	requestService.getallRequests();
+	        	requests=	requestService.getallRequestsbyStatus(0);
 	        return new ResponseEntity<>(requests, HttpStatus.OK);
-	    
-}}
+	    }
+        }
 
     

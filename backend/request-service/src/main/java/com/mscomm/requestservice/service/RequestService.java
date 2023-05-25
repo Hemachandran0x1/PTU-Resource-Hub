@@ -9,5 +9,6 @@ public interface RequestService {
 
   Request getRequestById(Long requestId);
 	List<Request> getallRequests();
+	List<Request> getallRequestsbyStatus(int s);
 
 }
