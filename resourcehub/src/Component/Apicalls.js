@@ -55,7 +55,7 @@ function getTopicsByunit(sid,unit)
 }
 function getContents(topicid,type)
 {
-  return instance1.get(`/api/contents/topic/${topicid}/type/${type}`)
+  return instance2.get(`/api/contents/topic/${topicid}/type/${type}`)
 }
 const instance = axios.create({
     baseURL: config.url.API_BASE_URL

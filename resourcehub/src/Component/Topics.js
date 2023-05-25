@@ -1,7 +1,8 @@
 import React from 'react'
 import Sidebar from './Sidebar'
 import Search from './Search'
-import { Grid,Box } from '@mui/material'
+
+import { Grid,Box ,Button} from '@mui/material'
 import { styled } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 import Table from '@mui/material/Table';
@@ -60,13 +61,18 @@ const getallContents=()=>
   Apicalls.getContents(topic,0).then(response=>response.data
     ).then(data=>{
       console.log(data)
-      textbased(data)
+      setTextbased(data)
     },(e)=>console.log(e))
   Apicalls.getContents(topic,1).then(response=>response.data
     ).then(data=>{
       console.log(data)
-      video(data)
+      setVideo(data)
     },(e)=>console.log(e))
+    Apicalls.getContents(topic,2).then(response=>response.data
+      ).then(data=>{
+        console.log(data)
+        setMaterial(data)
+      },(e)=>console.log(e))
 }
   return (
     <div>
@@ -94,8 +100,8 @@ const getallContents=()=>
           <TableHead>
             <TableRow>
               <StyledTableCell>Name</StyledTableCell>
-              <StyledTableCell align="center">Url</StyledTableCell>
-              <StyledTableCell align="center"></StyledTableCell>
+              <StyledTableCell >Url</StyledTableCell>
+              <StyledTableCell ></StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -104,8 +110,9 @@ const getallContents=()=>
                 <StyledTableCell component="th" scope="row">
                   {row.name}
                 </StyledTableCell>
-                <StyledTableCell align="center">{row.url}</StyledTableCell>
-                <StyledTableCell align="center"></StyledTableCell>
+                <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
+                <StyledTableCell ><Button variant='contained' color='primary'>Bookmark
+                  </Button></StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
@@ -117,7 +124,8 @@ const getallContents=()=>
           <TableHead>
             <TableRow>
               <StyledTableCell>Playlist</StyledTableCell>
-             
+              <StyledTableCell>Url</StyledTableCell>
+              <StyledTableCell ></StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -126,8 +134,33 @@ const getallContents=()=>
                 <StyledTableCell component="th" scope="row">
                   {row.name}
                 </StyledTableCell>
-                <StyledTableCell align="left">{row.url}</StyledTableCell>
-                <StyledTableCell align="center"></StyledTableCell>
+                <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
+                <StyledTableCell align="center"><Button variant='contained' color='primary'>Bookmark
+                  </Button></StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <h2>Materials:</h2>
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 700 }} aria-label="customized table">
+          <TableHead>
+            <TableRow>
+              <StyledTableCell>Title</StyledTableCell>
+              <StyledTableCell>Url</StyledTableCell>
+              <StyledTableCell ></StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {material.map((row) => (
+              <StyledTableRow >
+                <StyledTableCell component="th" scope="row">
+                  {row.name}
+                </StyledTableCell>
+                <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
+                <StyledTableCell align="center"><Button variant='contained' color='primary'>Bookmark
+                  </Button></StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>

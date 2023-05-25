@@ -165,14 +165,11 @@ function Unitpage(props) {
         <AccordionDetails>
            
       <Stack spacing={2}>
-<<<<<<< HEAD
         <Item  className='request_top'>
         <div >
                 <h1>Select Topics to Learn</h1>
                 </div>
                 </Item>
-=======
->>>>>>> ea8777627af12035ae7972aca141bc39656823bd
         <Item>
         <div className='request_bottom'>
                 <TableContainer component={Paper}>
@@ -216,14 +213,11 @@ function Unitpage(props) {
         <AccordionDetails>
            
       <Stack spacing={2}>
-<<<<<<< HEAD
         <Item className='request_top'>
         <div >
                 <h1>Select Topics to Learn</h1>
                 </div>
                 </Item>
-=======
->>>>>>> ea8777627af12035ae7972aca141bc39656823bd
         <Item>
         <div className='request_bottom'>
                 <TableContainer component={Paper}>
@@ -265,14 +259,11 @@ function Unitpage(props) {
         </AccordionSummary>
         <AccordionDetails>
         <Stack spacing={2}>
-<<<<<<< HEAD
         <Item className='request_top'>
         <div >
                 <h1>Select Topics to Learn</h1>
                 </div>
                 </Item>
-=======
->>>>>>> ea8777627af12035ae7972aca141bc39656823bd
         <Item>
         <div className='request_bottom'>
                 <TableContainer component={Paper}>
@@ -314,14 +305,11 @@ function Unitpage(props) {
         </AccordionSummary>
         <AccordionDetails>
         <Stack spacing={2}>
-<<<<<<< HEAD
         <Item className='request_top'>
         <div >
                 <h1>Select Topics to Learn</h1>
                 </div>
                 </Item>
-=======
->>>>>>> ea8777627af12035ae7972aca141bc39656823bd
         <Item>
         <div className='request_bottom'>
                 <TableContainer component={Paper}>
