@@ -11,7 +11,9 @@ import Search from './Search';
 import { styled } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 import { Paper } from '@mui/material';
-
+import { useState } from 'react';
+import { Apicalls } from './Apicalls';
+import { useNavigate } from 'react-router-dom';
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
@@ -24,7 +26,31 @@ export default function Reportmain() {
 let optionsDepartment=[];
 let optionsSemester=[] ;
 let optionsUnit=[];
-  return (
+const navigate =useNavigate()
+const [subject,setSubject]=useState("")
+const [sem,setSem]=useState("")
+const [unit,setUnit]=useState("")
+const [topic,setTopic]=useState("")
+const [desc,setDesc]=useState("")
+
+const handleSubmit=()=>{
+  const report={
+    "reportdesc":desc,
+    "topic":topic,
+    "unit":unit,
+    "semester":sem,
+    "subject":subject
+  }
+  Apicalls.addReport(report).then(response => {
+    console.log(response)
+    navigate("/submit_report")
+  }) .catch(error => {
+      
+      const error1=error;
+      console.log(error)
+    });
+}  
+return (
     <Grid container>
       <Grid xs={3}>
             <Sidebar/></Grid>
@@ -57,17 +83,18 @@ let optionsUnit=[];
       noValidate
       autoComplete="off"
     >
-    <TextField id="outlined-basic" label="Semester" variant="outlined" />
-    <TextField id="outlined-basic" label="Subject" variant="outlined" />
-    <TextField id="outlined-basic" label="Unit" variant="outlined" />
-    <TextField id="outlined-basic" label="Topic" variant="outlined" />
+    <TextField id="outlined-basic" label="Semester" variant="outlined" onChange={(e) => setSem(e.target.value)}/>
+    <TextField id="outlined-basic" label="Subject" variant="outlined"onChange={(e) => setSubject(e.target.value)} />
+    <TextField id="outlined-basic" label="Unit" variant="outlined" onChange={(e) => setUnit(e.target.value)} />
+    <TextField id="outlined-basic" label="Topic" variant="outlined" onChange={(e) => setTopic(e.target.value)} />
       <TextField
           id="outlined-multiline-flexible"
           label="What is the issue?"
           multiline
           maxRows={7}
+          onChange={(e) => setDesc(e.target.value)}
         />
-        <Button style={{ alignSelf: 'flex-start' , marginLeft: "10px"}} variant="contained" onClick={SubmitEvent}>Submit</Button>
+        <Button style={{ alignSelf: 'flex-start' , marginLeft: "10px"}} variant="contained" onClick={()=>handleSubmit()}>Submit</Button>
     </Box>
       </div>
 
