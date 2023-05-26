@@ -34,5 +34,17 @@ public class BookmarkController {
         	departments=	bookmarkService.getallBookmarks();
         return new ResponseEntity<>(departments, HttpStatus.OK);
     }
+    @GetMapping("/user/{uid}")
+    public ResponseEntity<?> saveUser(@PathVariable("uid") Long uid){
+	 List<Bookmark> departments = new ArrayList<>();
+        	departments=	bookmarkService.getallBookmarksbyUser(uid);
+        return new ResponseEntity<>(departments, HttpStatus.OK);
+    }
+    @DeleteMapping("/user/{uid}/bookmark/{bid}")
+    public ResponseEntity<String> deleteBookmark(@PathVariable("bid") Long bid,@PathVariable("uid") Long uid){
+   	 String s;
+           	s=	bookmarkService.deleteBookmark(bid,uid);
+           return new ResponseEntity<>(s, HttpStatus.OK);
+       }
 }
 

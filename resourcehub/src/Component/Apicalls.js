@@ -23,6 +23,8 @@ export const Apicalls = {
         addRequest,
         getRequests,
         addBookmark,
+        getBookmarks,
+        deleteBookmark,
         addReport,
         addContribute
 }
@@ -81,6 +83,16 @@ function addReport(req)
 function addBookmark(req)
 {
     return instance2.post('/api/bookmarks', req, {
+        headers: { 'Content-type': 'application/json' }
+      })
+}
+function getBookmarks(userid)
+{
+  return instance2.get(`/api/bookmarks/user/${userid}`)
+}
+function deleteBookmark(uid,bid)
+{
+    return instance2.delete(`/api/bookmarks/user/${uid}/bookmark/${bid}`, {
         headers: { 'Content-type': 'application/json' }
       })
 }
