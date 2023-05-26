@@ -5,6 +5,7 @@ import Signup from './Signup';
 import Contribute from './Contribute'
 import ContributeAuth from './ContributeAuth';
 import Requestmain from './Requestmain';
+import Bookmark from './Bookmark';
 import Home from './Home';
 import Reportmain from './Reportmain';
 import Requestsubmit from './Requestsubmit';
@@ -33,7 +34,8 @@ function Routesapp() {
                 <Route path="/requestsadd" element={<Request/>}/>    
                 <Route path="/credentials" element={<Credentials/>}/>        
                 <Route path="/unit" element={<Unitpage/>}/>     
-                <Route path="/about" element={<About/>}/>   
+                <Route path="/about" element={<About/>}/>  
+                <Route path='bookmark' element={<Bookmark/>}/> 
                 <Route path="/topics" element={<Topics/>}/>            
             </Routes>
         </BrowserRouter>

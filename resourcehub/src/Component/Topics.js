@@ -1,6 +1,7 @@
 import React from 'react'
 import Sidebar from './Sidebar'
 import Search from './Search'
+import "../Styles/topics.css"
 import { ReactSession } from 'react-client-session';
 import { Grid,Box ,Button} from '@mui/material'
 import { styled } from '@mui/material/styles';
@@ -51,9 +52,13 @@ export default function Topics() {
   const [video,setVideo]=useState([{}])
   const [material,setMaterial]=useState([{}])
   const navigate =useNavigate()
+  const [tname,setTname]=useState("")
+  const [unit,setUnit]=useState(0)
   useEffect(()=>
   {
     getallContents()
+    setTname(location.state.tname)
+    setUnit(location.state.unit)
     console.log(location)
     
   },[])
@@ -66,7 +71,7 @@ export default function Topics() {
     }
     Apicalls.addBookmark(bk).then(response => {
       console.log(response)
-      navigate("/submit_request")
+      navigate("/bookmark")
     }) .catch(error => {
         
         const error1=error;
@@ -109,9 +114,9 @@ const getallContents=()=>
       <Stack spacing={2}>
         <Item style={{backgroundColor:'#27374D'}}>
         <div className='topic_top'>
-                <h1 style={{color:'#9DB2BF'}}>Unit 1: </h1>                         
+                <h1 style={{color:'#9DB2BF'}}>Unit {unit}: </h1>                         
                 {/* // 9DB2BF */}
-                <h2 style={{color:'#9DB2BF'}}>Topic:</h2>
+                <h2 style={{color:'#9DB2BF'}}>{tname}:</h2>
                 </div>
                 </Item>
         <Item style={{backgroundColor:'#27374D'}}>
@@ -133,8 +138,10 @@ const getallContents=()=>
                   {row.name}
                 </StyledTableCell>
                 <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
-                <StyledTableCell ><Button variant='contained' color='primary' style={{backgroundColor:'#27374D'}}>Bookmark
-                  </Button></StyledTableCell>
+                <StyledTableCell className='bookmarkCell' align="center">
+                  <Button variant='contained' color='primary' style={{backgroundColor:'#27374D',left:'8px'}} onClick={()=>handlebookmark(row.id,row.name,row.url)}>Bookmark
+                  </Button>
+                </StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
@@ -157,7 +164,7 @@ const getallContents=()=>
                   {row.name}
                 </StyledTableCell>
                 <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
-                <StyledTableCell align="center"><Button variant='contained' color='primary' style={{backgroundColor:'#27374D'}}>Bookmark
+                <StyledTableCell align="center"><Button variant='contained' color='primary' style={{backgroundColor:'#27374D',left:'30px'}} onClick={()=>handlebookmark(row.id,row.name,row.url)}>Bookmark
                   </Button></StyledTableCell>
               </StyledTableRow>
             ))}
@@ -181,7 +188,7 @@ const getallContents=()=>
                   {row.name}
                 </StyledTableCell>
                 <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
-                <StyledTableCell ><Button variant='contained' color='primary' style={{backgroundColor:'#27374D'}}>Bookmark
+                <StyledTableCell ><Button variant='contained' color='primary' style={{backgroundColor:'#27374D',right:'10px'}} onClick={()=>handlebookmark(row.id,row.name,row.url)}>Bookmark
                   </Button></StyledTableCell>
               </StyledTableRow>
             ))}

@@ -6,6 +6,7 @@ import ControlPointIcon from '@mui/icons-material/ControlPoint';
 import InfoIcon from '@mui/icons-material/Info';
 import HomeIcon from '@mui/icons-material/Home';
 import TocIcon from '@mui/icons-material/Toc';
+import BookmarkIcon from '@mui/icons-material/Bookmark';
 import '@fontsource/fira-sans/600.css';
 import '../Styles/Sidebar.css'
 
@@ -70,6 +71,15 @@ function Sidebar() {
                 <ListItemText primary="Forum" />
               </ListItemButton>
             </ListItem></Link>
+            <Link to="/bookmark" style={{color:'inherit',textDecorationLine:'none'}}>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <BookmarkIcon/>
+                </ListItemIcon>
+                <ListItemText primary="Bookmark" />
+              </ListItemButton>
+            </ListItem> </Link>
             <Link to="/about" style={{color:'inherit',textDecorationLine:'none'}}>
             <ListItem disablePadding>
               <ListItemButton>
