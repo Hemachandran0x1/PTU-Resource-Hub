@@ -2,7 +2,7 @@
 
 Welcome to the PTU College resource hub—a one-stop platform for knowledge sharing, doubt clarification, study materials, and lectures. Experience a seamless learning environment, accessing comprehensive resources to enhance your academic journey. Maximize your potential and excel with PTU College's centralized resource hub.
 
-The frontend components are located in the resourcehub folder and the backend services are located in the backend folder.
+The **frontend components** are located in the **resourcehub folder** and the **backend services** are located in the **backend folder**.
 There are a total of 7 main components in our PTU Resource Hub -->
 > Home
 > Contribute
