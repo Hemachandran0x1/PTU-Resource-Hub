@@ -1,7 +1,8 @@
 import React from 'react'
 import Sidebar from './Sidebar'
 import Search from './Search'
-
+import "../Styles/topics.css"
+import { ReactSession } from 'react-client-session';
 import { Grid,Box ,Button} from '@mui/material'
 import { styled } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
@@ -16,6 +17,7 @@ import { useLocation } from 'react-router';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Apicalls } from './Apicalls';
+import { useNavigate } from 'react-router';
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
       backgroundColor: theme.palette.common.black,
@@ -49,12 +51,29 @@ export default function Topics() {
   const [textbased,setTextbased]=useState([{}])
   const [video,setVideo]=useState([{}])
   const [material,setMaterial]=useState([{}])
+  const navigate =useNavigate()
   useEffect(()=>
   {
     getallContents()
     console.log(location)
     
   },[])
+  const handlebookmark=(id,name,url)=>{
+    const bk={
+      "bookmarkname":name,
+      "url":url,
+      "contentid":id ,
+      "userid":ReactSession.get("userid")
+    }
+    Apicalls.addBookmark(bk).then(response => {
+      console.log(response)
+      navigate("/submit_request")
+    }) .catch(error => {
+        
+        const error1=error;
+        console.log(error)
+      });
+  }
 const getallContents=()=>
 { var topic;
   if(location.state.topicid != null)
@@ -76,6 +95,7 @@ const getallContents=()=>
         setMaterial(data)
       },(e)=>console.log(e))
 }
+
   return (
     <div>
     <Grid container>
@@ -114,8 +134,10 @@ const getallContents=()=>
                   {row.name}
                 </StyledTableCell>
                 <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
-                <StyledTableCell ><Button variant='contained' color='primary' style={{backgroundColor:'#27374D'}}>Bookmark
-                  </Button></StyledTableCell>
+                <StyledTableCell className='bookmarkCell' align="center">
+                  <Button variant='contained' color='primary' style={{backgroundColor:'#27374D',left:'8px'}}>Bookmark
+                  </Button>
+                </StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
@@ -138,7 +160,7 @@ const getallContents=()=>
                   {row.name}
                 </StyledTableCell>
                 <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
-                <StyledTableCell align="center"><Button variant='contained' color='primary' style={{backgroundColor:'#27374D'}}>Bookmark
+                <StyledTableCell align="center"><Button variant='contained' color='primary' style={{backgroundColor:'#27374D',left:'30px'}}>Bookmark
                   </Button></StyledTableCell>
               </StyledTableRow>
             ))}
@@ -162,7 +184,7 @@ const getallContents=()=>
                   {row.name}
                 </StyledTableCell>
                 <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
-                <StyledTableCell ><Button variant='contained' color='primary' style={{backgroundColor:'#27374D'}}>Bookmark
+                <StyledTableCell ><Button variant='contained' color='primary' style={{backgroundColor:'#27374D',right:'10px'}}>Bookmark
                   </Button></StyledTableCell>
               </StyledTableRow>
             ))}

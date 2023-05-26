@@ -10,13 +10,14 @@ import FormLabel from '@mui/material/FormLabel';
 import Stack from '@mui/material/Stack';
 import '../Styles/contribute.css'
 import '../Styles/Request.css'
-
+import { useState } from 'react';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import { Box } from '@mui/material';
 import Sidebar from './Sidebar';
 import Search from './Search';
-
+import { Apicalls } from './Apicalls';
+import { useNavigate } from 'react-router';
 const BootstrapButton = styled(Button)({
     boxShadow: 'none',
     textTransform: 'none',
@@ -62,6 +63,30 @@ const BootstrapButton = styled(Button)({
   }));
   
 export default function Contribute() {
+  const navigate= useNavigate()
+  const [sub,setSubject]=useState("")
+  const [unit,setUnit]=useState("")
+  const [topic,setTopic]=useState("")
+  const [desc,setDesc]=useState("")
+  const [url,seturl]=useState("")
+  const handlecontribute=()=>{
+    const contri ={
+      "subject":sub,
+      "unit":unit,
+      "topic":topic,
+      "description":desc,
+      "url":url,
+      "approve":0
+    }
+    Apicalls.addContribute(contri).then(response => {
+      console.log(response)
+      navigate("/contributeAuth")
+    }) .catch(error => {
+        
+        const error1=error;
+        console.log(error)
+      });
+  }
   return (
     <div>
     <Grid container>
@@ -76,7 +101,7 @@ export default function Contribute() {
         <div >
         <h1 style={{fontSize:'50px'}}> Hey Geeks!</h1>
                 <h1 style={{fontSize:'30px'}}> Contribute any new material here! ↓</h1>
-                <TextField id="standard-basic" label="Subject" variant="standard" inputProps={{
+                <TextField id="standard-basic" label="Subject" variant="standard" onChange={(e) => setSubject(e.target.value)} inputProps={{
     style: {
       width: "500px",
     },
@@ -87,6 +112,7 @@ export default function Contribute() {
   row
   aria-labelledby="demo-row-radio-buttons-group-label"
   name="row-radio-buttons-group"
+  onChange={(e) => setUnit(e.target.value)}
 >
   <FormControlLabel value="I" control={<Radio />} label="I" />
   <FormControlLabel value="II" control={<Radio />} label="II" />
@@ -96,23 +122,23 @@ export default function Contribute() {
   
 </RadioGroup>
 </FormControl><br></br>
-                <TextField id="standard-basic" label="Topic" variant="standard" inputProps={{
+                <TextField id="standard-basic" label="Topic" variant="standard" onChange={(e) => setTopic(e.target.value)} inputProps={{
     style: {
       width: "500px",
     },
   }}/><br></br><br></br>
-                <TextField id="standard-basic" label="Topic Name" variant="standard" inputProps={{
+                <TextField id="standard-basic" label="Description" variant="standard" onChange={(e) => setDesc(e.target.value)} inputProps={{
     style: {
       width: "500px",
     },
   }}/><br></br><br></br>
-                <TextField id="standard-basic" label="Url" variant="standard" inputProps={{
+                <TextField id="standard-basic" label="Url" variant="standard" onChange={(e) => seturl(e.target.value)} inputProps={{
     style: {
       width: "500px",
     },
   }} /><br></br><br></br><br></br>
 
-<BootstrapButton variant="contained" disableRipple>
+<BootstrapButton variant="contained" onClick={()=>handlecontribute()} disableRipple>
   Submit
 </BootstrapButton>
                 </div>

@@ -18,5 +18,6 @@ public class Bookmark {
 	    private Long id;
 	  	private Long contentid;
 	  	private String bookmarkname;
+	  	private String url;
 	  	private Long userid;
 }

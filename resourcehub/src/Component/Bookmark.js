@@ -1,4 +1,3 @@
-
 import Grid from '@mui/material/Grid';
 import "../Styles/Request.css"
 import * as React from 'react';
@@ -20,67 +19,37 @@ import '../Styles/Subject.css'
 import { Apicalls } from './Apicalls';
 import { ReactSession } from 'react-client-session';
 import { useNavigate } from 'react-router';
+
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
-    [`&.${tableCellClasses.head}`]: {
-      backgroundColor: theme.palette.common.black,
-      color: theme.palette.common.white,
-    },
-    [`&.${tableCellClasses.body}`]: {
-      fontSize: 14,
-    },
-  }));
-  
-  const StyledTableRow = styled(TableRow)(({ theme }) => ({
-    '&:nth-of-type(odd)': {
-      backgroundColor: theme.palette.action.hover,
-    },
-    // hide last border
-    '&:last-child td, &:last-child th': {
-      border: 0,
-    },
-  }));
+  [`&.${tableCellClasses.head}`]: {
+    backgroundColor: theme.palette.common.black,
+    color: theme.palette.common.white,
+  },
+  [`&.${tableCellClasses.body}`]: {
+    fontSize: 14,
+  },
+}));
 
-  const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  }));
-  
-export default function Subject() {
-  const navigate = useNavigate();
-  const [subject,setSubject]=useState([{}])
-  const [sid1,setSid1]=useState(null)
- 
-  
-    React.useEffect(()=>
-    {
-      getSubjects();
-    },[])
-    const getSubjects=()=>
-    {
-      Apicalls.getSubjects().then(response=>response.data
-        ).then(data=>{
-          console.log(data)
-          setSubject(data)
-        },(e)=>console.log(e))
-    }
-    const handleclick=(sid)=>
-    { setSid1(sid)
-      console.log(sid)
-      navigate("/unit",{state:{"subjectid":sid},});
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  '&:nth-of-type(odd)': {
+    backgroundColor: theme.palette.action.hover,
+  },
+  // hide last border
+  '&:last-child td, &:last-child th': {
+    border: 0,
+  },
+}));
 
-    }
-    const name=ReactSession.get("username");
-       
-    if(name==null)
-    {
-       navigate("/login")
-    }
-    else
-    {return (
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
 
+function Bookmark() {
+  return (
     <div>
       <Grid container>
         <Grid item xs={3}>
@@ -93,7 +62,8 @@ export default function Subject() {
       <Stack spacing={2}>
         <Item className='request_top'>
         <div >
-                <h1>Welcome {name} !</h1>
+                <h1>Bookmark Collection</h1>
+                <h2>Study and remove bookmarked contents at ease</h2>
                 </div>
                 </Item>
         <Item>
@@ -102,13 +72,12 @@ export default function Subject() {
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead>
             <TableRow>
-              <StyledTableCell>Subject</StyledTableCell>
-              <StyledTableCell>Code</StyledTableCell>
-              <StyledTableCell>Syllabus</StyledTableCell>
+              <StyledTableCell>Name</StyledTableCell>
+              <StyledTableCell>Url</StyledTableCell>
               <StyledTableCell></StyledTableCell>
             </TableRow>
           </TableHead>
-          <TableBody>
+          {/* <TableBody>
             {subject && subject.map && subject.map((row,i) => (
               <StyledTableRow key={i}>
                 <StyledTableCell >
@@ -116,10 +85,10 @@ export default function Subject() {
                 </StyledTableCell>
                 <StyledTableCell>{row.subjectcode}</StyledTableCell>
                 <StyledTableCell ><a href={row.syllabus} target='_blank' rel="noreferrer" >{row.syllabus}</a></StyledTableCell>
-                <StyledTableCell><Button variant='contained' className='icon' color='primary' onClick={()=>handleclick(row.id)}>Explore</Button></StyledTableCell>
+                <StyledTableCell><Button variant='contained' className='icon' color='primary' onClick={()=>handleclick(row.id)}>Remove</Button></StyledTableCell>
               </StyledTableRow>
             ))}
-          </TableBody>
+          </TableBody> */}
         </Table>
       </TableContainer>
                 </div>
@@ -133,6 +102,7 @@ export default function Subject() {
       <br></br>
       <br></br>
     </div>
-  )}}
+  )
+}
 
-//  navigate("/credentials",{state:{"name":name,"email":email,"password":password},});
+export default Bookmark

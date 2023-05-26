@@ -21,7 +21,10 @@ export const Apicalls = {
         getTopicsByunit,
         getContents,
         addRequest,
-        getRequests
+        getRequests,
+        addBookmark,
+        addReport,
+        addContribute
 }
 function Signup(user)
 {
@@ -66,6 +69,24 @@ function getRequests()
 function addRequest(req)
 {
     return instance3.post('/api/requests', req, {
+        headers: { 'Content-type': 'application/json' }
+      })
+}
+function addReport(req)
+{
+    return instance3.post('/api/reports', req, {
+        headers: { 'Content-type': 'application/json' }
+      })
+}
+function addBookmark(req)
+{
+    return instance2.post('/api/bookmarks', req, {
+        headers: { 'Content-type': 'application/json' }
+      })
+}
+function addContribute(req)
+{
+    return instance4.post('/api/contribute', req, {
         headers: { 'Content-type': 'application/json' }
       })
 }
