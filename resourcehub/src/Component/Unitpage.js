@@ -78,22 +78,22 @@ function Unitpage(props) {
         console.log(data)
         setTopic1(data)
       },(e)=>console.log(e))
-    Apicalls.getTopicsByunit(1,2).then(response=>response.data
+    Apicalls.getTopicsByunit(sid,2).then(response=>response.data
       ).then(data=>{
         console.log(data)
         setTopic2(data)
       },(e)=>console.log(e))
-    Apicalls.getTopicsByunit(1,3).then(response=>response.data
+    Apicalls.getTopicsByunit(sid,3).then(response=>response.data
       ).then(data=>{
         console.log(data)
         setTopic3(data)
       },(e)=>console.log(e))
-    Apicalls.getTopicsByunit(1,4).then(response=>response.data
+    Apicalls.getTopicsByunit(sid,4).then(response=>response.data
       ).then(data=>{
         console.log(data)
         setTopic4(data)
       },(e)=>console.log(e))
-    Apicalls.getTopicsByunit(1,5).then(response=>response.data
+    Apicalls.getTopicsByunit(sid,5).then(response=>response.data
       ).then(data=>{
         console.log(data)
         setTopic5(data)
