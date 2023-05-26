@@ -1,0 +1,21 @@
+version: '3'
+services:
+  resource-service:
+    image: resource-service
+    ports:
+      - "8082:8082"
+    networks:
+      - resource-mysql
+    depends_on:
+      - mysqldb
+ 
+  mysqldb:
+    image: mysql:8
+    networks:
+      - resource-mysql
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD='yes'
+      - MYSQL_DATABASE=bootdb  
+
+networks:
+  resource-mysql: 
