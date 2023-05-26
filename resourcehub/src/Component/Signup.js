@@ -10,6 +10,10 @@ import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 import { Container } from '@mui/material';
 import Grid from '@mui/material/Grid';
+import image from './image.jpg';
+import image2 from './image2.jpg';
+import image3 from './image3.jpg';
+import image4 from './image4.jpg';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -59,13 +63,17 @@ if(register)
 }
   return (
 <ThemeProvider theme={theme}>
-<div className='bac'>
 <div className='container'>
 <div className='highlight'>
 <h1 style={{marginLeft:'65px',marginBottom:'-5px'}}>PTU</h1>
 <h1 style={{marginLeft:'12px',marginBottom:'-5px',marginTop:'-5px'}}>RESOURCE</h1>
 <h1 style={{marginLeft:'64px',marginTop:'-5px'}}>HUB</h1>
 </div>
+
+<img src={image4}  alt="Image 4" className="static-image4" />
+<img src={image3}  alt="Image 3" className="static-image3" />
+<img src={image2}  alt="Image 2" className="static-image2" />
+
 </div>
       <Container component="main" maxWidth="xs" sx={{ backgroundColor: '#9DB2BF' }}>
         <CssBaseline />
@@ -150,7 +158,7 @@ if(register)
         </Box>
         <Copyright sx={{ mt: 5 }} />
       </Container>
-      </div>
+
     </ThemeProvider>
     
   );
