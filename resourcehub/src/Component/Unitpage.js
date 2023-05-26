@@ -145,7 +145,7 @@ function Unitpage(props) {
                   {row.topicname}
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary' onClick={()=>handleclick(row.id)} style={{backgroundColor:'#27374D'}}>Learn
+                  <Button variant='contained' color='primary' onClick={()=>handleclick(row.id)} style={{backgroundColor:'#27374D',position: 'absolute',right: 30,bottom: 10}}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>
@@ -171,11 +171,6 @@ function Unitpage(props) {
         <AccordionDetails>
            
       <Stack spacing={2}>
-        <Item  className='request_top'>
-        <div >
-                <h1>Select Topics to Learn</h1>
-                </div>
-                </Item>
         <Item>
         <div className='request_bottom'>
                 <TableContainer component={Paper}>
@@ -194,7 +189,7 @@ function Unitpage(props) {
                 {row.topicname}
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)} style={{backgroundColor:'#27374D'}}>Learn
+                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)} style={{backgroundColor:'#27374D',position: 'absolute',right: 30,bottom: 10}}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>
@@ -219,11 +214,6 @@ function Unitpage(props) {
         <AccordionDetails>
            
       <Stack spacing={2}>
-        <Item className='request_top'>
-        <div >
-                <h1>Select Topics to Learn</h1>
-                </div>
-                </Item>
         <Item>
         <div className='request_bottom'>
                 <TableContainer component={Paper}>
@@ -241,7 +231,7 @@ function Unitpage(props) {
                 {row.topicname}
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)} style={{backgroundColor:'#27374D'}}>Learn
+                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)} style={{backgroundColor:'#27374D',position: 'absolute',right: 30,bottom: 10}}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>
@@ -265,11 +255,6 @@ function Unitpage(props) {
         </AccordionSummary>
         <AccordionDetails>
         <Stack spacing={2}>
-        <Item className='request_top'>
-        <div >
-                <h1>Select Topics to Learn</h1>
-                </div>
-                </Item>
         <Item>
         <div className='request_bottom'>
                 <TableContainer component={Paper}>
@@ -287,7 +272,7 @@ function Unitpage(props) {
                 {row.topicname}
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)} style={{backgroundColor:'#27374D'}}>Learn
+                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)} style={{backgroundColor:'#27374D',position: 'absolute',right: 30,bottom: 10}}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>
@@ -311,11 +296,6 @@ function Unitpage(props) {
         </AccordionSummary>
         <AccordionDetails>
         <Stack spacing={2}>
-        <Item className='request_top'>
-        <div >
-                <h1>Select Topics to Learn</h1>
-                </div>
-                </Item>
         <Item>
         <div className='request_bottom'>
                 <TableContainer component={Paper}>
@@ -333,7 +313,7 @@ function Unitpage(props) {
                 {row.topicname }
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)} style={{backgroundColor:'#27374D'}}>Learn
+                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)} style={{backgroundColor:'#27374D',position: 'absolute',right: 30,bottom: 10}}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>
@@ -356,6 +336,8 @@ function Unitpage(props) {
    </Grid>
 
  </Grid>
+ <br></br>
+ <br></br>
 </div>
   )
 }

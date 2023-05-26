@@ -1,6 +1,7 @@
 import React from 'react'
 import Sidebar from './Sidebar'
 import Search from './Search'
+import "../Styles/topics.css"
 import { ReactSession } from 'react-client-session';
 import { Grid,Box ,Button} from '@mui/material'
 import { styled } from '@mui/material/styles';
@@ -133,8 +134,10 @@ const getallContents=()=>
                   {row.name}
                 </StyledTableCell>
                 <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
-                <StyledTableCell ><Button variant='contained' color='primary' style={{backgroundColor:'#27374D'}}>Bookmark
-                  </Button></StyledTableCell>
+                <StyledTableCell className='bookmarkCell' align="center">
+                  <Button variant='contained' color='primary' style={{backgroundColor:'#27374D',left:'8px'}}>Bookmark
+                  </Button>
+                </StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
@@ -157,7 +160,7 @@ const getallContents=()=>
                   {row.name}
                 </StyledTableCell>
                 <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
-                <StyledTableCell align="center"><Button variant='contained' color='primary' style={{backgroundColor:'#27374D'}}>Bookmark
+                <StyledTableCell align="center"><Button variant='contained' color='primary' style={{backgroundColor:'#27374D',left:'30px'}}>Bookmark
                   </Button></StyledTableCell>
               </StyledTableRow>
             ))}
@@ -181,7 +184,7 @@ const getallContents=()=>
                   {row.name}
                 </StyledTableCell>
                 <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
-                <StyledTableCell ><Button variant='contained' color='primary' style={{backgroundColor:'#27374D'}}>Bookmark
+                <StyledTableCell ><Button variant='contained' color='primary' style={{backgroundColor:'#27374D',right:'10px'}}>Bookmark
                   </Button></StyledTableCell>
               </StyledTableRow>
             ))}
