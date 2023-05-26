@@ -145,7 +145,7 @@ function Unitpage(props) {
                   {row.topicname}
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary' onClick={()=>handleclick(row.id,row.unit,row.topicname)} style={{backgroundColor:'#27374D',position: 'absolute',right: 30,bottom: 10}}>Learn
+                  <Button variant='contained' color='primary' onClick={()=>handleclick(row.id,row.unit,row.topicname)} style={{backgroundColor:'#27374D'}}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>
