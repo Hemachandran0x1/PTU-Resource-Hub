@@ -11,5 +11,5 @@ public interface BookmarkService {
 	Bookmark getBookmark(Long id);
 	ResponseDto getUser(Long userId);
 	List<Bookmark> getallBookmarks();
-
+	List<Bookmark> getallBookmarksbyUser(Long userid);
 }

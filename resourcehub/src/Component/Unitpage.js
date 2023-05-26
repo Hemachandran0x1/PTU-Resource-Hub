@@ -56,8 +56,8 @@ function Unitpage(props) {
   const [topic5,setTopic5]=useState([{}])
   const location =useLocation()
   const navigate=useNavigate()
-  const handleclick=(id)=>{
-    navigate("/topics",{state:{"topicid":id},});
+  const handleclick=(id,unit,tname)=>{
+    navigate("/topics",{state:{"topicid":id,"unit":unit,"tname":tname},});
   }
   React.useEffect(()=>
   {
@@ -145,7 +145,7 @@ function Unitpage(props) {
                   {row.topicname}
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary' onClick={()=>handleclick(row.id)} style={{backgroundColor:'#27374D'}}>Learn
+                  <Button variant='contained' color='primary' onClick={()=>handleclick(row.id,row.unit,row.topicname)} style={{backgroundColor:'#27374D'}}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>
@@ -194,7 +194,7 @@ function Unitpage(props) {
                 {row.topicname}
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)} style={{backgroundColor:'#27374D'}}>Learn
+                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id,row.unit,row.topicname)} style={{backgroundColor:'#27374D'}}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>
@@ -241,7 +241,7 @@ function Unitpage(props) {
                 {row.topicname}
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)} style={{backgroundColor:'#27374D'}}>Learn
+                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id,row.unit,row.topicname)} style={{backgroundColor:'#27374D'}}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>
@@ -287,7 +287,7 @@ function Unitpage(props) {
                 {row.topicname}
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)} style={{backgroundColor:'#27374D'}}>Learn
+                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id,row.unit,row.topicname)} style={{backgroundColor:'#27374D'}}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>
@@ -333,7 +333,7 @@ function Unitpage(props) {
                 {row.topicname }
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id)} style={{backgroundColor:'#27374D'}}>Learn
+                  <Button variant='contained' color='primary'  onClick={()=>handleclick(row.id,row.unit,row.topicname)} style={{backgroundColor:'#27374D'}}>Learn
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>

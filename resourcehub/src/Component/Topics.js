@@ -51,9 +51,13 @@ export default function Topics() {
   const [video,setVideo]=useState([{}])
   const [material,setMaterial]=useState([{}])
   const navigate =useNavigate()
+  const [tname,setTname]=useState("")
+  const [unit,setUnit]=useState(0)
   useEffect(()=>
   {
     getallContents()
+    setTname(location.state.tname)
+    setUnit(location.state,unit)
     console.log(location)
     
   },[])
@@ -109,9 +113,9 @@ const getallContents=()=>
       <Stack spacing={2}>
         <Item style={{backgroundColor:'#27374D'}}>
         <div className='topic_top'>
-                <h1 style={{color:'#9DB2BF'}}>Unit 1: </h1>                         
+                <h1 style={{color:'#9DB2BF'}}>Unit {unit}: </h1>                         
                 {/* // 9DB2BF */}
-                <h2 style={{color:'#9DB2BF'}}>Topic:</h2>
+                <h2 style={{color:'#9DB2BF'}}>{tname}:</h2>
                 </div>
                 </Item>
         <Item style={{backgroundColor:'#27374D'}}>

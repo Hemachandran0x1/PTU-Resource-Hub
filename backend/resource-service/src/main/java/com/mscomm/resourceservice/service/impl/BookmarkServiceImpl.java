@@ -66,4 +66,11 @@ public class BookmarkServiceImpl implements BookmarkService{
 		 resourceRepository.findAll().forEach(bookmarks::add);
 	     return bookmarks;
 	}
+	@Override
+	public List<Bookmark> getallBookmarksbyUser(Long userid)
+	{
+		 List<Bookmark> bookmarks = new ArrayList<>();
+		 resourceRepository.findByUserid(userid).forEach(bookmarks::add);
+	     return bookmarks;
+	}
 }

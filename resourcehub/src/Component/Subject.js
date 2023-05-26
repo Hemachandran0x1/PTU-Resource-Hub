@@ -93,7 +93,7 @@ export default function Subject() {
       <Stack spacing={2}>
         <Item className='request_top'>
         <div >
-                <h1>Welcome User</h1>
+                <h1>Welcome {name}</h1>
                 </div>
                 </Item>
         <Item>
