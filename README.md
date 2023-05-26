@@ -1,5 +1,4 @@
 # PTU-Resource-Hub
-# PTU-Resource-Hub
 
 Welcome to the PTU College resource hub—a one-stop platform for knowledge sharing, doubt clarification, study materials, and lectures. Experience a seamless learning environment, accessing comprehensive resources to enhance your academic journey. Maximize your potential and excel with PTU College's centralized resource hub.
 
