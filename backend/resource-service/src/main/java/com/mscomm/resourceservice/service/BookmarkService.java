@@ -12,4 +12,5 @@ public interface BookmarkService {
 	ResponseDto getUser(Long userId);
 	List<Bookmark> getallBookmarks();
 	List<Bookmark> getallBookmarksbyUser(Long userid);
+	String deleteBookmark(Long id,Long uid);
 }

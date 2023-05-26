@@ -58,7 +58,7 @@ export default function Topics() {
   {
     getallContents()
     setTname(location.state.tname)
-    setUnit(location.state,unit)
+    setUnit(location.state.unit)
     console.log(location)
     
   },[])
@@ -71,7 +71,7 @@ export default function Topics() {
     }
     Apicalls.addBookmark(bk).then(response => {
       console.log(response)
-      navigate("/submit_request")
+      navigate("/bookmark")
     }) .catch(error => {
         
         const error1=error;
@@ -139,7 +139,7 @@ const getallContents=()=>
                 </StyledTableCell>
                 <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
                 <StyledTableCell className='bookmarkCell' align="center">
-                  <Button variant='contained' color='primary' style={{backgroundColor:'#27374D',left:'8px'}}>Bookmark
+                  <Button variant='contained' color='primary' style={{backgroundColor:'#27374D',left:'8px'}} onClick={()=>handlebookmark(row.id,row.name,row.url)}>Bookmark
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>
@@ -164,7 +164,7 @@ const getallContents=()=>
                   {row.name}
                 </StyledTableCell>
                 <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
-                <StyledTableCell align="center"><Button variant='contained' color='primary' style={{backgroundColor:'#27374D',left:'30px'}}>Bookmark
+                <StyledTableCell align="center"><Button variant='contained' color='primary' style={{backgroundColor:'#27374D',left:'30px'}} onClick={()=>handlebookmark(row.id,row.name,row.url)}>Bookmark
                   </Button></StyledTableCell>
               </StyledTableRow>
             ))}
@@ -188,7 +188,7 @@ const getallContents=()=>
                   {row.name}
                 </StyledTableCell>
                 <StyledTableCell ><a href={row.url} target='_blank' rel="noreferrer">{row.url}</a></StyledTableCell>
-                <StyledTableCell ><Button variant='contained' color='primary' style={{backgroundColor:'#27374D',right:'10px'}}>Bookmark
+                <StyledTableCell ><Button variant='contained' color='primary' style={{backgroundColor:'#27374D',right:'10px'}} onClick={()=>handlebookmark(row.id,row.name,row.url)}>Bookmark
                   </Button></StyledTableCell>
               </StyledTableRow>
             ))}

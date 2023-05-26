@@ -73,4 +73,25 @@ public class BookmarkServiceImpl implements BookmarkService{
 		 resourceRepository.findByUserid(userid).forEach(bookmarks::add);
 	     return bookmarks;
 	}
+	@Override
+	public String deleteBookmark(Long bid,Long uid)
+	{	 int status=0;
+		 String m;
+		 Bookmark bm = resourceRepository.findByIdAndUserid(bid,uid);
+		 Long id = bm.getId();
+		
+	     try
+		 {resourceRepository.deleteById(id);
+		 status=1;}
+	     finally
+	     {if(status>0)
+	     {
+	    	 m= "Bookmark with id: " + bid + "  for user with id "+uid+"deleted successfully!";
+	     }else
+	     {
+	    	 m="Unsucessfull bookmark deletion";
+	     }
+	     }
+	     return m;
+	}
 }

@@ -49,6 +49,32 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function Bookmark() {
+  const navigate = useNavigate();
+  const [bookmark,setBookmark]=useState([{}])
+  const [bkr,setBkr]=useState(0)
+  
+    React.useEffect(()=>
+    {
+      getBookmarks();
+    },[])
+    const getBookmarks=()=>
+    {const uid =ReactSession.get("userid")
+      Apicalls.getBookmarks(uid).then(response=>response.data
+        ).then(data=>{
+          console.log(data)
+          setBookmark(data)
+        },(e)=>console.log(e))
+    }
+    const handleclick=(bid)=>
+    { const uid2 =ReactSession.get("userid")
+      Apicalls.deleteBookmark(uid2,bid).then(response => {
+      setBkr(1)
+    }) .catch(error => {
+        console.log(error);
+      });
+      navigate("/bookmark")
+
+    }
   return (
     <div>
       <Grid container>
@@ -77,18 +103,17 @@ function Bookmark() {
               <StyledTableCell></StyledTableCell>
             </TableRow>
           </TableHead>
-          {/* <TableBody>
-            {subject && subject.map && subject.map((row,i) => (
+          { <TableBody>
+            {bookmark && bookmark.map && bookmark.map((row,i) => (
               <StyledTableRow key={i}>
                 <StyledTableCell >
-                  {row.subjectname} 
+                  {row.bookmarkname} 
                 </StyledTableCell>
-                <StyledTableCell>{row.subjectcode}</StyledTableCell>
-                <StyledTableCell ><a href={row.syllabus} target='_blank' rel="noreferrer" >{row.syllabus}</a></StyledTableCell>
+                <StyledTableCell><a href={row.url}>{row.url}</a></StyledTableCell>
                 <StyledTableCell><Button variant='contained' className='icon' color='primary' onClick={()=>handleclick(row.id)}>Remove</Button></StyledTableCell>
               </StyledTableRow>
             ))}
-          </TableBody> */}
+          </TableBody> }
         </Table>
       </TableContainer>
                 </div>
