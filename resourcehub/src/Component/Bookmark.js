@@ -68,11 +68,10 @@ function Bookmark() {
     const handleclick=(bid)=>
     { const uid2 =ReactSession.get("userid")
       Apicalls.deleteBookmark(uid2,bid).then(response => {
-      setBkr(1)
     }) .catch(error => {
         console.log(error);
       });
-      navigate("/bookmark")
+      navigate('/')
 
     }
   return (

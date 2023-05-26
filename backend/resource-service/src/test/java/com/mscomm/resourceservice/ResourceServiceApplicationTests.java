@@ -1,10 +1,10 @@
-package com.mscomm.subjectservice;
+package com.mscomm.resourceservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DepartmentServiceApplicationTests {
+class ResourceServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
