@@ -1,0 +1,17 @@
+C:\Users\ravia\PTU-Resource-Hub\backend\subject-service\src\main\java\com\mscomm\subjectservice\controller\DepartmentController.java
+C:\Users\ravia\PTU-Resource-Hub\backend\subject-service\src\main\java\com\mscomm\subjectservice\repository\DepartmentRepository.java
+C:\Users\ravia\PTU-Resource-Hub\backend\subject-service\src\main\java\com\mscomm\subjectservice\entity\Department.java
+C:\Users\ravia\PTU-Resource-Hub\backend\subject-service\src\main\java\com\mscomm\subjectservice\config\CorsConfig.java
+C:\Users\ravia\PTU-Resource-Hub\backend\subject-service\src\main\java\com\mscomm\subjectservice\service\impl\TopicServiceImpl.java
+C:\Users\ravia\PTU-Resource-Hub\backend\subject-service\src\main\java\com\mscomm\subjectservice\SubjectServiceApplication.java
+C:\Users\ravia\PTU-Resource-Hub\backend\subject-service\src\main\java\com\mscomm\subjectservice\entity\Subject.java
+C:\Users\ravia\PTU-Resource-Hub\backend\subject-service\src\main\java\com\mscomm\subjectservice\controller\SubjectController.java
+C:\Users\ravia\PTU-Resource-Hub\backend\subject-service\src\main\java\com\mscomm\subjectservice\service\impl\SubjectServiceImpl.java
+C:\Users\ravia\PTU-Resource-Hub\backend\subject-service\src\main\java\com\mscomm\subjectservice\service\DepartmentService.java
+C:\Users\ravia\PTU-Resource-Hub\backend\subject-service\src\main\java\com\mscomm\subjectservice\repository\SubjectRepository.java
+C:\Users\ravia\PTU-Resource-Hub\backend\subject-service\src\main\java\com\mscomm\subjectservice\service\SubjectService.java
+C:\Users\ravia\PTU-Resource-Hub\backend\subject-service\src\main\java\com\mscomm\subjectservice\repository\TopicRepository.java
+C:\Users\ravia\PTU-Resource-Hub\backend\subject-service\src\main\java\com\mscomm\subjectservice\service\impl\DepartmentServiceImpl.java
+C:\Users\ravia\PTU-Resource-Hub\backend\subject-service\src\main\java\com\mscomm\subjectservice\entity\Topic.java
+C:\Users\ravia\PTU-Resource-Hub\backend\subject-service\src\main\java\com\mscomm\subjectservice\service\TopicService.java
+C:\Users\ravia\PTU-Resource-Hub\backend\subject-service\src\main\java\com\mscomm\subjectservice\controller\TopicController.java

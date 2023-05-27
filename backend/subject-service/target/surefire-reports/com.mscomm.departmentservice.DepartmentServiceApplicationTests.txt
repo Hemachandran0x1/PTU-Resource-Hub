@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.mscomm.departmentservice.DepartmentServiceApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.217 s <<< FAILURE! - in com.mscomm.departmentservice.DepartmentServiceApplicationTests
+com.mscomm.departmentservice.DepartmentServiceApplicationTests  Time elapsed: 0.216 s  <<< ERROR!
+java.lang.IllegalStateException: Unable to find a @SpringBootConfiguration, you need to use @ContextConfiguration or @SpringBootTest(classes=...) with your test
+
