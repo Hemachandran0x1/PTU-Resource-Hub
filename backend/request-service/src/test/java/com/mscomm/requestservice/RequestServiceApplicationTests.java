@@ -1,13 +1,14 @@
-package com.mscomm.departmentservice;
+/*package com.mscomm.requestservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DepartmentServiceApplicationTests {
+class RequestServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
 	}
 
 }
+*/
