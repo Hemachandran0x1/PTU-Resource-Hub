@@ -57,17 +57,16 @@ CREATE TABLE `request` (
 -- Dumping data for table `request`
 --
 
-INSERT INTO `request` (`id`, `requestdesc`, `userid`, `status`, `topic`, `subjectid`, `unit`) VALUES
-(1, 'Need Materials for SpringBoot', 4, 0, NULL, NULL, NULL),
-(5, 'Fsd Old question Papers required', 4, 0, NULL, NULL, NULL),
-(6, 'ATCD Question Papers', 4, 0, NULL, NULL, NULL),
-(7, 'Video for InterFragment Communication in Mobile application development', 4, 0, NULL, NULL, NULL),
-(8, 'SpringBoot Security related materials', 4, 0, NULL, NULL, NULL),
-(9, 'MPMC traffic light simulation materials', 3, 0, NULL, NULL, NULL),
-(10, 'Semester 5 all old question papers', 3, 0, NULL, NULL, NULL),
-(11, 'Book for Advanced Security Concepts', 3, 0, NULL, NULL, NULL),
-(12, 'ccccc', 4, 1, NULL, NULL, NULL),
-(13, 'vgb', 4, 1, NULL, NULL, NULL);
+INSERT INTO `request` (`id`, `requestdesc`, `userid`, `status`) VALUES
+(1, 'Need Materials for SpringBoot', 4, 0),
+(5, 'Fsd Old question Papers required', 4, 0),
+(6, 'ATCD Question Papers', 4, 0),
+(7, 'Video for InterFragment Communication in Mobile application development', 17, 0),
+(8, 'SpringBoot Security related materials', 3, 0),
+(9, 'MPMC traffic light simulation materials', 17, 0),
+(10, 'Semester 5 all old question papers', 3, 0),
+(11, 'Book for Advanced Security Concepts', 3, 0);
+
 
 --
 -- Indexes for dumped tables

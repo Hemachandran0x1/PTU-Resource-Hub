@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import com.mscomm.requestservice.dto.ResponseDto;
 import com.mscomm.requestservice.entity.Request;
 import com.mscomm.requestservice.service.RequestService;
 
@@ -30,8 +31,8 @@ public class RequestController {
     }
         @GetMapping
 	    public ResponseEntity<?> saveUser(){
-		 List<Request> requests = new ArrayList<>();
-	        	requests=	requestService.getallRequestsbyStatus(0);
+		 List<ResponseDto> requests = new ArrayList<>();
+	        	requests=	requestService.getUserAndRequests();
 	        return new ResponseEntity<>(requests, HttpStatus.OK);
 	    }
         }

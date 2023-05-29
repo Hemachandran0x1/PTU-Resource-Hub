@@ -5,5 +5,5 @@ import com.mscomm.userservice.entity.*;
 public interface UserService {
 	User register(User user);
 	User login(String username,String password);
-   // ResponseDto getUser(Long userId);
+	User getUser(Long userId);
 }
