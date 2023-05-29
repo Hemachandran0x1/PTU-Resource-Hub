@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import com.mscomm.resourceservice.dto.ResponseDto;
 import com.mscomm.resourceservice.entity.Bookmark;
 import com.mscomm.resourceservice.service.BookmarkService;
 
@@ -46,5 +47,11 @@ public class BookmarkController {
            	s=	bookmarkService.deleteBookmark(bid,uid);
            return new ResponseEntity<>(s, HttpStatus.OK);
        }
+    @GetMapping("/bookmark/{bid}")
+    public ResponseEntity<?> getUser(@PathVariable("bid") Long bid){
+	 ResponseDto departments;
+        	departments=	bookmarkService.getUser(bid);
+        return new ResponseEntity<>(departments, HttpStatus.OK);
+    }
 }
 

@@ -112,9 +112,9 @@ export default function Request() {
             {req && req.map && req.map((row) => (
               <StyledTableRow >
                 <StyledTableCell component="th" scope="row">
-                  {row.requestdesc}
+                  {row?.request?.requestdesc}
                 </StyledTableCell>
-                <StyledTableCell align="center">{row.userid}</StyledTableCell>
+                <StyledTableCell align="center">{row?.user?.name}</StyledTableCell>
                 <StyledTableCell align="center">Pending</StyledTableCell>
 
               </StyledTableRow>

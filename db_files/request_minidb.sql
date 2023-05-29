@@ -61,9 +61,9 @@ INSERT INTO `request` (`id`, `requestdesc`, `userid`, `status`) VALUES
 (1, 'Need Materials for SpringBoot', 4, 0),
 (5, 'Fsd Old question Papers required', 4, 0),
 (6, 'ATCD Question Papers', 4, 0),
-(7, 'Video for InterFragment Communication in Mobile application development', 1, 0),
-(8, 'SpringBoot Security related materials', 2, 0),
-(9, 'MPMC traffic light simulation materials', 5, 0),
+(7, 'Video for InterFragment Communication in Mobile application development', 17, 0),
+(8, 'SpringBoot Security related materials', 3, 0),
+(9, 'MPMC traffic light simulation materials', 17, 0),
 (10, 'Semester 5 all old question papers', 3, 0),
 (11, 'Book for Advanced Security Concepts', 3, 0);
 
