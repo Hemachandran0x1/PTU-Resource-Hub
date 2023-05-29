@@ -40,7 +40,7 @@ public class BookmarkServiceImpl implements BookmarkService{
         BookmarkDto bmDto = mapToBookmark(bm);
 
         ResponseEntity<UserDto> responseEntity = restTemplate
-                .getForEntity("http://localhost:8082/api/users/" + bm.getUserid(),
+                .getForEntity("http://user-service:8080/api/users/" + bm.getUserid(),
                 UserDto.class);
 
         UserDto userDto = responseEntity.getBody();
