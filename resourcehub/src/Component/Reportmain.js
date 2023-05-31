@@ -26,8 +26,8 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 let optionsSubject=[];
 let optionsSemester=[] ;
-let optionsUnit=[{value:'1',label:'1'},{value:'2',label:'2'},{value:'3',label:'3'},{value:'4',label:'4'},{value:'5',label:'5'}];
-let optionsTopic=[]
+let optionsUnit=[{value:'1',label:'Unit 1'},{value:'2',label:'Unit 2'},{value:'3',label:'Unit 3'},{value:'4',label:'Unit 4'},{value:'5',label:'Unit 5'}];
+let optionsTopic=[{}]
 export default function Reportmain() {
 
 const navigate =useNavigate()
@@ -50,15 +50,16 @@ useEffect(() => {
       Apicalls.getSems()
       .then(response => response.data
       ).then(data => {console.log(data)
-      data.map((semy)=>{optionsSemester.push({value:semy.id,label:semy.semester})}); 
+      data.map((semy)=>{optionsSemester.push({value:semy.id,label:"Semester "+semy.semester})}); 
       }, (e) =>{
       console.log(e);
       })  
 },[]);
 const handleUnit=(unit)=>{
+  optionsTopic=[{}]
   setUnit(unit);
-  console.log(subject.value)
-  Apicalls.getTopicsByunit(subject.value,unit).then(response => response.data
+
+  Apicalls.getTopicsByunit(subject.value,unit.value).then(response => response.data
     ).then(data => { console.log(data)
     data.map((topics)=>{optionsTopic.push({value:topics.id,label:topics.topicname})}); 
     }, (e) =>{
@@ -120,20 +121,53 @@ return (
             defaultValue={sem}
             onChange={setSem}
             options={optionsSemester}
+            styles={{
+              control: (baseStyles, state) => ({
+                ...baseStyles,
+                backgroundColor: '#9DB2BF',
+                borderColor: '#27374D',
+              }),
+            }}
                 />  
         <Select className="selectbox2"
             placeholder='Subject'
             defaultValue={subject}
             onChange={setSubject}
             options={optionsSubject}
+            styles={{
+              control: (baseStyles, state) => ({
+                ...baseStyles,
+                backgroundColor: '#9DB2BF',
+                borderColor: '#27374D',
+              }),
+            }}
                 />
-            <TextField id="outlined-basic" placeholder="unit" variant="outlined" onChange={(e) => handleUnit(e.target.value)} />
-
-        <Select className="selectbox3"
+            
+            <Select className="selectbox2"
+            placeholder='Unit'
+            defaultValue={subject}
+            onChange={handleUnit}
+            options={optionsUnit}
+            styles={{
+              control: (baseStyles, state) => ({
+                ...baseStyles,
+                backgroundColor: '#9DB2BF',
+                borderColor: '#27374D',
+              }),
+            }}
+                />
+        <Select className="selectbox2"
             placeholder='Topic'
             defaultValue={topic}
             onChange={setTopic}
             options={optionsTopic}
+            styles={{
+              control: (baseStyles, state) => ({
+                ...baseStyles,
+                backgroundColor: '#9DB2BF',
+                borderColor: '#27374D',
+              }),
+            }}
                 />  
       <TextField
           id="outlined-multiline-flexible"
@@ -158,5 +192,6 @@ return (
 
 }
 /*    <TextField id="outlined-basic" label="Semester" variant="outlined" onChange={(e) => setSem(e.target.value)}/>
+<TextField id="outlined-basic" placeholder="unit" variant="outlined" onChange={(e) => handleUnit(e.target.value)} />
     <TextField id="outlined-basic" label="Subject" variant="outlined"onChange={(e) => setSubject(e.target.value)} />
     <TextField id="outlined-basic" label="Topic" variant="outlined" onChange={(e) => setTopic(e.target.value)} />*/

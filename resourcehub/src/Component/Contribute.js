@@ -121,6 +121,13 @@ useEffect(() => {
             defaultValue={sub}
             onChange={setSubject}
             options={optionsSubject}
+            styles={{
+              control: (baseStyles, state) => ({
+                ...baseStyles,
+                backgroundColor:'#9DB2BF',
+                borderColor:  state.isFocused ? 'blue':'#27374D',
+              }),
+            }}
                 /></div><br></br><br></br>
                 <FormControl>
 <FormLabel id="demo-row-radio-buttons-group-label">Unit</FormLabel>
