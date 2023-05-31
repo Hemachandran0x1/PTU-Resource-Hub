@@ -6,7 +6,7 @@ import com.mscomm.userservice.exceptions.UserNotFoundException;
 import com.mscomm.userservice.service.*;
 import com.mscomm.userservice.repository.*;
 import org.springframework.web.client.RestTemplate;
-import com.mscomm.userservice.dto.*;
+
 import lombok.AllArgsConstructor;
 
 import java.util.ArrayList;

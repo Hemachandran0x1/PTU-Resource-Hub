@@ -10,6 +10,10 @@
     display: flex;
     position: relative;
 }
+.dev{
+    position: relative; 
+    background-color: #27374D!important;
+}
 .add_button{
     position: relative; 
     height: 100%;

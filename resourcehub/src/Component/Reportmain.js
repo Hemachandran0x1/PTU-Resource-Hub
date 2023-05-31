@@ -94,7 +94,7 @@ return (
           maxRows={7}
           onChange={(e) => setDesc(e.target.value)}
         />
-        <Button style={{ alignSelf: 'flex-start' , marginLeft: "10px",backgroundColor:'#27374D'}} variant="contained" onClick={SubmitEvent}>Submit</Button>
+        <Button style={{ alignSelf: 'flex-start' , marginLeft: "10px",backgroundColor:'#27374D'}} variant="contained" onClick={()=>handleSubmit()}>Submit</Button>
     </Box>
       </div>
 
