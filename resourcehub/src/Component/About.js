@@ -36,7 +36,33 @@ export default function About() {
                 <h1>About</h1>
                 <h2>Welcome to the PTU College resource hub—a one-stop platform for knowledge sharing, doubt clarification, study materials, and lectures. Experience a seamless learning environment, accessing comprehensive resources to enhance your academic journey. Maximize your potential and excel with PTU College's centralized resource hub.</h2>
                 </div>
-                </Item>        
+                </Item>
+                <br></br>
+                <Item className='dev'>
+        <div>
+                <h1 style={{color:'white'}}>Developers</h1>
+                </div>
+                </Item>
+                <Item className='request_top'>
+        <div>
+                <h1>Hemachandran P</h1>
+                <h2>Full Stack, Python, Django framework</h2>
+                </div>
+                </Item>
+                <Item className='request_top'>
+        <div>
+                <h1>Gokulnath P</h1>
+                <h2>Full Stack, Smart Contracts, Neural Neworks</h2>
+                </div>
+                </Item>
+                <Item className='request_top'>
+        <div>
+                <h1>Cegil</h1>
+                <h2>Full Stack, Unity developer, Python</h2>
+                </div>
+                </Item>   
+                <br></br>
+                <br></br>     
       </Stack>
     </Box>
     </Grid>
