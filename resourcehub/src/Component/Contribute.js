@@ -18,6 +18,8 @@ import Sidebar from './Sidebar';
 import Search from './Search';
 import { Apicalls } from './Apicalls';
 import { useNavigate } from 'react-router';
+import { useEffect } from 'react';
+import Select from 'react-select';
 const BootstrapButton = styled(Button)({
     boxShadow: 'none',
     textTransform: 'none',
@@ -61,7 +63,7 @@ const BootstrapButton = styled(Button)({
     textAlign: 'center',
     color: theme.palette.text.secondary,
   }));
-  
+  let optionsSubject=[];
 export default function Contribute() {
   const navigate= useNavigate()
   const [sub,setSubject]=useState("")
@@ -69,9 +71,22 @@ export default function Contribute() {
   const [topic,setTopic]=useState("")
   const [desc,setDesc]=useState("")
   const [url,seturl]=useState("")
+  
+useEffect(() => {  
+   
+  Apicalls.getSubjects()
+  .then(response => response.data
+  ).then(data => {
+  data.map((subj)=>{optionsSubject.push({value:subj.id,label:subj.subjectname})})
+  console.log(data)
+  }, (e) =>{
+  console.log(e);
+  })
+  
+},[]);
   const handlecontribute=()=>{
     const contri ={
-      "subject":sub,
+      "subject":sub.value,
       "unit":unit,
       "topic":topic,
       "description":desc,
@@ -101,11 +116,12 @@ export default function Contribute() {
         <div >
         <h1 style={{fontSize:'50px'}}> Hey Geeks!</h1>
                 <h1 style={{fontSize:'30px'}}> Contribute any new material here! ↓</h1>
-                <TextField id="standard-basic" label="Subject" variant="standard" onChange={(e) => setSubject(e.target.value)} inputProps={{
-    style: {
-      width: "500px",
-    },
-  }}/><br></br><br></br>
+      <div className='selectbox' style={{color:'#27374D'}}> <Select 
+            placeholder='Subject'
+            defaultValue={sub}
+            onChange={setSubject}
+            options={optionsSubject}
+                /></div><br></br><br></br>
                 <FormControl>
 <FormLabel id="demo-row-radio-buttons-group-label">Unit</FormLabel>
 <RadioGroup

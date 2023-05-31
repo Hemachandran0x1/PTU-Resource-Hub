@@ -10,6 +10,10 @@
     display: flex;
     position: relative;
 }
+.dev{
+    position: relative; 
+    background-color: #27374D!important;
+}
 .add_button{
     position: relative; 
     height: 100%;
@@ -20,4 +24,26 @@
     position: fixed; /* Set button to fixed position */
     bottom: 16px; /* Set button to 16px from the bottom */
     right: 16px;
+}
+.selectbox{
+    width: 500px;
+    background-color: #27374D!important ;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.selectbox2
+{
+    width: 700px;
+    background-color: #27374D!important ;
+    margin-bottom: 2rem; 
+    margin-left: 8px;
+}
+.selectbox3
+{
+    width: 700px;
+    background-color: #27374D!important ;
+    margin-bottom: 2rem; 
+    margin-top: 2rem;
+    margin-left: 8px;
 }
