@@ -27,7 +27,8 @@ export const Apicalls = {
         deleteBookmark,
         addReport,
         addContribute,
-        updateUser
+        updateUser,
+        getAllSubjects
 }
 function Signup(user)
 {
@@ -58,6 +59,10 @@ function getSems()
 function getSubjects(semid,deptid)
 {
   return instance1.get(`/api/subjects/sem/${semid}/dept/${deptid}`)
+}
+function getAllSubjects(semid,deptid)
+{
+  return instance1.get(`/api/subjects/`)
 }
 function getTopics()
 {
