@@ -1,4 +1,3 @@
-
 import Grid from '@mui/material/Grid';
 import "../Styles/Request.css"
 import * as React from 'react';
@@ -20,6 +19,7 @@ import '../Styles/Subject.css'
 import { Apicalls } from './Apicalls';
 import { ReactSession } from 'react-client-session';
 import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
       backgroundColor: theme.palette.common.black,
@@ -72,8 +72,11 @@ export default function Subject() {
       navigate("/unit",{state:{"subjectid":sid},});
 
     }
+    const handlecred = ()=>{
+      navigate("\changecred")
+    };
     const name=ReactSession.get("username");
-       
+    
     if(name==null)
     {
        navigate("/login")
@@ -123,10 +126,11 @@ export default function Subject() {
         </Table>
       </TableContainer>
                 </div>
-                </Item>
-                
+                </Item><div >
+                <Button variant='contained' className='icon2' color='primary' onClick={()=>handlecred()}> Change Credentials</Button></div>
       </Stack>
     </Box>
+    
             </div>
         </Grid>
       </Grid>

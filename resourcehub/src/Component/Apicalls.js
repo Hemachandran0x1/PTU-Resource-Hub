@@ -26,11 +26,18 @@ export const Apicalls = {
         getBookmarks,
         deleteBookmark,
         addReport,
-        addContribute
+        addContribute,
+        updateUser
 }
 function Signup(user)
 {
     return instance.post('/api/users/signup', user, {
+        headers: { 'Content-type': 'application/json' }
+      })
+}
+function updateUser(user,id)
+{
+    return instance.post(`/api/users/${id}`, user, {
         headers: { 'Content-type': 'application/json' }
       })
 }

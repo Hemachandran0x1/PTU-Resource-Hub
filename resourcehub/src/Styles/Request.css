@@ -25,12 +25,17 @@
     bottom: 16px; /* Set button to 16px from the bottom */
     right: 16px;
 }
+.selectbox4{
+    width: 550px;
+    background-color: #27374D!important ;
+  
+}
 .selectbox{
     width: 500px;
     background-color: #27374D!important ;
     display: block;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
 }
 .selectbox2
 {

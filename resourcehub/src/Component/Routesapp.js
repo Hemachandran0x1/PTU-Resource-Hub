@@ -16,7 +16,7 @@ import Unitpage from './Unitpage';
 import About from './About';
 import Subject from './Subject';
 import Topics from './Topics';
-
+import Changecred from './Changecred';
 function Routesapp() {
   return (
     <>
@@ -36,7 +36,8 @@ function Routesapp() {
                 <Route path="/unit" element={<Unitpage/>}/>     
                 <Route path="/about" element={<About/>}/>  
                 <Route path='bookmark' element={<Bookmark/>}/> 
-                <Route path="/topics" element={<Topics/>}/>            
+                <Route path="/topics" element={<Topics/>}/>   
+                <Route path="/changecred" element={<Changecred/>}/>         
             </Routes>
         </BrowserRouter>
     </>

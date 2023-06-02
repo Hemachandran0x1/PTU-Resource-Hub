@@ -45,10 +45,11 @@ export default function Login() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     Apicalls.Login(data.get('email'),data.get('password')).then(response => {
-      const { id, name, email,password,departmenid,semesterid, role } = response.data;
+      const { id, name, email,password,departmentid,semesterid, role } = response.data;
       ReactSession.set("username",name)
       ReactSession.set("userid",id)
-
+      ReactSession.set("sem",semesterid)
+      ReactSession.set("dept",departmentid)
       setLoggedin(true)}) .catch(error => {
         //handleLogError(error)
         const error1=error;
