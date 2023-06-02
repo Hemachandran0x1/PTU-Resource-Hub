@@ -127,7 +127,9 @@ useEffect(() => {
               control: (baseStyles, state) => ({
                 ...baseStyles,
                 backgroundColor:'#9DB2BF',
-                borderColor:  'grey',
+
+                borderColor:  state.isFocused ? 'blue':'#27374D',
+
               }),
             }}
                 /></div><br></br><br></br>

@@ -51,7 +51,9 @@ useEffect(() => {
       Apicalls.getSems()
       .then(response => response.data
       ).then(data => {console.log(data)
-      data.map((semy)=>{optionsSemester.push({value:semy.id,label:"Semester"+semy.semester})}); 
+
+      data.map((semy)=>{optionsSemester.push({value:semy.id,label:"Semester "+semy.semester})}); 
+
       }, (e) =>{
       console.log(e);
       })  
@@ -59,7 +61,9 @@ useEffect(() => {
 const handleUnit=(unit)=>{
   optionsTopic=[{}]
   setUnit(unit);
-  console.log(subject.value)
+
+
+
   Apicalls.getTopicsByunit(subject.value,unit.value).then(response => response.data
     ).then(data => { console.log(data)
     data.map((topics)=>{optionsTopic.push({value:topics.id,label:topics.topicname})}); 
@@ -125,8 +129,10 @@ return (
             styles={{
               control: (baseStyles, state) => ({
                 ...baseStyles,
-                backgroundColor:'#9DB2BF',
-                borderColor:  'grey',
+
+                backgroundColor: '#9DB2BF',
+                borderColor: '#27374D',
+
               }),
             }}
                 />  
@@ -138,21 +144,22 @@ return (
             styles={{
               control: (baseStyles, state) => ({
                 ...baseStyles,
-                backgroundColor:'#9DB2BF',
-                borderColor: state.isFocused ? 'black' : '#27374D',
+                backgroundColor: '#9DB2BF',
+                borderColor: '#27374D',
               }),
             }}
-            />
+                />
+            
             <Select className="selectbox2"
             placeholder='Unit'
-            defaultValue={unit}
+            defaultValue={subject}
             onChange={handleUnit}
             options={optionsUnit}
             styles={{
-              control: (baseStyles) => ({
+              control: (baseStyles, state) => ({
                 ...baseStyles,
-                backgroundColor:'#9DB2BF',
-                borderColor: 'grey',
+                backgroundColor: '#9DB2BF',
+                borderColor: '#27374D',
               }),
             }}
                 />
@@ -165,8 +172,10 @@ return (
             styles={{
               control: (baseStyles, state) => ({
                 ...baseStyles,
-                backgroundColor:'#9DB2BF',
-                borderColor: 'grey',
+
+                backgroundColor: '#9DB2BF',
+                borderColor: '#27374D',
+
               }),
             }}
                 />  
@@ -200,6 +209,7 @@ return (
 
 }
 /*    <TextField id="outlined-basic" label="Semester" variant="outlined" onChange={(e) => setSem(e.target.value)}/>
+<TextField id="outlined-basic" placeholder="unit" variant="outlined" onChange={(e) => handleUnit(e.target.value)} />
     <TextField id="outlined-basic" label="Subject" variant="outlined"onChange={(e) => setSubject(e.target.value)} />
                 <TextField id="outlined-basic" placeholder="unit" variant="outlined" onChange={(e) => handleUnit(e.target.value)} />
 
