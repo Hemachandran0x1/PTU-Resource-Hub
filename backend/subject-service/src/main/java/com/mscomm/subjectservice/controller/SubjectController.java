@@ -36,5 +36,12 @@ public class SubjectController {
         	departments=	subjectService.getallSubjects();
         return new ResponseEntity<>(departments, HttpStatus.OK);
     }
+	@CrossOrigin(origins = "http://localhost:3000")
+	@GetMapping("sem/{semid}/dept/{deptid}")
+    public ResponseEntity<?> getSubjects(@PathVariable("semid") Long semid,@PathVariable("deptid") Long deptid){
+	 List<Subject> departments = new ArrayList<>();
+        	departments=	subjectService.getSubjects(semid,deptid);
+        return new ResponseEntity<>(departments, HttpStatus.OK);
+    }
 }
 

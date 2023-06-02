@@ -7,6 +7,7 @@ public interface SubjectService {
 	Subject saveSubject(Subject s);
 	Subject getSubject(Long id);
 	List<Subject> getallSubjects();
-
+	List<Subject> getSubjects(Long semid, Long deptid);
+	
 }
 

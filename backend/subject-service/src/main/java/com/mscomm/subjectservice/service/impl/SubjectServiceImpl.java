@@ -33,4 +33,11 @@ public class SubjectServiceImpl implements SubjectService {
 		 subjectRepository.findAll().forEach(subjects::add);
 	     return subjects;
 	}
+	@Override
+	public List<Subject> getSubjects(Long semid,Long deptid)
+	{
+		 List<Subject> subjects = new ArrayList<>();
+		 subjectRepository.findBySemidAndDeptid(semid,deptid).forEach(subjects::add);
+	     return subjects;
+	}
 }

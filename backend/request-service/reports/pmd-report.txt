@@ -1,0 +1,148 @@
+src/main/java/com/mscomm/requestservice/RequesrServiceApplication.java:9:	AtLeastOneConstructor:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/com/mscomm/requestservice/RequesrServiceApplication.java:9:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/mscomm/requestservice/RequesrServiceApplication.java:11:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/mscomm/requestservice/RequesrServiceApplication.java:11:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/main/java/com/mscomm/requestservice/RequesrServiceApplication.java:15:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/mscomm/requestservice/config/CorsConfig.java:13:	AtLeastOneConstructor:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/com/mscomm/requestservice/config/CorsConfig.java:13:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/mscomm/requestservice/config/CorsConfig.java:16:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/mscomm/requestservice/config/CorsConfig.java:16:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'allowedOrigins' is not assigned and could be declared final
+src/main/java/com/mscomm/requestservice/config/CorsConfig.java:17:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'source' could be declared final
+src/main/java/com/mscomm/requestservice/config/CorsConfig.java:18:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'config' could be declared final
+src/main/java/com/mscomm/requestservice/controller/ReportController.java:17:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/mscomm/requestservice/controller/ReportController.java:18:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/controller/ReportController.java:21:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/mscomm/requestservice/controller/ReportController.java:21:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'report' is not assigned and could be declared final
+src/main/java/com/mscomm/requestservice/controller/ReportController.java:22:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'savedReport' could be declared final
+src/main/java/com/mscomm/requestservice/controller/ReportController.java:27:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/mscomm/requestservice/controller/ReportController.java:27:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'reportId' is not assigned and could be declared final
+src/main/java/com/mscomm/requestservice/controller/ReportController.java:28:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'report' could be declared final
+src/main/java/com/mscomm/requestservice/controller/ReportController.java:31:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/mscomm/requestservice/controller/ReportController.java:32:	UnusedAssignment:	UnusedAssignment: The initializer for variable 'reports' is never used (overwritten on line 33)
+src/main/java/com/mscomm/requestservice/controller/RequestController.java:18:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/mscomm/requestservice/controller/RequestController.java:19:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/controller/RequestController.java:22:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/mscomm/requestservice/controller/RequestController.java:22:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'request' is not assigned and could be declared final
+src/main/java/com/mscomm/requestservice/controller/RequestController.java:23:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'savedRequest' could be declared final
+src/main/java/com/mscomm/requestservice/controller/RequestController.java:28:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/mscomm/requestservice/controller/RequestController.java:28:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'requestId' is not assigned and could be declared final
+src/main/java/com/mscomm/requestservice/controller/RequestController.java:29:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'request' could be declared final
+src/main/java/com/mscomm/requestservice/controller/RequestController.java:33:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/mscomm/requestservice/controller/RequestController.java:34:	UnusedAssignment:	UnusedAssignment: The initializer for variable 'requests' is never used (overwritten on line 35)
+src/main/java/com/mscomm/requestservice/dto/RequestDto.java:10:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/mscomm/requestservice/dto/RequestDto.java:11:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/dto/RequestDto.java:12:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/dto/RequestDto.java:13:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/dto/ResponseDto.java:10:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/mscomm/requestservice/dto/ResponseDto.java:11:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/dto/ResponseDto.java:12:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/dto/UserDto.java:10:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/mscomm/requestservice/dto/UserDto.java:11:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/dto/UserDto.java:12:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/dto/UserDto.java:13:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/dto/UserDto.java:14:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/dto/UserDto.java:15:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/dto/UserDto.java:16:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/entity/Report.java:19:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/mscomm/requestservice/entity/Report.java:22:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/entity/Report.java:22:	ShortVariable:	ShortVariable: Avoid variables with short names like id
+src/main/java/com/mscomm/requestservice/entity/Report.java:23:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/entity/Report.java:24:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/entity/Report.java:25:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/entity/Report.java:26:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/entity/Report.java:27:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/entity/Request.java:19:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/mscomm/requestservice/entity/Request.java:22:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/entity/Request.java:22:	ShortVariable:	ShortVariable: Avoid variables with short names like id
+src/main/java/com/mscomm/requestservice/entity/Request.java:23:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/entity/Request.java:24:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/entity/Request.java:25:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/repository/ReportRepository.java:6:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/mscomm/requestservice/repository/RequestRepository.java:8:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/mscomm/requestservice/repository/RequestRepository.java:9:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/mscomm/requestservice/service/ReportService.java:8:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/mscomm/requestservice/service/ReportService.java:9:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/mscomm/requestservice/service/ReportService.java:11:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/mscomm/requestservice/service/ReportService.java:12:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/mscomm/requestservice/service/RequestService.java:8:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/mscomm/requestservice/service/RequestService.java:9:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/mscomm/requestservice/service/RequestService.java:10:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/mscomm/requestservice/service/RequestService.java:11:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/mscomm/requestservice/service/RequestService.java:12:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/mscomm/requestservice/service/RequestService.java:13:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/mscomm/requestservice/service/RequestService.java:13:	ShortVariable:	ShortVariable: Avoid variables with short names like s
+src/main/java/com/mscomm/requestservice/service/impl/ReportServiceImpl.java:17:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/mscomm/requestservice/service/impl/ReportServiceImpl.java:18:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/service/impl/ReportServiceImpl.java:20:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'report' is not assigned and could be declared final
+src/main/java/com/mscomm/requestservice/service/impl/ReportServiceImpl.java:25:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'reportId' is not assigned and could be declared final
+src/main/java/com/mscomm/requestservice/service/impl/ReportServiceImpl.java:31:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'reports' could be declared final
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:22:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:23:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:24:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:26:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'request' is not assigned and could be declared final
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:32:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'requestId' is not assigned and could be declared final
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:38:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'requests' could be declared final
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:43:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 's' is not assigned and could be declared final
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:43:	ShortVariable:	ShortVariable: Avoid variables with short names like s
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:45:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'requests' could be declared final
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:52:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'responseDto' could be declared final
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:53:	ShortVariable:	ShortVariable: Avoid variables with short names like rs
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:53:	UnusedAssignment:	UnusedAssignment: The initializer for variable 'rs' is never used (overwritten on line 54)
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:55:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'res' could be declared final
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:57:	ForLoopCanBeForeach:	ForLoopCanBeForeach: This for loop can be replaced by a foreach loop
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:58:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'r' could be declared final
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:58:	ShortVariable:	ShortVariable: Avoid variables with short names like r
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:60:	ControlStatementBraces:	ControlStatementBraces: This statement should have braces
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:62:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'responseEntity' could be declared final
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:65:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'userDto' could be declared final
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:66:	SystemPrintln:	SystemPrintln: Usage of System.out/err
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:74:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'request' is not assigned and could be declared final
+src/main/java/com/mscomm/requestservice/service/impl/RequestServiceImpl.java:75:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'requestDto' could be declared final
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:3:	UnnecessaryImport:	UnnecessaryImport: Unused import 'com.mscomm.requestservice.dto.RequestDto'
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:24:	AtLeastOneConstructor:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:24:	CommentRequired:	CommentRequired: Class comments are required
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:24:	JUnit5TestShouldBePackagePrivate:	JUnit5TestShouldBePackagePrivate: JUnit 5 tests should be package-private.
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:27:	CommentRequired:	CommentRequired: Field comments are required
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:30:	CommentRequired:	CommentRequired: Field comments are required
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:32:	CommentRequired:	CommentRequired: Field comments are required
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:35:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:41:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:41:	JUnit5TestShouldBePackagePrivate:	JUnit5TestShouldBePackagePrivate: JUnit 5 tests should be package-private.
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:41:	JUnitTestContainsTooManyAsserts:	JUnitTestContainsTooManyAsserts: Unit tests should not contain more than 1 assert(s).
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:43:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'request' could be declared final
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:50:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'savedRequest' could be declared final
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:53:	JUnitAssertionsShouldIncludeMessage:	JUnitAssertionsShouldIncludeMessage: JUnit assertions should include a message
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:60:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:60:	JUnit5TestShouldBePackagePrivate:	JUnit5TestShouldBePackagePrivate: JUnit 5 tests should be package-private.
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:60:	JUnitTestContainsTooManyAsserts:	JUnitTestContainsTooManyAsserts: Unit tests should not contain more than 1 assert(s).
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:62:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'request' could be declared final
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:70:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'retrievedRequest' could be declared final
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:73:	JUnitAssertionsShouldIncludeMessage:	JUnitAssertionsShouldIncludeMessage: JUnit assertions should include a message
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:74:	JUnitAssertionsShouldIncludeMessage:	JUnitAssertionsShouldIncludeMessage: JUnit assertions should include a message
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:76:	CommentSize:	CommentSize: Comment is too large: Line too long
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:81:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:81:	JUnit5TestShouldBePackagePrivate:	JUnit5TestShouldBePackagePrivate: JUnit 5 tests should be package-private.
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:81:	JUnitTestContainsTooManyAsserts:	JUnitTestContainsTooManyAsserts: Unit tests should not contain more than 1 assert(s).
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:83:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'requests' could be declared final
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:91:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'retrievedRequests' could be declared final
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:94:	JUnitAssertionsShouldIncludeMessage:	JUnitAssertionsShouldIncludeMessage: JUnit assertions should include a message
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:101:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:101:	JUnit5TestShouldBePackagePrivate:	JUnit5TestShouldBePackagePrivate: JUnit 5 tests should be package-private.
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:101:	JUnitTestContainsTooManyAsserts:	JUnitTestContainsTooManyAsserts: Unit tests should not contain more than 1 assert(s).
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:103:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'requests' could be declared final
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:111:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'retrievedRequests' could be declared final
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:114:	JUnitAssertionsShouldIncludeMessage:	JUnitAssertionsShouldIncludeMessage: JUnit assertions should include a message
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:116:	CommentSize:	CommentSize: Comment is too large: Line too long
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:121:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:121:	JUnit5TestShouldBePackagePrivate:	JUnit5TestShouldBePackagePrivate: JUnit 5 tests should be package-private.
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:121:	JUnitTestContainsTooManyAsserts:	JUnitTestContainsTooManyAsserts: Unit tests should not contain more than 1 assert(s).
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:123:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'request' could be declared final
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:128:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'userDto' could be declared final
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:136:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'responseEntity' could be declared final
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:139:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'requests' could be declared final
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:147:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'responseDtos' could be declared final
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:150:	JUnitAssertionsShouldIncludeMessage:	JUnitAssertionsShouldIncludeMessage: JUnit assertions should include a message
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:151:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'responseDto' could be declared final
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:152:	JUnitAssertionsShouldIncludeMessage:	JUnitAssertionsShouldIncludeMessage: JUnit assertions should include a message
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:152:	LawOfDemeter:	LawOfDemeter: Call to `getRequest` on foreign value `responseDto` (degree 1)
+src/test/java/com/mscomm/requestservice/RequestServiceImplTest.java:153:	JUnitAssertionsShouldIncludeMessage:	JUnitAssertionsShouldIncludeMessage: JUnit assertions should include a message

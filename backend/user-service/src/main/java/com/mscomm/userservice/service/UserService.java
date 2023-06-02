@@ -6,4 +6,5 @@ public interface UserService {
 	User register(User user);
 	User login(String username,String password);
 	User getUser(Long userId);
+	User updateUser(User user,Long uid);
 }
