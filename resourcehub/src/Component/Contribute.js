@@ -77,13 +77,13 @@ export default function Contribute() {
 useEffect(() => {  
    
   Apicalls.getSubjects(ReactSession.get("sem"),ReactSession.get("dept"))
-  .then(response => response.data
-  ).then(data => {
-  data.map((subj)=>{optionsSubject.push({value:subj.id,label:subj.subjectname})})
-  console.log(data)
-  }, (e) =>{
-  console.log(e);
-  })
+      .then(response => response.data
+      ).then(data => {
+      data.map((subj)=>{optionsSubject.push({value:subj.id,label:subj.subjectname})})
+      console.log(data)
+      }, (e) =>{
+      console.log(e);
+      })
   
 },[]);
   const handlecontribute=()=>{
