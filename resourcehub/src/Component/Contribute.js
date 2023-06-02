@@ -20,6 +20,8 @@ import { Apicalls } from './Apicalls';
 import { useNavigate } from 'react-router';
 import { useEffect } from 'react';
 import Select from 'react-select';
+import { ReactSession } from 'react-client-session';
+
 const BootstrapButton = styled(Button)({
     boxShadow: 'none',
     textTransform: 'none',
@@ -74,7 +76,7 @@ export default function Contribute() {
   
 useEffect(() => {  
    
-  Apicalls.getSubjects()
+  Apicalls.getSubjects(ReactSession.get("sem"),ReactSession.get("dept"))
   .then(response => response.data
   ).then(data => {
   data.map((subj)=>{optionsSubject.push({value:subj.id,label:subj.subjectname})})

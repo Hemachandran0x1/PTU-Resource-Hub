@@ -50,6 +50,11 @@ export default function Login() {
       ReactSession.set("userid",id)
       ReactSession.set("sem",semesterid)
       ReactSession.set("dept",departmentid)
+      ReactSession.set("email",email)
+      ReactSession.set("pass",password)
+      ReactSession.set("role",role)
+      console.log(response.data)
+      console.log(ReactSession.get("email"))
       setLoggedin(true)}) .catch(error => {
         //handleLogError(error)
         const error1=error;

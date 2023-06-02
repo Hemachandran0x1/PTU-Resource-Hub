@@ -60,11 +60,15 @@ function Changecred(props) {
         name:ReactSession.get("username"),
         email: ReactSession.get("email"),
         password:ReactSession.get("pass"),
-        departmentid:ReactSession.get("dept"),
-        semesterid:ReactSession.get("sem")
+        departmentid:department.value,
+        semesterid:semester.value,
+        role:ReactSession.get("role")
       };
       console.log(user);
       Apicalls.updateUser(user,user.id).then(response => {
+        const { id, name, email,password,departmentid,semesterid, role } = response.data;
+        ReactSession.set("sem",semesterid)
+        ReactSession.set("dept",departmentid)
         setSignup(true)
       }) .catch(error => {
           //handleLogError(error)

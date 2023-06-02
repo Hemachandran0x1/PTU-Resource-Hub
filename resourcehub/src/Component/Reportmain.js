@@ -16,6 +16,7 @@ import { Apicalls } from './Apicalls';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Select from 'react-select';
+import { ReactSession } from 'react-client-session';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -26,8 +27,8 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 let optionsSubject=[];
 let optionsSemester=[] ;
-let optionsUnit=[{value:'1',label:'Unit 1'},{value:'2',label:'Unit 3'},{value:'3',label:'Unit 3'},{value:'4',label:'Unit 4'},{value:'5',label:'Unit 5'}];
-let optionsTopic=[]
+let optionsUnit=[{value:'1',label:'Unit 1'},{value:'2',label:'Unit 2'},{value:'3',label:'Unit 3'},{value:'4',label:'Unit 4'},{value:'5',label:'Unit 5'}];
+let optionsTopic=[{}]
 export default function Reportmain() {
 
 const navigate =useNavigate()
@@ -39,7 +40,7 @@ const [desc,setDesc]=useState("")
 
 useEffect(() => {  
    
-      Apicalls.getSubjects()
+      Apicalls.getSubjects(ReactSession.get("sem"),ReactSession.get("dept"))
       .then(response => response.data
       ).then(data => {
       data.map((subj)=>{optionsSubject.push({value:subj.id,label:subj.subjectname})})
@@ -56,9 +57,10 @@ useEffect(() => {
       })  
 },[]);
 const handleUnit=(unit)=>{
+  optionsTopic=[{}]
   setUnit(unit);
   console.log(subject.value)
-  Apicalls.getTopicsByunit(subject.value,unit).then(response => response.data
+  Apicalls.getTopicsByunit(subject.value,unit.value).then(response => response.data
     ).then(data => { console.log(data)
     data.map((topics)=>{optionsTopic.push({value:topics.id,label:topics.topicname})}); 
     }, (e) =>{

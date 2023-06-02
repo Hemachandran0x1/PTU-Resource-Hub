@@ -37,7 +37,7 @@ function Signup(user)
 }
 function updateUser(user,id)
 {
-    return instance.post(`/api/users/${id}`, user, {
+    return instance.put(`/api/users/${id}`, user, {
         headers: { 'Content-type': 'application/json' }
       })
 }
@@ -55,9 +55,9 @@ function getSems()
 {
   return instance.get('/api/semester')   
 }
-function getSubjects()
+function getSubjects(semid,deptid)
 {
-  return instance1.get('/api/subjects')
+  return instance1.get(`/api/subjects/sem/${semid}/dept/${deptid}`)
 }
 function getTopics()
 {

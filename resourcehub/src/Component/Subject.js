@@ -56,11 +56,14 @@ export default function Subject() {
   
     React.useEffect(()=>
     {
-      getSubjects();
+      if(ReactSession.get("username"))
+      {getSubjects();}
+      else
+      navigate("/login")
     },[])
     const getSubjects=()=>
     {
-      Apicalls.getSubjects().then(response=>response.data
+      Apicalls.getSubjects(ReactSession.get("sem"),ReactSession.get("dept")).then(response=>response.data
         ).then(data=>{
           console.log(data)
           setSubject(data)
