@@ -111,21 +111,21 @@ function Credentials(props) {
                 Select Your Credentials
         </Typography>
               <Stack m={5} spacing={6}>    
-                   <Select className="selectbox" 
+                   <Select className="selectbox4" 
                 placeholder='Department'
                 defaultValue={department}
                 onChange={setDepartment}
                 options={optionsDepartment}
                     />
                     
-                <Select className="selectbox"
+                <Select className="selectbox4"
                 placeholder='Semester'
                 defaultValue={semester}
                 onChange={setSemester}
                 options={optionsSemester}
                     />
                 </Stack>
-                <Button 
+                <Button className='icon2'
                 onClick={handleSubmit}
               type="submit"
               fullWidth
